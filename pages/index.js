@@ -1,10 +1,20 @@
 import styled from 'styled-components'
 
-const Title = styled.h1`
+const Main = styled.main`
+  margin: 24px;
+`
+
+const Titulo = styled.h1`
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primaria};
 `
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <Main>
+      <Titulo>OlaMundo</Titulo>
+    
+      <p>comé que vc tá?</p>
+    </Main>
+  )
 }
