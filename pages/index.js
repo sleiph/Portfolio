@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       nome:'bbb',
-      icone: 'http://www.it.uom.gr/project/intro/conwin/mwin8/95desktop5.gif',
+      icone: 'https://iconarchive.com/download/i19002/iconshock/vista-general/trash.ico',
       conteudo: <h4>BBBbbb</h4>
     },
     {

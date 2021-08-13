@@ -2,16 +2,15 @@ import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+  * {
     margin: 0;
     padding: 0;
-    font-family: 'Fira Code', monospace;
+    box-sizing: border-box;
   }
 
-  * {
-    box-sizing: border-box;
-    font: inherit;
+  body {
+    font-family: 'Fira Code', monospace;
   }
 `
 
