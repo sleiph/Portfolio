@@ -13,7 +13,7 @@ const Janela = styled.div`
 `
 
 const Notas = styled.div`
-  background: ${({ theme }) => theme.colors.janela};
+  background: ${({ theme }) => theme.desktop.janela};
   display: block;
   min-height: 100px;
   width: 100%;
@@ -25,7 +25,7 @@ const Notas = styled.div`
 `
 
 const NotasBarra = styled.div`
-  background: ${({ theme }) => theme.colors.windows};
+  background: ${({ theme }) => theme.desktop.azul_windows};
   width: 100%;
   height: 24px;
   margin-bottom: 2px;
@@ -55,16 +55,15 @@ const NotasBarra = styled.div`
   	display: block;
   	float: right;
   	padding-bottom: 3px;
-  	padding-left:  5px;
-  	padding-right: 5px;
+  	padding-right: 4px;
 
     button {
-      background: ${({ theme }) => theme.colors.janela};
+      background: ${({ theme }) => theme.desktop.janela};
       height: 20px;
       width: 20px;
       margin-top: 2px;
       line-height: .9;
-      padding-left: 4px;
+      padding-left: 2px;
       border-right: 2px solid black;
       border-bottom: 2px solid black;
       border-left: 1px solid white;
@@ -88,7 +87,7 @@ const NotasContent = styled.div`
   }
 `
 
-export default function Artigo({ icone, titulo, conteudo }) {
+export default function Artigo({ icone, titulo, conteudo, topo, esquerda }) {
   
   const deleteDis = () => {
     document.getElementById(titulo).remove()
@@ -96,8 +95,7 @@ export default function Artigo({ icone, titulo, conteudo }) {
 
   return (
     <Janela id={ titulo }
-    style={{ top: (Math.floor(Math.random() * (40 - 10)) + 10) + 'vh',
-    left: (Math.floor(Math.random() * (60 - 0)) + 0) + 'vw' }}>
+    style={{ top: topo + 'vh', left: esquerda + 'vw' }}>
       <Notas>
         <NotasBarra>
           <div className="icone">
