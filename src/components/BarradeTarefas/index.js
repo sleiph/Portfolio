@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const AreadeTrabalho = styled.div`
-  background: ${({ theme }) => theme.desktop.fundo};
-  height: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-`
-
 const BarradeTarefas = styled.div`
   background: ${({ theme }) => theme.desktop.janela};
   height: 38px;
@@ -19,14 +11,19 @@ const BarradeTarefas = styled.div`
   z-index: 1000;
 
   .relogio {
-    @include border-color(2px solid #666, 2px solid white);
     float: right;
-    padding: 5px 15px 5px 35px;
+    padding: 4px 15px 3px 35px;
     font-size: 14px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Gnome-audio-volume-high.svg/120px-Gnome-audio-volume-high.svg.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 5px center;
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: #666;
+    border-left-color: #666;
+    border-right-color: white;
+    border-bottom-color: white;
   }
 
   .start-btn {
@@ -43,10 +40,18 @@ const BarradeTarefas = styled.div`
     background-size: 22px;
     background-position: 5px center;
     background-color: ${({ theme }) => theme.desktop.janela};
-    @include border-color(2px solid white, 2px solid #222);
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: #222;
+    border-bottom-color: #222;
     &:active {
       outline: none;
-      @include border-color(2px solid #222, 2px solid white);
+      border-top-color: #222;
+      border-left-color: #222;
+      border-right-color: white;
+      border-bottom-color: white;
     }
   }
 `
@@ -55,12 +60,17 @@ const StartMenu = styled.div`
   position: absolute;
   bottom: 38px;
   background: ${({ theme }) => theme.desktop.janela};
-  @include border-color(2px solid white, 2px solid #222);
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
   font-size: 14px;
   display: none;
+  border-style: solid;
+  border-width: 2px;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: #222;
+  border-bottom-color: #222;
   &.open {
     display: block;
   }
@@ -136,79 +146,32 @@ const StartMenu = styled.div`
   }
 `
 
-const Icones = styled.div`
-  margin: 20px;
-  text-align: center;
-  width: 100px;
-
-  #meus-documentos {
-    width: 100px;
-    img {
-      max-width: 100%;
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-  }
-`
-
-const Icone = styled.div`
-  display: block;
-  margin-bottom: 20px;
-  width: 48px;
-
-  img {
-    display: block;
-    margin: 5px auto;
-    width: 100%;
-  }
-
-  p {
-    color: rgba(white, .8);
-    font-size: 12px;
-    margin: 0;
-  }
-
-`
-
 export default function Desktop( {artigos} ) {
   return (
-    <AreadeTrabalho>
-      <Icones>
-        {artigos.map((artigo) => {
-          return (
-            <Icone id={artigo.nome+'icone'}>
-              <img src={artigo.icone} alt="" />
-              <p>{artigo.nome}</p>
-            </Icone>
-          )
-        })}
-      </Icones>
-
-      <BarradeTarefas>
-        <a className="start-btn" href="#0">Start</a>
-        <div className="relogio">
-          4:20PM
+    <BarradeTarefas>
+      <a className="start-btn" href="#0">Start</a>
+      <div className="relogio">
+        4:20PM
+      </div>
+      <StartMenu>
+        <div className="title-container">
+          <div className="title">Windows<span>98</span></div>
         </div>
-        <StartMenu>
-          <div className="title-container">
-            <div className="title">Windows<span>98</span></div>
-          </div>
-          <ul>
-            <li className="windows-update">Windows Update</li>
-            <hr />
-            <li className="programs">Programs</li>
-            <li className="favorites">Favorites</li>
-            <li className="documents">Documents</li>
-            <li className="settings">Settings</li>
-            <li className="find">Find</li>
-            <li className="help">Help</li>
-            <li className="run">Run...</li>
-            <hr />
-            <li className="log-off ok">Log Off</li>
-            <li className="shut-down ok">Shut Down...</li>
-          </ul>
-        </StartMenu>
-      </BarradeTarefas>
-    </AreadeTrabalho>
+        <ul>
+          <li key='update' className="windows-update">Windows Update</li>
+          <hr />
+          <li key='programas' className="programs">Programs</li>
+          <li key='favoritos' className="favorites">Favorites</li>
+          <li key='documentos' className="documents">Documents</li>
+          <li key='settings' className="settings">Settings</li>
+          <li key='find' className="find">Find</li>
+          <li key='ajuda' className="help">Help</li>
+          <li key='executar' className="run">Executar...</li>
+          <hr />
+          <li key='logoff' className="log-off ok">Log Off</li>
+          <li key='shutdown' className="shut-down ok">Shut Down...</li>
+        </ul>
+      </StartMenu>
+    </BarradeTarefas>
   )
 }

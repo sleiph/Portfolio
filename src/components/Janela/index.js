@@ -1,30 +1,21 @@
 import styled from 'styled-components';
 
 const Janela = styled.div`
-  display: block;
-  max-width: 800px;
-  min-height: 24px;
-  padding-bottom: 16px;
-
-  @media(min-width: 860px) {
-    position: absolute;
-
-  }
-`
-
-const Notas = styled.div`
-  background: ${({ theme }) => theme.desktop.janela};
-  display: block;
   min-height: 100px;
-  width: 100%;
+  max-width: 800px;
+  background: ${({ theme }) => theme.desktop.janela};
   padding: 4px;
   -webkit-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
   box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.75);
   border: 1.4px solid white;
+
+  @media(min-width: 860px) {
+    position: absolute;
+  }
 `
 
-const NotasBarra = styled.div`
+const Titulo = styled.div`
   background: ${({ theme }) => theme.desktop.azul_windows};
   width: 100%;
   height: 24px;
@@ -72,7 +63,7 @@ const NotasBarra = styled.div`
   }
 `
 
-const NotasContent = styled.div`
+const Conteudo = styled.div`
   background: white;
   height: 400px;
   width: 100%;
@@ -87,33 +78,42 @@ const NotasContent = styled.div`
   }
 `
 
-export default function Artigo({ icone, titulo, conteudo, topo, esquerda }) {
+export default function Artigo({ artigo, topo, esquerda }) {
   
   const deleteDis = () => {
-    document.getElementById(titulo).remove()
+    document.getElementById(artigo.nome).remove()
   }
 
+  const indiceZ = () => {
+    let temp = document.getElementById(artigo.nome)
+    if (temp != null) {
+      temp.style.zIndex += 1
+    }
+  }
+  
   return (
-    <Janela id={ titulo }
-    style={{ top: topo + 'vh', left: esquerda + 'vw' }}>
-      <Notas>
-        <NotasBarra>
-          <div className="icone">
-            <img src={ icone } alt="icone do programa" />
-          </div>
-          <div className="titulo">
-            { titulo }
-          </div>
-          <div className="fechar">
-            <button onClick={ deleteDis }>
-              &#10006;
-            </button>
-          </div>
-        </NotasBarra>
-        <NotasContent>
-          { conteudo }
-        </NotasContent>
-      </Notas>
+    <Janela id={ artigo.nome }
+    style={{ top: topo, left: esquerda, zIndex: 1 }}
+    onClick={indiceZ}>
+
+      <Titulo>
+        <div className="icone">
+          <img src={ artigo.icone } alt="icone do programa" />
+        </div>
+        <div className="titulo">
+          { artigo.nome }
+        </div>
+        <div className="fechar">
+          <button onClick={ deleteDis }>
+            &#10006;
+          </button>
+        </div>
+      </Titulo>
+
+      <Conteudo>
+        { artigo.conteudo }
+      </Conteudo>
+
     </Janela>
   )
 }
