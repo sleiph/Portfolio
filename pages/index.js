@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 
 import BarradeTarefas from '../src/components/BarradeTarefas'
+import Artigo from '../src/components/Janela';
 import Janela from '../src/components/Janela'
 
 const AreadeTrabalho = styled.main`
@@ -80,18 +81,21 @@ export default function Home() {
     }
   ]
 
-  const [showMe, setShowMe] = useState(false);
-  function toggle(){
-    setShowMe(!showMe);
-  }
-
   return (
     <AreadeTrabalho>
 
       <Icones>
-        {artigos.map((artigo) => {
+        {artigos.map((artigo, index) => {
+          const [vis, setVis] = useState(true)
+
           return (
-            <Icone key={artigo.nome+'icone'} onClick={toggle}>
+            <Icone key={artigo.nome+'icone'}
+            onClick={() => {
+              let temp = document.getElementById(artigo.nome)
+              temp.style.display=vis?'block':'none'
+              temp.style.zIndex=vis?2:1
+              setVis(!vis)
+            }}>
               <img src={artigo.icone} alt="" />
               <p>{artigo.nome}</p>
             </Icone>
@@ -101,21 +105,14 @@ export default function Home() {
 
       <BarradeTarefas />
 
-      {artigos.map((artigo) => {
+      {artigos.map((artigo, index) => {
+        //(Math.floor(Math.random() * (40 - 10)) + 10) + 'vh'
+        //(Math.floor(Math.random() * (60 - 0)) + 0) + 'vw'
         return (
-          <div key={artigo.nome}
-            style={{ display: showMe?"block":"none" }}
-          >
-            <Janela
+          <Janela key={artigo.nome}
               artigo={artigo}
-              topo={ '96px'
-                //(Math.floor(Math.random() * (40 - 10)) + 10) + 'vh'
-              }
-              esquerda={ '112px'
-                //(Math.floor(Math.random() * (60 - 0)) + 0) + 'vw'
-              }
             />
-          </div>
+
         )
       })}
 

@@ -12,6 +12,10 @@ const Janela = styled.div`
 
   @media(min-width: 860px) {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 `
 
@@ -78,22 +82,21 @@ const Conteudo = styled.div`
   }
 `
 
-export default function Artigo({ artigo, topo, esquerda }) {
+export default function Artigo({ artigo }) {
   
   const deleteDis = () => {
-    document.getElementById(artigo.nome).remove()
+    let temp = document.getElementById(artigo.nome)
+    temp.style.zIndex = 2
+    temp.style.display = 'none'
   }
 
   const indiceZ = () => {
-    let temp = document.getElementById(artigo.nome)
-    if (temp != null) {
-      temp.style.zIndex += 1
-    }
+    document.getElementById(artigo.nome).style.zIndex += 1
   }
   
   return (
     <Janela id={ artigo.nome }
-    style={{ top: topo, left: esquerda, zIndex: 1 }}
+    style={{ zIndex: 1, display: 'none' }}
     onClick={indiceZ}>
 
       <Titulo>
