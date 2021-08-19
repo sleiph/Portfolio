@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const BarradeTarefas = styled.div`
@@ -64,16 +65,12 @@ const StartMenu = styled.div`
   padding-right: 0px;
   padding-bottom: 0px;
   font-size: 14px;
-  display: none;
   border-style: solid;
   border-width: 2px;
   border-top-color: white;
   border-left-color: white;
   border-right-color: #222;
   border-bottom-color: #222;
-  &.open {
-    display: block;
-  }
   .title-container {
     position: absolute;
     left: 0;
@@ -85,8 +82,8 @@ const StartMenu = styled.div`
       position: absolute;
       transform: rotate(-90deg);
       color: white;
-      top: 430px;
-      left: -51px;
+      top: calc(66px*6);
+      left: -49px;
       font-size: 25px;
       font-weight: bold;
       span {
@@ -109,27 +106,6 @@ const StartMenu = styled.div`
       &.windows-update {
         background-image: url('https://68.media.tumblr.com/f33cc852028056f5c3f41daa4ba007c3/tumblr_odq9qssnET1vgs7gco1_75sq.png');
       }
-      &.programs {
-        background-image: url('https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png');
-      }
-      &.favorites {
-        background-image: url('https://66.media.tumblr.com/2d4a1593f0a13df6d507304708e11a7f/tumblr_odqaag4zd41vgs7gco1_75sq.png');
-      }
-      &.documents {
-        background-image: url('https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png');
-      }
-      &.settings {
-        background-image: url('https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png');
-      }
-      &.find {
-        background-image: url('https://68.media.tumblr.com/d4f271116e0f67b79c64f2a1aac6488e/tumblr_odqaag4zd41vgs7gco8_75sq.png');
-      }
-      &.help {
-        background-image: url('https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png');
-      }
-      &.run {
-        background-image: url('https://66.media.tumblr.com/4ff9a932e9ba9b4736ddc63fae12b4fb/tumblr_odqay8HODs1vgs7gco1_75sq.png');
-      }
       &.log-off {
         background-image: url('https://66.media.tumblr.com/1439f4d5c4bd20dcf6b98916a7cfb24e/tumblr_odqaag4zd41vgs7gco6_75sq.png');
       }
@@ -147,29 +123,41 @@ const StartMenu = styled.div`
 `
 
 export default function Desktop( {artigos} ) {
+  const [start, setStart] = useState('none')
+
   return (
     <BarradeTarefas>
-      <a className="start-btn" href="#0">Start</a>
+      <a className="start-btn" href="#0" 
+      onClick={() => {
+        let temp = document.getElementById("start-menu")
+        if (temp.style.display==='none') {
+          temp.style.display='block'
+          setStart('block')
+        }
+        else {
+          temp.style.display='none'
+          setStart('none')
+        }
+      }}>Start</a>
+      
       <div className="relogio">
-        4:20PM
+        16:20PM
       </div>
-      <StartMenu>
+      <StartMenu id="start-menu" style={{display: 'none'}}>
         <div className="title-container">
-          <div className="title">Windows<span>98</span></div>
+          <div className="title">Ricardo<span>98</span></div>
         </div>
         <ul>
           <li key='update' className="windows-update">Windows Update</li>
           <hr />
-          <li key='programas' className="programs">Programs</li>
-          <li key='favoritos' className="favorites">Favorites</li>
-          <li key='documentos' className="documents">Documents</li>
-          <li key='settings' className="settings">Settings</li>
-          <li key='find' className="find">Find</li>
-          <li key='ajuda' className="help">Help</li>
-          <li key='executar' className="run">Executar...</li>
+          {artigos.map((artigo, index) => {
+            return (
+              <li key={artigo.nome} style={{backgroundImage: `url(${artigo.icone})`}}>{artigo.nome}</li>
+            )
+          })}
           <hr />
-          <li key='logoff' className="log-off ok">Log Off</li>
-          <li key='shutdown' className="shut-down ok">Shut Down...</li>
+          <li key='logoff' className="log-off ok">Sair</li>
+          <li key='shutdown' className="shut-down ok">Desligar...</li>
         </ul>
       </StartMenu>
     </BarradeTarefas>

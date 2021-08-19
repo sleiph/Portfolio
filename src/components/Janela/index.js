@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Janela = styled.div`
   min-height: 100px;
   max-width: 800px;
+  display: block;
   background: ${({ theme }) => theme.desktop.janela};
   padding: 4px;
   -webkit-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
@@ -69,7 +70,8 @@ const Titulo = styled.div`
 
 const Conteudo = styled.div`
   background: white;
-  height: 400px;
+  min-height: 256px;
+  max-height: 80vh;
   width: 100%;
   clear: both;
   border-radius: 1px;
@@ -82,21 +84,17 @@ const Conteudo = styled.div`
   }
 `
 
-export default function Artigo({ artigo }) {
+export default function Artigo({ artigo, funcao }) {
   
-  const deleteDis = () => {
-    let temp = document.getElementById(artigo.nome)
-    temp.style.zIndex = 2
-    temp.style.display = 'none'
-  }
-
   const indiceZ = () => {
-    document.getElementById(artigo.nome).style.zIndex += 1
+    let jan = document.getElementById(artigo.nome)
+    if (jan !== null)
+      jan.style.zIndex += 1
   }
   
   return (
     <Janela id={ artigo.nome }
-    style={{ zIndex: 1, display: 'none' }}
+    style={{ zIndex: 1 }}
     onClick={indiceZ}>
 
       <Titulo>
@@ -107,7 +105,7 @@ export default function Artigo({ artigo }) {
           { artigo.nome }
         </div>
         <div className="fechar">
-          <button onClick={ deleteDis }>
+          <button onClick={ funcao }>
             &#10006;
           </button>
         </div>
