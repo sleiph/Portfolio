@@ -152,7 +152,10 @@ export default function Desktop( {artigos} ) {
           <hr />
           {artigos.map((artigo, index) => {
             return (
-              <li key={artigo.nome} style={{backgroundImage: `url(${artigo.icone})`}}>{artigo.nome}</li>
+              <li key={artigo.nome}
+              style={{backgroundImage: `url(${artigo.icone})`}}>
+                {artigo.nome}
+              </li>
             )
           })}
           <hr />
