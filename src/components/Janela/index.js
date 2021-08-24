@@ -2,22 +2,21 @@ import styled from 'styled-components';
 import Draggable from 'react-draggable'
 
 const Janela = styled.div`
-  min-height: 100px;
-  max-width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 25px;
+  max-width: 800px;
   background: ${({ theme }) => theme.desktop.janela};
   padding: 4px;
   -webkit-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
   box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.75);
   border: 1.4px solid white;
-  position: absolute;
-  top: 25px;
-  left: 5%;
+  
 
-  @media(min-width: 860px) {
-    max-width: 800px;
-    top: 25%;
-    left: 25%;
+  @media(max-width: 860px) {
+    width: 90vw;
   }
 `
 
@@ -70,7 +69,7 @@ const Titulo = styled.div`
 
 const Conteudo = styled.div`
   background: white;
-  min-height: 256px;
+  min-height: 208px;
   max-height: 80vh;
   width: 100%;
   clear: both;
@@ -78,18 +77,20 @@ const Conteudo = styled.div`
   border: 1.2px solid black;
   overflow: auto;
 
-  @media(min-width: 860px) {
-    min-width: 400px;
+  @media(max-width: 860px) {
+    height: 80vh;
   }
 `
 
 export default function Artigo({ artigo, fechar, focar }) {
 
   return (
-    <Draggable>
+    <Draggable
+    handle=".head"
+    positionOffset={{x: '-50%', y: '-50%'}}>
       <Janela id={ artigo.nome }>
         
-        <Titulo id={ artigo.nome + "header" }>
+        <Titulo className="head">
           <div className="icone" onClick={focar}>
             <img src={ artigo.icone } alt="icone do programa" />
           </div>

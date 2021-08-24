@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const BarradeTarefas = styled.div`
+export const BarradeTarefas = styled.div`
   background: ${({ theme }) => theme.desktop.janela};
   height: 38px;
   width: 100%;
@@ -57,7 +56,7 @@ const BarradeTarefas = styled.div`
   }
 `
 
-const StartMenu = styled.div`
+export const StartMenu = styled.div`
   position: absolute;
   bottom: 38px;
   background: ${({ theme }) => theme.desktop.janela};
@@ -121,48 +120,3 @@ const StartMenu = styled.div`
     }
   }
 `
-
-export default function Desktop( {artigos} ) {
-  const [start, setStart] = useState('none')
-
-  return (
-    <BarradeTarefas>
-      <a className="start-btn" href="#0" 
-      onClick={() => {
-        let temp = document.getElementById("start-menu")
-        if (temp.style.display==='none') {
-          temp.style.display='block'
-          setStart('block')
-        }
-        else {
-          temp.style.display='none'
-          setStart('none')
-        }
-      }}>Start</a>
-      
-      <div className="relogio">
-        16:20PM
-      </div>
-      <StartMenu id="start-menu" style={{display: 'none'}}>
-        <div className="title-container">
-          <div className="title">Ricardo<span>98</span></div>
-        </div>
-        <ul>
-          <li key='update' className="windows-update">Windows Update</li>
-          <hr />
-          {artigos.map((artigo, index) => {
-            return (
-              <li key={artigo.nome}
-              style={{backgroundImage: `url(${artigo.icone})`}}>
-                {artigo.nome}
-              </li>
-            )
-          })}
-          <hr />
-          <li key='logoff' className="log-off ok">Sair</li>
-          <li key='shutdown' className="shut-down ok">Desligar...</li>
-        </ul>
-      </StartMenu>
-    </BarradeTarefas>
-  )
-}
