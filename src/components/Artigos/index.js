@@ -11,14 +11,30 @@ export const MeuCorpo = styled.div`
   }
 `
 
-export const Titulo = styled.h1`
+export const Titulo = styled.h3`
+  font-size: large;
+  font-weight: bold;
+`
+
+export const Notas = styled.p`
   width: 100%;
-  font-size: 42px;
-  color: ${({ theme }) => theme.colors.primaria};
+  line-height: 1.75;
+
+  a{
+    font-weight: bold;
+    text-decoration: underline;
+    
+    &:link {
+      color: ${({ theme }) => theme.desktop.fundo};
+    }
+    &:visited {
+      color: ${({ theme }) => theme.desktop.azul_windows};
+    }
+  }
 `
 
 export const Pasta = styled.div`
-  width: 96px;
+  width: 92px;
   min-height: 90px;
 
   img {

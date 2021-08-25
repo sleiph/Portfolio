@@ -7,16 +7,16 @@ export default function Desenhos( props ) {
       imagem: './img/nedankinde.png'
     },
     {
-      nome: 'aaaaaaaaa',
-      imagem: './img/nedankinde.png'
+      nome: 'Quero ser Lourenço Mutarelli',
+      imagem: './img/mutarelli.jpg'
     },
     {
-      nome: 'bbbbbb b bbbbbb',
-      imagem: './img/nedankinde.png'
+      nome: 'h2',
+      imagem: './img/h2.jpg'
     },
     {
-      nome: 'cccccc ccccc ccccccc',
-      imagem: './img/nedankinde.png'
+      nome: 'Vikings',
+      imagem: './img/vikings.jpg'
     }
   ]
 

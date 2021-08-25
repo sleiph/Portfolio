@@ -1,10 +1,9 @@
-import { MeuCorpo, Titulo } from '..'
+import { MeuCorpo, Notas } from '..'
 
 export default function Formacao() {
   return (
     <MeuCorpo>
-      <Titulo>Formação & Experiências</Titulo>
-      <p>Tô me formando.</p>
+      <Notas>Tô me formando.</Notas>
     </MeuCorpo>
   )
 }

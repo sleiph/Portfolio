@@ -77,7 +77,7 @@ export default function Home() {
       conteudo: <Formacao></Formacao>
     },
     {
-      nome:'@Sobre',
+      nome:'Contatos',
       icone: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
       conteudo: <Sobre />
     },
@@ -106,8 +106,14 @@ export default function Home() {
     }
   }
 
-  function handleClick(value) { 
-    setJanelas( janelas.concat([value]) )
+  function handleClick(value) {
+    if (janelas.filter(j => j.nome === value.nome).length > 0) {
+      let temp = arrayRemove(janelas, value)
+      setJanelas( temp.concat([value]) )
+    }
+    else {
+      setJanelas( janelas.concat([value]) )
+    } 
   }
 
   return (
@@ -115,7 +121,6 @@ export default function Home() {
 
       <Icones>
         {artigos.map((artigo, index) => {
-
           return (
             <Icone key={artigo.nome+'-icone'}
             onClick={

@@ -1,15 +1,41 @@
-import { MeuCorpo, Titulo } from '..'
+import { MeuCorpo, Pasta } from '..'
 
 export default function Sobre() {
+  const contatos = [
+    {
+      nome: 'GitHub',
+      imagem: './img/github.png',
+      link: 'https://github.com/sleiph'
+    },
+    {
+      nome: 'LinkedIn',
+      imagem: './img/linkedin.png',
+      link: 'https://www.linkedin.com/in/ricardo-gomes-aa40a51b1/'
+    },
+    {
+      nome: 'dribbble',
+      imagem: './img/dribbble.png',
+      link: 'https://dribbble.com/ricardoalvesgomes'
+    },
+    {
+      nome: 'Behance',
+      imagem: './img/behance.png',
+      link: 'https://www.behance.net/ricardoalvesgomes'
+    }
+  ]
+
   return (
     <MeuCorpo>
-      <Titulo>Ricardo Gomes</Titulo>
-
-      <p>Como você vai neste dia de hoje?</p>
-
-      <p>Não que eu esteja realmente interessado em como você está, eu só escrevi esse texto pra testar a aplicação mesmo.
-        A aplicação, aliás, vai ser o meu portfólio algum dia, mas se você já ficou interessado no meu trabalho só com essa página sem propósito, por que não entra no meu <a href='https://github.com/sleiph'>gitHub</a> e confere meus outros trabalhos?
-      </p>
+      {contatos.map((contato) => {
+        return (
+          <a href={contato.link} key={contato.nome}>
+            <Pasta>
+              <img src={contato.imagem} alt={contato.nome} />
+              <p>{contato.nome}</p>
+            </Pasta>
+          </a>
+        )
+      })}
     </MeuCorpo>
   )
 }

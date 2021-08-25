@@ -1,7 +1,7 @@
 # Ricardo Gomes
 
 ### Tecnologias
-Next.js | React.js | Node.js | styled-components | [React-Draggable](https://github.com/react-grid-layout/react-draggable)
+Next.js | [styled-components](https://styled-components.com/) | [React-Draggable](https://github.com/react-grid-layout/react-draggable)
 
 criado com o comando:
 ```bash
