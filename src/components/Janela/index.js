@@ -6,7 +6,7 @@ const Janela = styled.div`
   top: 50%;
   left: 50%;
   min-width: 25px;
-  max-width: 800px;
+  max-width: 920px;
   background: ${({ theme }) => theme.desktop.janela};
   padding: 4px;
   -webkit-box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
@@ -77,8 +77,8 @@ const Conteudo = styled.div`
   border: 1.2px solid black;
   overflow: auto;
 
-  @media(max-width: 860px) {
-    height: 80vh;
+  img {
+    max-width:1080px;
   }
 `
 

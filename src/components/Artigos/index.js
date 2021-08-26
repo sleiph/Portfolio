@@ -12,6 +12,8 @@ export const MeuCorpo = styled.div`
 `
 
 export const Titulo = styled.h3`
+  width: 100%;
+  line-height: 1.75;
   font-size: large;
   font-weight: bold;
 `
@@ -41,6 +43,8 @@ export const Pasta = styled.div`
     display: block;
     margin: 5px auto;
     width: 48px;
+    height: 46px;
+    object-fit: cover;
   }
 
   p {

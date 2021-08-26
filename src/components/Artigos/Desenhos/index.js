@@ -17,6 +17,30 @@ export default function Desenhos( props ) {
     {
       nome: 'Vikings',
       imagem: './img/vikings.jpg'
+    },
+    {
+      nome: 'Daytona',
+      imagem: './img/daytona.png'
+    },
+    {
+      nome: 'Iguaçú',
+      imagem: './img/iguacu.jpg'
+    },
+    {
+      nome: 'Lupus',
+      imagem: './img/lupus.jpg'
+    },
+    {
+      nome: 'Caliban',
+      imagem: './img/caliban.jpg'
+    },
+    {
+      nome: 'Thomassons',
+      imagem: './img/thomassons.jpg'
+    },
+    {
+      nome: 'Expressionist',
+      imagem: './img/expressionist.jpg'
     }
   ]
 

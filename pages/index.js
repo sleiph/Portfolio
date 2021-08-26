@@ -62,14 +62,14 @@ export default function Home() {
       conteudo: <Projetos />
     },
     {
-      nome:'Uns desenhos aí',
-      icone: 'https://66.media.tumblr.com/4ff9a932e9ba9b4736ddc63fae12b4fb/tumblr_odqay8HODs1vgs7gco1_75sq.png',
-      conteudo: <Desenhos value={janelas} onClick={handleClick} />
-    },
-    {
       nome:'Conhecimentos',
       icone: 'https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png',
       conteudo: <Conhecimentos />
+    },
+    {
+      nome:'Uns desenhos aí',
+      icone: './img/paint.png',
+      conteudo: <Desenhos value={janelas} onClick={handleClick} />
     },
     {
       nome:'Formação & Experiências',
