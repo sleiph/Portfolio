@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Draggable from 'react-draggable'
 
-const Janela = styled.div`
+export const Janela = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,7 +20,7 @@ const Janela = styled.div`
   }
 `
 
-const Titulo = styled.div`
+export const Titulo = styled.div`
   background: ${({ theme }) => theme.desktop.azul_windows};
   width: 100%;
   height: 25px;
@@ -41,10 +41,10 @@ const Titulo = styled.div`
   }
 
   .titulo {
+    overflow: hidden;
 	  color: white;
     padding-left: 5px;
 	  padding-top: 2px;
-    float: left;
   }
 
   .fechar {
@@ -94,17 +94,17 @@ export default function Artigo({ artigo, fechar, focar }) {
           <div className="icone" onClick={focar}>
             <img src={ artigo.icone } alt="icone do programa" />
           </div>
-          <div className="titulo" onClick={focar}>
-            { artigo.nome }
-          </div>
           <div className="fechar">
             <button onClick={ fechar }>
               &#10006;
             </button>
           </div>
+          <div className="titulo" onClick={focar}>
+            { artigo.nome }
+          </div>
         </Titulo>
 
-        <Conteudo>
+        <Conteudo className='conteudo'>
           { artigo.conteudo }
         </Conteudo>
 

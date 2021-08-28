@@ -21,6 +21,16 @@ export default function Sobre() {
       nome: 'Behance',
       imagem: './img/behance.png',
       link: 'https://www.behance.net/ricardoalvesgomes'
+    },
+    {
+      nome: 'sleiph @gmail.com',
+      imagem: './img/gmail.png',
+      link: 'mailto:sleiph@gmail.com'
+    },
+    {
+      nome: '(11) 94520-0418',
+      imagem: './img/whatsapp.png',
+      link: 'https://api.whatsapp.com/send?phone=+5511945200418'
     }
   ]
 

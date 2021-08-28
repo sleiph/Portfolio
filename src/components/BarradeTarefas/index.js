@@ -70,6 +70,7 @@ export const StartMenu = styled.div`
   border-left-color: white;
   border-right-color: #222;
   border-bottom-color: #222;
+
   .title-container {
     position: absolute;
     left: 0;
@@ -77,6 +78,7 @@ export const StartMenu = styled.div`
     width: 37px;
     height: 100%;
     background: linear-gradient( #000184 60%, #0f80cd);
+
     .title {
       position: absolute;
       transform: rotate(-90deg);
@@ -85,17 +87,24 @@ export const StartMenu = styled.div`
       left: -49px;
       font-size: 25px;
       font-weight: bold;
+
       span {
         font-weight: 100;
       }
     }
   }
+
   hr {
     margin: 0 4px 0 40px;
   }
+  
   ul {
-    margin: 0;
-    padding: 0;
+    a {
+      text-decoration: none;
+      color:inherit;
+    }
+
+
     li {
       padding: 18px 100px 18px 100px;
       list-style: none;
@@ -105,8 +114,8 @@ export const StartMenu = styled.div`
       &.windows-update {
         background-image: url('https://68.media.tumblr.com/f33cc852028056f5c3f41daa4ba007c3/tumblr_odq9qssnET1vgs7gco1_75sq.png');
       }
-      &.log-off {
-        background-image: url('https://66.media.tumblr.com/1439f4d5c4bd20dcf6b98916a7cfb24e/tumblr_odqaag4zd41vgs7gco6_75sq.png');
+      &.config {
+        background-image: url('https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png');
       }
       &.shut-down {
         background-image: url('https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png');

@@ -21,6 +21,18 @@ export default function Conhecimentos() {
     {
       nome: 'python',
       imagem: './img/python.png'
+    },
+    {
+      nome: 'MySQL',
+      imagem: './img/mysql.png'
+    },
+    {
+      nome: 'Adobe Photoshop',
+      imagem: './img/photoshop.png'
+    },
+    {
+      nome: 'Adobe Illustrator',
+      imagem: './img/illustrator.png'
     }
   ]
 

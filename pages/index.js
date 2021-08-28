@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components'
 
+import { theme } from '../pages/_app'
 import Projetos from '../src/components/Artigos/Projetos'
 import Desenhos from '../src/components/Artigos/Desenhos'
 import Conhecimentos from '../src/components/Artigos/Conhecimentos'
@@ -9,6 +10,7 @@ import Sobre from '../src/components/Artigos/Sobre'
 import QuatrozeroQuatro from '../src/components/Artigos/404'
 import {BarradeTarefas, StartMenu} from '../src/components/BarradeTarefas'
 import Janela from '../src/components/Janela'
+import Config from '../src/components/Config'
 
 const AreadeTrabalho = styled.main`
   background: ${({ theme }) => theme.desktop.fundo};
@@ -55,6 +57,8 @@ export default function Home() {
 
   const [start, setStart] = useState('none')
 
+  const [config, setConfig] = useState(false)
+
   const artigos = [
     {
       nome:'Projetos',
@@ -72,7 +76,7 @@ export default function Home() {
       conteudo: <Desenhos value={janelas} onClick={handleClick} />
     },
     {
-      nome:'Formação & Experiências',
+      nome:'Formação & Certificados',
       icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
       conteudo: <Formacao></Formacao>
     },
@@ -148,12 +152,23 @@ export default function Home() {
         <div className="relogio">
           16:20PM
         </div>
+
         <StartMenu id="start-menu" style={{display: 'none'}}>
           <div className="title-container">
             <div className="title">Ricardo<span>98</span></div>
           </div>
           <ul>
-            <li key='update' className="windows-update">Windows Update</li>
+            <li key='update' className="windows-update"
+            onClick={
+              () => {
+                let hex = '#' +  Math.random().toString(16).substr(-6)
+                document.getElementById("area-de-trabalho")
+                .style.background = hex
+              }
+            }
+            >
+              Windows Update
+            </li>
             <hr />
             {artigos.map((artigo, index) => {
               return (
@@ -174,10 +189,22 @@ export default function Home() {
               )
             })}
             <hr />
-            <li key='logoff' className="log-off ok">Sair</li>
-            <li key='shutdown' className="shut-down ok">Desligar...</li>
+            <li key='config' className="config ok"
+            onClick={
+              () => {
+                setConfig(!config)
+              }
+            }>
+              Configurações
+            </li>
+            <a href='https://pt.wikipedia.org/wiki/Special:Random'>
+              <li key='shutdown' className="shut-down ok">
+                Sair
+              </li>
+            </a>
           </ul>
         </StartMenu>
+        
       </BarradeTarefas>
       
       {janelas.map((artigo, index) => {
@@ -196,6 +223,56 @@ export default function Home() {
           />
         )
       })}
+
+      {
+        config ?
+        <Config fecharTudo={
+          () => {
+            setJanelas([])
+            setConfig(false)
+          }
+        }
+        corHead={
+          () => {
+            let hex = '#' +  Math.random().toString(16).substr(-6)
+            var titulos = document.getElementsByClassName('head')
+            for(var i = 0; i < titulos.length; i++){
+              titulos[i].style.background = hex;
+            }
+          }
+        }
+        corCorpo={
+          () => {
+            var hex = '#' + (function lol(m, s, c) {
+              return s[m.floor(m.random() * s.length)] +
+                  (c && lol(m, s, c - 1));
+          })(Math, '3456789ABCDEF', 4)
+            var corpos = document.getElementsByClassName('conteudo')
+            for(var i = 0; i < corpos.length; i++){
+              corpos[i].style.background = hex;
+            }
+          }
+        }
+        resetarCores={
+          () => {
+            document.getElementById("area-de-trabalho")
+                .style.background = theme.desktop.fundo
+            var titulos = document.getElementsByClassName('head')
+            for(var i = 0; i < titulos.length; i++){
+              titulos[i].style.backgroundColor = theme.desktop.azul_windows
+            }
+            var corpos = document.getElementsByClassName('conteudo')
+            for(var i = 0; i < corpos.length; i++){
+              corpos[i].style.background = 'white';
+            }
+          }
+        }
+        fechar={
+          () => { setConfig(false) }
+        }
+        />
+        : <div></div>
+      }
 
     </AreadeTrabalho>
   )

@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = {
+export const theme = {
   colors: {
     primaria: '#eb5000',
     secundaria: "#eb0500",
