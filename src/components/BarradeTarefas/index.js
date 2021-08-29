@@ -77,7 +77,7 @@ export const StartMenu = styled.div`
     bottom: 0;
     width: 37px;
     height: 100%;
-    background: linear-gradient( #000184 60%, #0f80cd);
+    background: ${({ theme }) => theme.desktop.titulo_janela};
 
     .title {
       position: absolute;
@@ -122,7 +122,7 @@ export const StartMenu = styled.div`
       }
       
       &:hover {
-        background-color: ${({ theme }) => theme.desktop.azul_windows};
+        background-color: ${({ theme }) => theme.desktop.titulo_janela};
         color: white;
         cursor: pointer;
       }

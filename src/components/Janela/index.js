@@ -21,7 +21,7 @@ export const Janela = styled.div`
 `
 
 export const Titulo = styled.div`
-  background: ${({ theme }) => theme.desktop.azul_windows};
+  background: ${({ theme }) => theme.desktop.titulo_janela};
   width: 100%;
   height: 25px;
   margin-bottom: 2px;
@@ -68,7 +68,7 @@ export const Titulo = styled.div`
 `
 
 const Conteudo = styled.div`
-  background: white;
+  background: ${({ theme }) => theme.desktop.fundo_janela};
   min-height: 208px;
   max-height: 80vh;
   width: 100%;

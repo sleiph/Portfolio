@@ -27,7 +27,7 @@ Pra compilar e rodar:
 yarn dev
 ```
 
-!(Eu em 256x256px)[./public/android-chrome-256x256.png]
+![Eu em 256x256px](/public/android-chrome-256x256.png)
 
 ### Coisas à fazer
 
@@ -41,3 +41,5 @@ yarn dev
 - A janela abre em uma posição aleatória?
 - Abrir o menu iniciar com CSS puro
 - Arrumar o horário? não sei... quem vai entrar no meu site pra ver a hora?
+- Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
+- Função nas configurações pra mudar o tamanho da fonte

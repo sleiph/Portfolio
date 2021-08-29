@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import { theme } from '../pages/_app'
+import { theme } from './_app'
 import Projetos from '../src/components/Artigos/Projetos'
 import Desenhos from '../src/components/Artigos/Desenhos'
 import Conhecimentos from '../src/components/Artigos/Conhecimentos'
@@ -47,7 +47,7 @@ const Icone = styled.div`
 
   &:active {
     p {
-      background-color: ${({ theme }) => theme.desktop.azul_windows};
+      background-color: ${({ theme }) => theme.desktop.titulo_janela};
     }
   }
 `
@@ -55,7 +55,7 @@ const Icone = styled.div`
 export default function Home() {
   const [janelas, setJanelas] = useState([])
 
-  const [start, setStart] = useState('none')
+  const [start, setStart] = useState(false)
 
   const [config, setConfig] = useState(false)
 
@@ -99,15 +99,7 @@ export default function Home() {
   }
 
   const exibirStart = () => {
-    let temp = document.getElementById("start-menu")
-    if (temp.style.display==='none') {
-      temp.style.display='block'
-      setStart('block')
-    }
-    else {
-      temp.style.display='none'
-      setStart('none')
-    }
+    setStart(!start)
   }
 
   function handleClick(value) {
@@ -153,57 +145,60 @@ export default function Home() {
           16:20PM
         </div>
 
-        <StartMenu id="start-menu" style={{display: 'none'}}>
-          <div className="title-container">
-            <div className="title">Ricardo<span>98</span></div>
-          </div>
-          <ul>
-            <li key='update' className="windows-update"
-            onClick={
-              () => {
-                let hex = '#' +  Math.random().toString(16).substr(-6)
-                document.getElementById("area-de-trabalho")
-                .style.background = hex
+        {start ? 
+          <StartMenu id="start-menu">
+            <div id='start-menu-titulo' className="title-container">
+              <div className="title">Ricardo<span>98</span></div>
+            </div>
+            <ul>
+              <li key='update' className="windows-update"
+              onClick={
+                () => {
+                  let hex = '#' +  Math.random().toString(16).substr(-6)
+                  document.getElementById("area-de-trabalho")
+                  .style.background = hex
+                }
               }
-            }
-            >
-              Windows Update
-            </li>
-            <hr />
-            {artigos.map((artigo, index) => {
-              return (
-                <li key={artigo.nome}
-                style={{backgroundImage: `url(${artigo.icone})`}}
-                onClick={
-                  () => {
-                    if (janelas.filter(j => j.nome === artigo.nome).length > 0) {
-                      let temp = arrayRemove(janelas, artigo)
-                      setJanelas( temp.concat([artigo]) )
-                    }
-                    else {
-                      setJanelas( janelas.concat([artigo]) )
-                    }
-                }}>
-                  {artigo.nome}
-                </li>
-              )
-            })}
-            <hr />
-            <li key='config' className="config ok"
-            onClick={
-              () => {
-                setConfig(!config)
-              }
-            }>
-              Configurações
-            </li>
-            <a href='https://pt.wikipedia.org/wiki/Special:Random'>
-              <li key='shutdown' className="shut-down ok">
-                Sair
+              >
+                Windows Update
               </li>
-            </a>
-          </ul>
-        </StartMenu>
+              <hr />
+              {artigos.map((artigo, index) => {
+                return (
+                  <li key={artigo.nome}
+                  style={{backgroundImage: `url(${artigo.icone})`}}
+                  onClick={
+                    () => {
+                      if (janelas.filter(j => j.nome === artigo.nome).length > 0) {
+                        let temp = arrayRemove(janelas, artigo)
+                        setJanelas( temp.concat([artigo]) )
+                      }
+                      else {
+                        setJanelas( janelas.concat([artigo]) )
+                      }
+                  }}>
+                    {artigo.nome}
+                  </li>
+                )
+              })}
+              <hr />
+              <li key='config' className="config ok"
+              onClick={
+                () => {
+                  setConfig(!config)
+                }
+              }>
+                Configurações
+              </li>
+              <a href='https://pt.wikipedia.org/wiki/Special:Random'>
+                <li key='shutdown' className="shut-down ok">
+                  Sair
+                </li>
+              </a>
+            </ul>
+          </StartMenu>
+        : <div></div>
+        }
         
       </BarradeTarefas>
       
@@ -235,6 +230,7 @@ export default function Home() {
         corHead={
           () => {
             let hex = '#' +  Math.random().toString(16).substr(-6)
+            theme.desktop.titulo_janela = hex
             var titulos = document.getElementsByClassName('head')
             for(var i = 0; i < titulos.length; i++){
               titulos[i].style.background = hex;
@@ -246,7 +242,8 @@ export default function Home() {
             var hex = '#' + (function lol(m, s, c) {
               return s[m.floor(m.random() * s.length)] +
                   (c && lol(m, s, c - 1));
-          })(Math, '3456789ABCDEF', 4)
+            })(Math, '3456789ABCDEF', 4)
+            theme.desktop.fundo_janela = hex
             var corpos = document.getElementsByClassName('conteudo')
             for(var i = 0; i < corpos.length; i++){
               corpos[i].style.background = hex;
@@ -255,15 +252,17 @@ export default function Home() {
         }
         resetarCores={
           () => {
+            theme.desktop.titulo_janela = '#01007A'
+            theme.desktop.fundo_janela = 'white'
             document.getElementById("area-de-trabalho")
                 .style.background = theme.desktop.fundo
             var titulos = document.getElementsByClassName('head')
             for(var i = 0; i < titulos.length; i++){
-              titulos[i].style.backgroundColor = theme.desktop.azul_windows
+              titulos[i].style.backgroundColor = theme.desktop.titulo_janela
             }
             var corpos = document.getElementsByClassName('conteudo')
             for(var i = 0; i < corpos.length; i++){
-              corpos[i].style.background = 'white';
+              corpos[i].style.background = theme.desktop.fundo_janela;
             }
           }
         }

@@ -14,15 +14,11 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export const theme = {
-  colors: {
-    primaria: '#eb5000',
-    secundaria: "#eb0500",
-    complementar: "#886cc6"
-  },
   desktop: {
     janela: '#BFBFBF',
-    azul_windows: '#01007A',
-    fundo: '#008080'
+    titulo_janela: '#01007A',
+    fundo: '#008080',
+    fundo_janela: 'white'
   }
 }
 
@@ -38,7 +34,7 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content={theme.colors.primaria}></meta>
+        <meta name="theme-color" content={theme.desktop.titulo_janela}></meta>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

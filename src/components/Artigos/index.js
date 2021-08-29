@@ -30,7 +30,7 @@ export const Notas = styled.p`
       color: ${({ theme }) => theme.desktop.fundo};
     }
     &:visited {
-      color: ${({ theme }) => theme.desktop.azul_windows};
+      color: ${({ theme }) => theme.desktop.titulo_janela};
     }
   }
 `
@@ -54,7 +54,7 @@ export const Pasta = styled.div`
 
   &:active {
     p {
-      background-color: ${({ theme }) => theme.desktop.azul_windows};
+      background-color: ${({ theme }) => theme.desktop.titulo_janela};
       color: white;
     }
   }
