@@ -2,7 +2,7 @@
 
 Taí o meu portfólio, o que eu tenho a ver com o Windows 98? Nada... eu só pensei nesse tema enquanto estudava o Next e acabei deixando.
 
-Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app).
+Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app/home).
 
 Layout ~copiado~ baseado [nesse projeto do Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
 

@@ -33,6 +33,7 @@ const Icones = styled.div`
 const Icone = styled.div`
   width: 96px;
   min-height: 80px;
+  cursor: pointer;
 
   img {
     display: block;
@@ -93,6 +94,7 @@ function BTarefas(propriedades) {
                 style={{backgroundImage: `url(${artigo.icone})`}}
                 onClick={
                   () => {
+                    propriedades.setStart(!propriedades.start)
                     var caminho = router.asPath
                     if (caminho === '/home') {
                       caminho = artigo.nome
