@@ -17,37 +17,37 @@ export default function Formacao() {
     {
       nome: 'everis - .NET',
       data: 'Agosto de 2021',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'GFT - Java Developer',
       data: 'Junho de 2021',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'santander - Mobile Developer',
       data: 'Abril de 2021',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'everis - Kotlin Developer',
       data: 'Março de 2021',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'React Web Developer',
       data: 'Outubro de 2020',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'Fullstack Developer',
       data: 'Junho de 2020',
-      imagem: './img/dio.png'
+      imagem: '/img/dio.png'
     },
     {
       nome: 'Python - Análise de Dados',
       data: 'Maio de 2020',
-      imagem: './img/dsa.png'
+      imagem: '/img/dsa.png'
     }
   ]
 

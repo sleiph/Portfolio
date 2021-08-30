@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import styled from 'styled-components';
 import Draggable from 'react-draggable'
 
@@ -82,8 +83,9 @@ const Conteudo = styled.div`
   }
 `
 
-export default function Artigo({ artigo, fechar, focar }) {
-
+export default function Artigo({ artigo }) {
+  const router = useRouter()
+  
   return (
     <Draggable
     handle=".head"
@@ -91,15 +93,35 @@ export default function Artigo({ artigo, fechar, focar }) {
       <Janela id={ artigo.nome }>
         
         <Titulo className="head">
-          <div className="icone" onClick={focar}>
+          <div className="icone" onClick={
+            () => {
+              var caminho = router.asPath
+              caminho = caminho.replace('/' + artigo.nome, '')
+              caminho += '/' + artigo.nome
+              router.push(`${caminho}`)
+            }
+          }>
             <img src={ artigo.icone } alt="icone do programa" />
           </div>
           <div className="fechar">
-            <button onClick={ fechar }>
+            <button onClick={
+              () =>  {
+                var caminho = router.asPath.replace('/' + artigo.nome, '')
+                if (caminho === '') caminho = '/home'
+                router.replace(`${caminho}`)
+              }
+            }>
               &#10006;
             </button>
           </div>
-          <div className="titulo" onClick={focar}>
+          <div className="titulo" onClick={
+            () => {
+              var caminho = router.asPath
+              caminho = caminho.replace('/' + artigo.nome, '')
+              caminho += '/' + artigo.nome
+              router.push(`${caminho}`)
+            }
+          }>
             { artigo.nome }
           </div>
         </Titulo>

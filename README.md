@@ -33,8 +33,6 @@ yarn dev
 
 ##### Importantes
 - Arrumar o 'fechar janela' pra funcionar em celular...
-- Criar as routes todas
-- Arrumar os hooks dos 'desenhos'
 
 ##### Pra fazer algum dia
 - Usar classes?
@@ -42,4 +40,4 @@ yarn dev
 - Abrir o menu iniciar com CSS puro
 - Arrumar o horário? não sei... quem vai entrar no meu site pra ver a hora?
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
-- Função nas configurações pra mudar o tamanho da fonte
+- Função nas configurações pra mudar o tamanho das fonte

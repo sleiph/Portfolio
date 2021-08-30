@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import Draggable from 'react-draggable'
 
+import { theme } from '../../../pages/_app'
 import {Janela, Titulo} from '../Janela'
 
 const Conteudo = styled.div`
@@ -63,8 +65,9 @@ const Botao = styled.a`
   }
 `
 
-export default function Config({ fecharTudo, fechar, corHead, corCorpo, resetarCores }) {
-
+export default function Config(  ) {
+  const router = useRouter()
+  
   return (
     <Draggable
     handle=".head"
@@ -72,41 +75,126 @@ export default function Config({ fecharTudo, fechar, corHead, corCorpo, resetarC
       <Janela id='config'>
           
         <Titulo className="head">
-          <div className="icone">
+          <div className="icone" onClick={
+            () => {
+              var caminho = router.asPath
+              caminho = caminho.replace('/config', '')
+              caminho += '/config'
+              router.push(`${caminho}`)
+            }
+          }>
             <img src='https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png' alt="icone das configuracoes" />
           </div>
           <div className="fechar">
-            <button onClick={ fechar }>
+            <button onClick={ 
+              () => {
+                var caminho = router.asPath.replace('/config', '')
+                if (caminho === '') caminho = '/home'
+                router.replace(`${caminho}`)
+              }
+            }>
               &#10006;
             </button>
           </div>
-          <div className="titulo">
+          <div className="titulo" onClick={
+            () => {
+              var caminho = router.asPath
+              caminho = caminho.replace('/config', '')
+              caminho += '/config'
+              router.push(`${caminho}`)
+            }
+          }>
             Configurações
           </div>
 
         </Titulo>
 
         <Conteudo>
-          <ImgSys src='./img/win98.png' />
-          <Campo>
-            <h5>Janelas</h5>
-            <Botao onClick={ fecharTudo }>
-              Fechar todas as janelas
-            </Botao>
-            <Botao onClick={ corHead }>
-              Mudar a cor da barra de título
-            </Botao>
-            <Botao onClick={ corCorpo }>Mudar a cor de fundo</Botao>
-          </Campo>
+          <ImgSys src='/img/win98.png' />
           <Campo>
             <h5>Estilos</h5>
-            <Botao onClick={ resetarCores }>Resetar todas as cores</Botao>
             <Botao onClick={
               () => {
-                var musiquinha = new Audio('./snd/startup.wav')
+                let hex = '#' +  Math.random().toString(16).substr(-6)
+                document.getElementById("area-de-trabalho")
+                .style.background = hex
+              }
+            }>
+              Mudar a cor do plano de fundo
+            </Botao>
+            <Botao onClick={
+              () => {
+                theme.desktop.titulo_janela = '#01007A'
+                theme.desktop.fundo_janela = 'white'
+                document.getElementById("area-de-trabalho")
+                    .style.background = theme.desktop.fundo
+                var titulos = document.getElementsByClassName('head')
+                for(var i = 0; i < titulos.length; i++){
+                  titulos[i].style.backgroundColor = theme.desktop.titulo_janela
+                }
+                var corpos = document.getElementsByClassName('conteudo')
+                for(var i = 0; i < corpos.length; i++){
+                  corpos[i].style.background = theme.desktop.fundo_janela;
+                }
+              }
+            }>
+              Resetar todas as cores
+            </Botao>
+          </Campo>
+          <Campo>
+            <h5>Janelas</h5>
+            <Botao onClick={
+              () => {
+                router.replace('/home')
+              }
+            }>
+              Fechar todas as janelas
+            </Botao>
+            <Botao onClick={
+              () => {
+                let hex = '#' +  Math.random().toString(16).substr(-6)
+                theme.desktop.titulo_janela = hex
+                var titulos = document.getElementsByClassName('head')
+                for(var i = 0; i < titulos.length; i++){
+                  titulos[i].style.background = hex;
+                }
+              }
+            }>
+              Mudar a cor da barra de título
+            </Botao>
+            <Botao onClick={
+              () => {
+                var hex = '#' + (function lol(m, s, c) {
+                  return s[m.floor(m.random() * s.length)] +
+                      (c && lol(m, s, c - 1));
+                })(Math, '3456789ABCDEF', 4)
+                theme.desktop.fundo_janela = hex
+                var corpos = document.getElementsByClassName('conteudo')
+                for(var i = 0; i < corpos.length; i++){
+                  corpos[i].style.background = hex;
+                }
+              }
+            }>
+              Mudar a cor de fundo
+            </Botao>
+          </Campo>
+          <Campo>
+            <h5>Sistema</h5>
+            <Botao onClick={
+              () => {
+                var musiquinha = new Audio('/snd/startup.wav')
                 musiquinha.play()
               }
-            }>Tocar uma musiquina</Botao>
+            }>
+              Tocar uma musiquina
+            </Botao>
+            <Botao onClick={
+              () => {
+                window.location.href='https://pt.wikipedia.org/wiki/Special:Random'
+              }
+            }>
+              Sair
+            </Botao>
           </Campo>
         </Conteudo>
 

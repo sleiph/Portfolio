@@ -83,7 +83,6 @@ export const StartMenu = styled.div`
       position: absolute;
       transform: rotate(-90deg);
       color: white;
-      top: calc(66px*6);
       left: -49px;
       font-size: 25px;
       font-weight: bold;

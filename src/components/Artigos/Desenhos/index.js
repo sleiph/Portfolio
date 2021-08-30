@@ -1,46 +1,50 @@
+import router, { useRouter } from 'next/router'
+
 import { MeuCorpo, Pasta } from '..'
 
-export default function Desenhos( props ) {
+export default function Desenhos(  ) {
+  const router = useRouter()
+
   const desenhos = [
     {
-      nome: 'Nedankinde',
-      imagem: './img/nedankinde.png'
+      nome: 'nedankinde',
+      imagem: '/img/nedankinde.png'
     },
     {
-      nome: 'Quero ser Lourenço Mutarelli',
-      imagem: './img/mutarelli.jpg'
+      nome: 'mutarelli',
+      imagem: '/img/mutarelli.jpg'
     },
     {
       nome: 'h2',
-      imagem: './img/h2.jpg'
+      imagem: '/img/h2.jpg'
     },
     {
-      nome: 'Vikings',
-      imagem: './img/vikings.jpg'
+      nome: 'vikings',
+      imagem: '/img/vikings.jpg'
     },
     {
-      nome: 'Daytona',
-      imagem: './img/daytona.png'
+      nome: 'daytona',
+      imagem: '/img/daytona.png'
     },
     {
-      nome: 'Iguaçú',
-      imagem: './img/iguacu.jpg'
+      nome: 'iguacu',
+      imagem: '/img/iguacu.jpg'
     },
     {
-      nome: 'Lupus',
-      imagem: './img/lupus.jpg'
+      nome: 'lupus',
+      imagem: '/img/lupus.jpg'
     },
     {
-      nome: 'Caliban',
-      imagem: './img/caliban.jpg'
+      nome: 'caliban',
+      imagem: '/img/caliban.jpg'
     },
     {
-      nome: 'Thomassons',
-      imagem: './img/thomassons.jpg'
+      nome: 'thomassons',
+      imagem: '/img/thomassons.jpg'
     },
     {
-      nome: 'Expressionist',
-      imagem: './img/expressionist.jpg'
+      nome: 'expressionist',
+      imagem: '/img/expressionist.jpg'
     }
   ]
 
@@ -50,15 +54,18 @@ export default function Desenhos( props ) {
         return (
           <Pasta key={desenho.nome} onClick={
             () => {
-              var imagem = {
-                nome: desenho.nome,
-                icone: desenho.imagem,
-                conteudo: <img src={desenho.imagem} />
+              var caminho = router.asPath
+              if (caminho === '/home') {
+                caminho = desenho.nome
               }
-              props.onClick(imagem)
+              else {
+                caminho = caminho.replace('/' + desenho.nome, '')
+                caminho += '/' + desenho.nome
+              }
+              router.push(`${caminho}`)
             }
           }>
-            <img src={desenho.imagem} alt='' />
+            <img src={desenho.imagem} alt={desenho.nome} />
             <p>{desenho.nome}</p>
           </Pasta>
         )
