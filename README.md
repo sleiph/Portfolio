@@ -33,6 +33,7 @@ yarn dev
 
 ##### Importantes
 - Arrumar o 'fechar janela' pra funcionar em celular...
+- Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
 ##### Pra fazer algum dia
 - Usar classes?

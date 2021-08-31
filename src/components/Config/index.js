@@ -145,13 +145,6 @@ export default function Config(  ) {
             <h5>Janelas</h5>
             <Botao onClick={
               () => {
-                router.replace('/home')
-              }
-            }>
-              Fechar todas as janelas
-            </Botao>
-            <Botao onClick={
-              () => {
                 let hex = '#' +  Math.random().toString(16).substr(-6)
                 theme.desktop.titulo_janela = hex
                 var titulos = document.getElementsByClassName('head')
@@ -176,6 +169,13 @@ export default function Config(  ) {
               }
             }>
               Mudar a cor de fundo
+            </Botao>
+            <Botao onClick={
+              () => {
+                router.replace('/home')
+              }
+            }>
+              Fechar todas as janelas
             </Botao>
           </Campo>
           <Campo>
