@@ -15,6 +15,11 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'capgemini - Angular',
+      data: 'setembro de 2021',
+      imagem: '/img/dio.png'
+    },
+    {
       nome: 'everis - .NET',
       data: 'Agosto de 2021',
       imagem: '/img/dio.png'
