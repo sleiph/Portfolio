@@ -195,7 +195,7 @@ const Post = () => {
     },
     {
       nome:'desenhos',
-      icone: '/img/paint.png',
+      icone: '/img/spook.gif',
       conteudo: <Desenhos  />,
       isRaiz: true
     },
