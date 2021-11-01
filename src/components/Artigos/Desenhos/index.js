@@ -45,6 +45,10 @@ export default function Desenhos(  ) {
     {
       nome: 'expressionist',
       imagem: '/img/expressionist.jpg'
+    },
+    {
+      nome: '64bitsMarseilles',
+      imagem: 'https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900'
     }
   ]
 
