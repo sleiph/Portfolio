@@ -15,6 +15,11 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'Eduzz Fullstack Developer',
+      data: 'novembro de 2021',
+      imagem: '/img/dio.png'
+    },
+    {
       nome: 'capgemini - Angular',
       data: 'setembro de 2021',
       imagem: '/img/dio.png'

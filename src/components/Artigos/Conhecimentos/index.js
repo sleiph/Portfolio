@@ -19,6 +19,10 @@ export default function Conhecimentos() {
       imagem: '/img/android.png'
     },
     {
+      nome: 'django',
+      imagem: '/img/django.png'
+    },
+    {
       nome: 'python',
       imagem: '/img/python.png'
     },
