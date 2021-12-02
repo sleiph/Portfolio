@@ -42,3 +42,4 @@ yarn dev
 - Arrumar o horário? não sei... quem vai entrar no meu site pra ver a hora?
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
 - Função nas configurações pra mudar o tamanho das fonte
+- Opção pra escolher um tema (natal, halloween, ...) nas 'config'

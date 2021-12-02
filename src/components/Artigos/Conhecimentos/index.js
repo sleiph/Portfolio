@@ -7,10 +7,6 @@ export default function Conhecimentos() {
       imagem: '/img/spring.png'
     },
     {
-      nome: '.NET',
-      imagem: '/img/dotnet.png'
-    },
-    {
       nome: 'React',
       imagem: '/img/react.png'
     },
@@ -19,16 +15,24 @@ export default function Conhecimentos() {
       imagem: '/img/android.png'
     },
     {
+      nome: '.NET',
+      imagem: '/img/dotnet.png'
+    },
+    {
       nome: 'django',
       imagem: '/img/django.png'
     },
     {
-      nome: 'python',
-      imagem: '/img/python.png'
+      nome: 'unity',
+      imagem: '/img/unity.png'
     },
     {
       nome: 'MySQL',
       imagem: '/img/mysql.png'
+    },
+    {
+      nome: 'MongoDB',
+      imagem: '/img/mongodb.png'
     },
     {
       nome: 'Adobe Photoshop',

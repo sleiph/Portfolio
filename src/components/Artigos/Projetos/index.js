@@ -15,6 +15,10 @@ export default function Projetos() {
       link: 'https://github.com/sleiph/taroTI'
     },
     {
+      nome: 'Editor de pixels',
+      link: 'https://gitlab.com/ricadO/djangopixeleditor'
+    },
+    {
       nome: 'Avatares Gmail',
       link: 'https://github.com/sleiph/GmailAvatar'
     },
