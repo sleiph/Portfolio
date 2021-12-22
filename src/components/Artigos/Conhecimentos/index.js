@@ -7,8 +7,12 @@ export default function Conhecimentos() {
       imagem: '/img/spring.png'
     },
     {
-      nome: 'React',
+      nome: 'React.js',
       imagem: '/img/react.png'
+    },
+    {
+      nome: 'Node.js',
+      imagem: '/img/node.png'
     },
     {
       nome: 'Android Studio',
