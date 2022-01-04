@@ -7,12 +7,12 @@ export default function Projetos() {
       link: 'https://github.com/sleiph/Miltonio'
     },
     {
-      nome: 'Portas Lógicas',
-      link: 'https://github.com/sleiph/portasLogicas'
-    },
-    {
       nome: 'TaroTI',
       link: 'https://github.com/sleiph/taroTI'
+    },
+    {
+      nome: 'Portas Lógicas',
+      link: 'https://github.com/sleiph/portasLogicas'
     },
     {
       nome: 'Editor de pixels',

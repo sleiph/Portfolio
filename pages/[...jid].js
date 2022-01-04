@@ -12,6 +12,7 @@ import Formacao from '../src/components/Artigos/Formacao'
 import Sobre from '../src/components/Artigos/Sobre'
 import QuatrozeroQuatro from '../src/components/Artigos/404'
 import Config from '../src/components/Config'
+import Lixeira from '../src/components/Artigos/Lixeira';
 
 const AreadeTrabalho = styled.main`
   background: ${({ theme }) => theme.desktop.fundo};
@@ -195,9 +196,9 @@ const Post = () => {
     },
     {
       nome:'desenhos',
-      icone: '/img/spohoho.gif',
+      icone: '/img/paint.png',
       conteudo: <Desenhos  />,
-      isRaiz: true
+      isRaiz: false
     },
     {
       nome:'formacao',
@@ -305,9 +306,23 @@ const Post = () => {
       isRaiz: false
     },
     {
+      nome:'php',
+      icone: '/img/php.png',
+      conteudo: <a href="https://www.reddit.com/r/PHP/comments/1fy71s/why_do_so_many_developers_hate_php/">
+        <img src="https://i.imgur.com/eXi1Ld0.jpeg" alt="meme de php" />
+      </a>,
+      isRaiz: false
+    },
+    {
       nome: 'config',
       icone: 'https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png',
       conteudo: <></>,
+      isRaiz: true
+    },
+    {
+      nome: 'lixeira',
+      icone: '/img/lixeira-cheia.png',
+      conteudo: <Lixeira />,
       isRaiz: true
     }
   ]
