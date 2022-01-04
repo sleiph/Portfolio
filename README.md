@@ -1,21 +1,16 @@
 # Ricardo Gomes
 
-Taí o meu portfólio, o que eu tenho a ver com o Windows 98? Nada... eu só pensei nesse tema enquanto estudava o Next e acabei deixando.
+Taí o meu portfólio, feito com Next.js, React.js e Node.js. O que eu tenho a ver com o Windows 98? Nada... eu só pensei nesse tema enquanto estudava o Next e acabei deixando.
 
 Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app/home).
 
-Layout ~copiado~ baseado [nesse projeto do Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
+Layout ~copiado~ baseado em um projeto do [Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
 
-### Tecnologias usadas
+## Tecnologias usadas
 
 Next.js | [styled-components](https://styled-components.com/) | [React-Draggable](https://github.com/react-grid-layout/react-draggable)
 
-### Comandos
-
-Pra criar um projeto com o mesmo template:
-```bash
-npx create-next-app --example with-styled-components
-```
+## Comandos
 
 Pra instalar os pacotes:
 ```bash
@@ -27,17 +22,22 @@ Pra compilar e rodar:
 yarn dev
 ```
 
+Pra criar um projeto com o mesmo template:
+```bash
+npx create-next-app --example with-styled-components
+```
+
 ![Eu em 256x256px](/public/android-chrome-256x256.png)
 
-### Coisas à fazer
+## Coisas pra fazer
 
-##### Importantes
+#### Importantes
 - Arrumar o 'fechar janela' pra funcionar em celular...
 - Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
-##### Pra fazer algum dia
+#### Pra fazer algum dia...
 - Usar classes?
-- A janela abre em uma posição aleatória?
+- A janela abre em uma posição aleatória
 - Abrir o menu iniciar com CSS puro
 - Arrumar o horário? não sei... quem vai entrar no meu site pra ver a hora?
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
