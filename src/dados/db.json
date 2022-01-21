@@ -1,0 +1,118 @@
+[ 
+  {
+    "nome": "projetos",
+    "icone": "https://66.media.tumblr.com/2d4a1593f0a13df6d507304708e11a7f/tumblr_odqaag4zd41vgs7gco1_75sq.png",
+    "conteudo": "<Projetos />",
+    "isRaiz": true
+  },
+  {
+    "nome": "conhecimentos",
+    "icone": "https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png",
+    "conteudo": "<Conhecimentos />",
+    "isRaiz": true
+  },
+  {
+    "nome": "desenhos",
+    "icone": "/img/paint.png",
+    "conteudo": "<Desenhos />",
+    "isRaiz": false
+  },
+  {
+    "nome": "formacao",
+    "icone": "https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png",
+    "conteudo": "<Formacao />",
+    "isRaiz": true
+  },
+  {
+    "nome": "contatos",
+    "icone": "https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png",
+    "conteudo": "<Sobre />",
+    "isRaiz": true
+  },
+  {
+    "nome": "nedankinde",
+    "icone": "/img/nedankinde.png",
+    "conteudo": "<img src='/img/nedankinde.png' />",
+    "isRaiz": false
+  },
+  {
+    "nome": "mutarelli",
+    "icone": "/img/mutarelli.jpg",
+    "conteudo":
+      "<a href='https://www.behance.net/gallery/59384263/Quero-ser-Lourenco-Mutarelli'><img src='/img/mutarelli.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "h2",
+    "icone": "/img/h2.jpg",
+    "conteudo": "<img src='/img/h2.jpg' />",
+    "isRaiz": false
+  },
+  {
+    "nome": "vikings",
+    "icone": "/img/vikings.jpg",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Vikings-605260538'><img src='/img/vikings.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "daytona",
+    "icone": "/img/daytona.png",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Daytona-845558314'><img src='/img/daytona.png' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "iguacu",
+    "icone": "/img/iguacu.jpg",
+    "conteudo": 
+      "<a href='https://www.artstation.com/artwork/YdaEK'><img src='/img/iguacu.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "lupus",
+    "icone": "/img/lupus.jpg",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Lupus-dei-606614577'><img src='/img/lupus.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "caliban",
+    "icone": "/img/caliban.jpg",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Dreadful-Caliban-482397424'><img src='/img/caliban.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "thomassons",
+    "icone": "/img/thomassons.jpg",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Thomassons-483662972'><img src='/img/thomassons.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "expressionist",
+    "icone": "/img/expressionist.jpg",
+    "conteudo": "<a href='https://www.deviantart.com/sleiph/art/Expressionist-482396606'><img src='/img/expressionist.jpg' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "64bitsMarseilles",
+    "icone": "/img/paint.png",
+    "conteudo": "<a href='https://dribbble.com/shots/16692392-Paus-de-Marseilles'><img src='https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900' alt='tarot de Marseilles' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "php",
+    "icone": "/img/php.png",
+    "conteudo": "<a href='https://www.reddit.com/r/PHP/comments/1fy71s/why_do_so_many_developers_hate_php'><img src='https://i.imgur.com/eXi1Ld0.jpeg' alt='meme de php' /></a>",
+    "isRaiz": false
+  },
+  {
+    "nome": "config",
+    "icone": "https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png",
+    "conteudo": "<></>",
+    "isRaiz": true
+  },
+  {
+    "nome": "lixeira",
+    "icone": "/img/lixeira-cheia.png",
+    "conteudo": "<Lixeira />",
+    "isRaiz": true
+  }
+]
