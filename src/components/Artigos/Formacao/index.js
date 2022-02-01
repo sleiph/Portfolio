@@ -15,6 +15,11 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'Amdocs JAVA Developer',
+      data: 'janeiro de 2022',
+      imagem: '/img/dio.png'
+    },
+    {
       nome: 'Eduzz Fullstack Developer',
       data: 'novembro de 2021',
       imagem: '/img/dio.png'

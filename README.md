@@ -27,7 +27,7 @@ Pra criar um projeto com o mesmo template:
 npx create-next-app --example with-styled-components
 ```
 
-![Eu em 256x256px](/public/android-chrome-256x256.png)
+![Eu em 256x256px](/public/img/eu_16-16.gif)
 
 ## Coisas pra fazer
 
@@ -36,10 +36,9 @@ npx create-next-app --example with-styled-components
 - Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
 #### Pra fazer algum dia...
-- Usar classes?
 - A janela abre em uma posição aleatória
 - Abrir o menu iniciar com CSS puro
-- Arrumar o horário? não sei... quem vai entrar no meu site pra ver a hora?
+- Arrumar o horário
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
-- Função nas configurações pra mudar o tamanho das fonte
+- Função nas configurações pra mudar o tamanho das fontes
 - Opção pra escolher um tema (natal, halloween, ...) nas 'config'
