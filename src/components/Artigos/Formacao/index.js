@@ -15,15 +15,20 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'Mobile Developer',
+      data: 'fevereiro de 2022',
+      imagem: '/img/dio.png'
+    },
+    {
       nome: 'Amdocs JAVA Developer',
       data: 'janeiro de 2022',
       imagem: '/img/dio.png'
-    },
+    },/*
     {
       nome: 'Eduzz Fullstack Developer',
       data: 'novembro de 2021',
       imagem: '/img/dio.png'
-    },
+    },*/
     {
       nome: 'capgemini - Angular',
       data: 'setembro de 2021',
@@ -50,9 +55,19 @@ export default function Formacao() {
       imagem: '/img/dio.png'
     },
     {
+      nome: 'Imersão Next.js da Alura',
+      data: 'Fevereiro de 2021',
+      imagem: '/img/alura.png'
+    },
+    {
       nome: 'React Web Developer',
-      data: 'Outubro de 2020',
+      data: 'Novembro de 2020',
       imagem: '/img/dio.png'
+    },
+    {
+      nome: 'NextLevelWeek#3 da Rocketseat',
+      data: 'Setembro de 2020',
+      imagem: '/img/rocketseat.png'
     },
     {
       nome: 'Fullstack Developer',
