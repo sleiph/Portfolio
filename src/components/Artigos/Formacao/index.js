@@ -87,7 +87,7 @@ export default function Formacao() {
       {formacoes.map((formacao) => {
         return (
           <Pasta key={formacao.nome}>
-            <img src='https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png' alt={formacao.nome} />
+            <img src='https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png' alt="pasta de arquivos" />
             <p><b>{formacao.estado}</b></p>
             <p>{formacao.nome}</p>
             <p>{formacao.facul}</p>

@@ -1,7 +1,13 @@
 import { MeuCorpo, Pasta, Titulo } from '..'
 
 export default function Conhecimentos() {
-  const conhecimentos = [
+  const experiencias = [
+    {
+      empresa: 'Élin Duxus',
+      cargo: 'estagiário'
+    }
+  ]
+  const tecnologias = [
     {
       nome: 'spring-boot',
       imagem: '/img/spring.png'
@@ -50,11 +56,22 @@ export default function Conhecimentos() {
 
   return (
     <MeuCorpo>
-      {conhecimentos.map((conhecimento) => {
+      <Titulo>Experiências</Titulo>
+      {experiencias.map((experiencia) => {
         return (
-          <Pasta key={conhecimento.nome}>
-            <img src={conhecimento.imagem} alt={conhecimento.nome} />
-            <p>{conhecimento.nome}</p>
+          <Pasta key={experiencia.empresa}>
+            <img src='https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png' alt="pasta de arquivos" />
+            <p><b>{experiencia.empresa}</b></p>
+            <p>{experiencia.cargo}</p>
+          </Pasta>
+        )
+      })}
+      <Titulo>Tecnologias</Titulo>
+      {tecnologias.map((tecnologia) => {
+        return (
+          <Pasta key={tecnologia.nome}>
+            <img src={tecnologia.imagem} alt={tecnologia.nome} />
+            <p>{tecnologia.nome}</p>
           </Pasta>
         )
       })}
