@@ -17,6 +17,10 @@ export default function Conhecimentos() {
       imagem: '/img/react.png'
     },
     {
+      nome: 'Vue.js',
+      imagem: '/img/vue.png'
+    },
+    {
       nome: 'Node.js',
       imagem: '/img/node.png'
     },
