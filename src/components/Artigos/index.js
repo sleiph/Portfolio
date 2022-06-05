@@ -11,6 +11,10 @@ export const MeuCorpo = styled.div`
   }
 `
 
+export const Descricao = styled.p`
+  padding: 24px 16px;
+`
+
 export const Titulo = styled.h3`
   width: 100%;
   line-height: 1.75;

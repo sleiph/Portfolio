@@ -1,4 +1,4 @@
-import { MeuCorpo, Pasta } from '..'
+import { MeuCorpo, Pasta, Descricao } from '..'
 
 export default function Sobre() {
   const contatos = [
@@ -35,17 +35,24 @@ export default function Sobre() {
   ]
 
   return (
-    <MeuCorpo>
-      {contatos.map((contato) => {
-        return (
-          <a href={contato.link} key={contato.nome}>
-            <Pasta>
-              <img src={contato.imagem} alt={contato.nome} />
-              <p>{contato.nome}</p>
-            </Pasta>
-          </a>
-        )
-      })}
-    </MeuCorpo>
+    <div>
+      <Descricao>
+        Acho que o melhor mesmo é que você fale comigo por whatsapp, mas se precisar muito mesmo, pode me ligar.
+        Se mandar um email, as chances são grandes de eu pensar que é spam e ignorar, no LinkedIn eu realmente gostaria de nunca mais entrar na minha vida.
+        
+      </Descricao>
+      <MeuCorpo>
+        {contatos.map((contato) => {
+          return (
+            <a href={contato.link} key={contato.nome}>
+              <Pasta>
+                <img src={contato.imagem} alt={contato.nome} />
+                <p>{contato.nome}</p>
+              </Pasta>
+            </a>
+          )
+        })}
+      </MeuCorpo>
+    </div>
   )
 }

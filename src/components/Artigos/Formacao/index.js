@@ -5,30 +5,44 @@ export default function Formacao() {
     {
       nome: 'Desenvolvimento de Sistemas',
       facul: 'FATEC Guarulhos',
-      estado: 'cursando'
+      estado: 'cursando - dez/2022'
     },
     {
       nome: 'Desenho Industrial',
       facul: 'São Judas Tadeu',
       estado: 'concluído'
+    },
+    {
+      nome: 'Infografia',
+      facul: 'Anhembi Morumbi',
+      estado: 'concluído'
     }
   ]
   const certificados = [
+    {
+      nome: 'Carrefour Web Developer',
+      data: 'maio de 2022',
+      imagem: '/img/dio.png'
+    },
+    /*
     {
       nome: 'Mobile Developer',
       data: 'fevereiro de 2022',
       imagem: '/img/dio.png'
     },
+    */
     {
       nome: 'Amdocs JAVA Developer',
       data: 'janeiro de 2022',
       imagem: '/img/dio.png'
-    },/*
+    },
+    /*
     {
       nome: 'Eduzz Fullstack Developer',
       data: 'novembro de 2021',
       imagem: '/img/dio.png'
-    },*/
+    },
+    */
     {
       nome: 'capgemini - Angular',
       data: 'setembro de 2021',
