@@ -3,6 +3,7 @@ import router, { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 import {BarradeTarefas, StartMenu} from '../src/components/BarradeTarefas'
+import { Descricao } from '../src/components/Artigos'
 
 import Janela from '../src/components/Janela'
 import Projetos from '../src/components/Artigos/Projetos'
@@ -324,6 +325,15 @@ const Post = () => {
       icone: '/img/lixeira-cheia.png',
       conteudo: <Lixeira />,
       isRaiz: true
+    },
+    {
+      nome:'elinduxus',
+      icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
+      conteudo:<Descricao>
+        <a href="https://www.duxus.com.br"><h3>Élin Duxus</h3></a>
+        <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é B.O.</p>
+      </Descricao>,
+      isRaiz: false
     }
   ]
 

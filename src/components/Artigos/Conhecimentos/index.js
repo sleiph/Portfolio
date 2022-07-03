@@ -1,8 +1,12 @@
 import { MeuCorpo, Pasta, Titulo } from '..'
+import router, { useRouter } from 'next/router'
 
 export default function Conhecimentos() {
+  const router = useRouter()
+
   const experiencias = [
     {
+      nome: 'elinduxus',
       empresa: 'Élin Duxus',
       cargo: 'estagiário'
     }
@@ -11,18 +15,6 @@ export default function Conhecimentos() {
     {
       nome: 'spring-boot',
       imagem: '/img/spring.png'
-    },
-    {
-      nome: 'React.js',
-      imagem: '/img/react.png'
-    },
-    {
-      nome: 'Vue.js',
-      imagem: '/img/vue.png'
-    },
-    {
-      nome: 'Node.js',
-      imagem: '/img/node.png'
     },
     {
       nome: 'Android Studio',
@@ -35,6 +27,18 @@ export default function Conhecimentos() {
     {
       nome: 'django',
       imagem: '/img/django.png'
+    },
+    {
+      nome: 'React.js',
+      imagem: '/img/react.png'
+    },
+    {
+      nome: 'Vue.js',
+      imagem: '/img/vue.png'
+    },
+    {
+      nome: 'Node.js',
+      imagem: '/img/node.png'
     },
     {
       nome: 'unity',
@@ -63,7 +67,19 @@ export default function Conhecimentos() {
       <Titulo>Experiências</Titulo>
       {experiencias.map((experiencia) => {
         return (
-          <Pasta key={experiencia.empresa}>
+          <Pasta key={experiencia.empresa} onClick={
+            () => {
+              var caminho = router.asPath
+              if (caminho === '/home') {
+                caminho = experiencia.nome
+              }
+              else {
+                caminho = caminho.replace('/' + experiencia.nome, '')
+                caminho += '/' + experiencia.nome
+              }
+              router.push(`${caminho}`)
+            }
+          }>
             <img src='https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png' alt="pasta de arquivos" />
             <p><b>{experiencia.empresa}</b></p>
             <p>{experiencia.cargo}</p>
