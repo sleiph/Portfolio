@@ -9,6 +9,11 @@ export default function Conhecimentos() {
       nome: 'elinduxus',
       empresa: 'Élin Duxus',
       cargo: 'estagiário'
+    },
+    {
+      nome: 'elinduxus',
+      empresa: 'Élin Duxus',
+      cargo: 'júnior - atual'
     }
   ]
   const tecnologias = [
