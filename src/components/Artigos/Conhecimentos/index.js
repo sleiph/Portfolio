@@ -54,6 +54,10 @@ export default function Conhecimentos() {
       imagem: '/img/mysql.png'
     },
     {
+      nome: 'Postgres',
+      imagem: '/img/postgres.png'
+    },
+    {
       nome: 'MongoDB',
       imagem: '/img/mongodb.png'
     },
