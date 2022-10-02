@@ -26,12 +26,12 @@ export default function Sobre() {
       nome: 'dribbble',
       imagem: '/img/dribbble.png',
       link: 'https://dribbble.com/ricardoalvesgomes'
-    },
-    {
+    }
+    /*{
       nome: 'Behance',
       imagem: '/img/behance.png',
       link: 'https://www.behance.net/ricardoalvesgomes'
-    }
+    }*/
   ]
 
   return (
