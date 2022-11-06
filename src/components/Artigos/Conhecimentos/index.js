@@ -22,6 +22,10 @@ export default function Conhecimentos() {
       imagem: '/img/spring.png'
     },
     {
+      nome: 'mockito',
+      imagem: '/img/mockito.png'
+    },
+    {
       nome: 'Android Studio',
       imagem: '/img/android.png'
     },
