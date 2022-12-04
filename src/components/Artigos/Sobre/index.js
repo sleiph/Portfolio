@@ -21,13 +21,13 @@ export default function Sobre() {
       nome: 'LinkedIn',
       imagem: '/img/linkedin.png',
       link: 'https://www.linkedin.com/in/ricardo-gomes-aa40a51b1/'
-    },
+    }/*,
     {
       nome: 'dribbble',
       imagem: '/img/dribbble.png',
       link: 'https://dribbble.com/ricardoalvesgomes'
     }
-    /*{
+    {
       nome: 'Behance',
       imagem: '/img/behance.png',
       link: 'https://www.behance.net/ricardoalvesgomes'
