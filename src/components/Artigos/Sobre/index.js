@@ -37,7 +37,7 @@ export default function Sobre() {
   return (
     <div>
       <Descricao>
-        Acho que o melhor mesmo é que você fale comigo por whatsapp, mas se precisar muito mesmo, pode me ligar.
+        O melhor jeito de falar comigo é por whatsapp, mas se precisar muito mesmo, pode me ligar.
         Se mandar um email, as chances são grandes de eu pensar que é spam e ignorar, no LinkedIn eu realmente gostaria de nunca mais entrar na minha vida.
         
       </Descricao>
