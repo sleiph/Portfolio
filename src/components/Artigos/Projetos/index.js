@@ -13,15 +13,20 @@ export default function Projetos() {
       link: 'https://github.com/sleiph/taroTI'
     },
     {
+      nome: 'CHIP-OITO',
+      tecnologia: 'React',
+      link: 'https://github.com/sleiph/CHIP-OITO'
+    },
+    {
       nome: 'Portas Lógicas',
       tecnologia: 'Unity',
       link: 'https://github.com/sleiph/portasLogicas'
     },
-    {
+    /*{
       nome: 'Editor de pixels',
       tecnologia: 'Django',
       link: 'https://gitlab.com/ricadO/djangopixeleditor'
-    },
+    },*/
     {
       nome: 'Avatares Gmail',
       tecnologia: '.NET Framework',

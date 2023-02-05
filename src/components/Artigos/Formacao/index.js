@@ -13,70 +13,20 @@ export default function Formacao() {
       estado: 'concluído'
     },
     {
-      nome: 'A/D de Sistemas',
+      nome: 'Análise de Sistemas',
       facul: 'FATEC Guarulhos',
-      estado: 'cursando - dez/2022'
+      estado: 'concluído'
     }
   ]
   const certificados = [
     {
-      nome: 'Python - Análise de Dados',
-      data: 'Maio de 2020',
-      imagem: '/img/dsa.png'
-    },
-    {
-      nome: 'Fullstack Developer',
-      data: 'Junho de 2020',
+      nome: 'Java Developer',
+      data: 'agosto de 2022',
       imagem: '/img/dio.png'
     },
     {
-      nome: 'NextLevelWeek#3 da Rocketseat',
-      data: 'Setembro de 2020',
-      imagem: '/img/rocketseat.png'
-    },
-    {
-      nome: 'React Web Developer',
-      data: 'Novembro de 2020',
-      imagem: '/img/dio.png'
-    },
-    {
-      nome: 'Imersão Next.js da Alura',
-      data: 'Fevereiro de 2021',
-      imagem: '/img/alura.png'
-    },
-    {
-      nome: 'everis - Kotlin Developer',
-      data: 'Março de 2021',
-      imagem: '/img/dio.png'
-    },
-    {
-      nome: 'santander - Mobile Developer',
-      data: 'Abril de 2021',
-      imagem: '/img/dio.png'
-    },
-    /*{
-      nome: 'GFT - Java Developer',
-      data: 'Junho de 2021',
-      imagem: '/img/dio.png'
-    },*/
-    {
-      nome: 'everis - .NET',
-      data: 'Agosto de 2021',
-      imagem: '/img/dio.png'
-    },
-    {
-      nome: 'capgemini - Angular',
-      data: 'setembro de 2021',
-      imagem: '/img/dio.png'
-    },
-    /*{
-      nome: 'Eduzz Fullstack Developer',
-      data: 'novembro de 2021',
-      imagem: '/img/dio.png'
-    },*/
-    {
-      nome: 'Amdocs JAVA Developer',
-      data: 'janeiro de 2022',
+      nome: 'Carrefour Web Developer',
+      data: 'maio de 2022',
       imagem: '/img/dio.png'
     },
     /*{
@@ -85,15 +35,65 @@ export default function Formacao() {
       imagem: '/img/dio.png'
     },*/
     {
-      nome: 'Carrefour Web Developer',
-      data: 'maio de 2022',
+      nome: 'Amdocs JAVA Developer',
+      data: 'janeiro de 2022',
+      imagem: '/img/dio.png'
+    },
+    /*{
+      nome: 'Eduzz Fullstack Developer',
+      data: 'novembro de 2021',
+      imagem: '/img/dio.png'
+    },*/
+    {
+      nome: 'capgemini - Angular',
+      data: 'setembro de 2021',
       imagem: '/img/dio.png'
     },
     {
-      nome: 'Java Developer',
-      data: 'agosto de 2022',
+      nome: 'everis - .NET',
+      data: 'Agosto de 2021',
       imagem: '/img/dio.png'
-    }
+    },
+    /*{
+      nome: 'GFT - Java Developer',
+      data: 'Junho de 2021',
+      imagem: '/img/dio.png'
+    },*/
+    {
+      nome: 'santander - Mobile Developer',
+      data: 'Abril de 2021',
+      imagem: '/img/dio.png'
+    },
+    {
+      nome: 'everis - Kotlin Developer',
+      data: 'Março de 2021',
+      imagem: '/img/dio.png'
+    },
+    {
+      nome: 'Imersão Next.js da Alura',
+      data: 'Fevereiro de 2021',
+      imagem: '/img/alura.png'
+    },
+    {
+      nome: 'React Web Developer',
+      data: 'Novembro de 2020',
+      imagem: '/img/dio.png'
+    },
+    {
+      nome: 'NextLevelWeek#3 da Rocketseat',
+      data: 'Setembro de 2020',
+      imagem: '/img/rocketseat.png'
+    },
+    {
+      nome: 'Fullstack Developer',
+      data: 'Junho de 2020',
+      imagem: '/img/dio.png'
+    },
+    {
+      nome: 'Python - Análise de Dados',
+      data: 'Maio de 2020',
+      imagem: '/img/dsa.png'
+    },
   ]
 
   return (
