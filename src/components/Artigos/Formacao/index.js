@@ -3,8 +3,8 @@ import { MeuCorpo, Pasta, Titulo } from '..'
 export default function Formacao() {
   const formacoes = [
     {
-      nome: 'Desenho Industrial',
-      facul: 'São Judas Tadeu',
+      nome: 'Análise de Sistemas',
+      facul: 'FATEC Guarulhos',
       estado: 'concluído'
     },
     {
@@ -13,8 +13,8 @@ export default function Formacao() {
       estado: 'concluído'
     },
     {
-      nome: 'Análise de Sistemas',
-      facul: 'FATEC Guarulhos',
+      nome: 'Desenho Industrial',
+      facul: 'São Judas Tadeu',
       estado: 'concluído'
     }
   ]
