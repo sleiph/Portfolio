@@ -36,7 +36,7 @@ export const BarradeTarefas = styled.div`
     line-height: 25px;
     font-weight: bold;
     cursor: pointer;
-    background-image: url('https://vignette4.wikia.nocookie.net/logopedia/images/b/b3/Windows_logo_(Pre-XP)_alt._color.svg.png/revision/latest?cb=20160311145452');
+    background-image: url(/img/win98-logo.png);
     background-repeat: no-repeat;
     background-size: 22px;
     background-position: 5px center;
