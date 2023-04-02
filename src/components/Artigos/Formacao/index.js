@@ -20,6 +20,11 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'SOLID com Java',
+      data: 'fevereiro de 2023',
+      imagem: '/img/alura.png'
+    },
+    {
       nome: 'Java Developer',
       data: 'agosto de 2022',
       imagem: '/img/dio.png'
@@ -29,11 +34,11 @@ export default function Formacao() {
       data: 'maio de 2022',
       imagem: '/img/dio.png'
     },
-    /*{
+    {
       nome: 'Mobile Developer',
       data: 'fevereiro de 2022',
       imagem: '/img/dio.png'
-    },*/
+    },
     {
       nome: 'Amdocs JAVA Developer',
       data: 'janeiro de 2022',
