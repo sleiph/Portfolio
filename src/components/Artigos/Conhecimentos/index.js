@@ -21,10 +21,10 @@ export default function Conhecimentos() {
       nome: 'spring-boot',
       imagem: '/img/spring.png'
     },
-    {
+    /*{
       nome: 'mockito',
       imagem: '/img/mockito.png'
-    },
+    },*/
     {
       nome: 'Android Studio',
       imagem: '/img/android.png'
@@ -33,10 +33,10 @@ export default function Conhecimentos() {
       nome: '.NET',
       imagem: '/img/dotnet.png'
     },
-    {
+    /*{
       nome: 'django',
       imagem: '/img/django.png'
-    },
+    },*/
     {
       nome: 'React.js',
       imagem: '/img/react.png'
@@ -77,7 +77,8 @@ export default function Conhecimentos() {
 
   return (
     <MeuCorpo>
-      <Titulo>Experiências</Titulo>
+      <Titulo>Experiências<hr class="dashed"></hr></Titulo>
+
       {experiencias.map((experiencia) => {
         return (
           <Pasta key={experiencia.empresa} onClick={
@@ -99,7 +100,10 @@ export default function Conhecimentos() {
           </Pasta>
         )
       })}
-      <Titulo>Tecnologias</Titulo>
+
+
+      <Titulo>Tecnologias<hr class="dashed"></hr></Titulo>
+
       {tecnologias.map((tecnologia) => {
         return (
           <Pasta key={tecnologia.nome}>

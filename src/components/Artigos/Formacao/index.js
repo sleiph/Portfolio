@@ -103,7 +103,7 @@ export default function Formacao() {
 
   return (
     <MeuCorpo>
-      <Titulo>Formação</Titulo>
+      <Titulo>Formação<hr class="dashed"></hr></Titulo>
       {formacoes.map((formacao) => {
         return (
           <Pasta key={formacao.nome}>
@@ -114,7 +114,7 @@ export default function Formacao() {
           </Pasta>
         )
       })}
-      <Titulo>Certificados</Titulo>
+      <Titulo>Certificados<hr class="dashed"></hr></Titulo>
       {certificados.map((certificado) => {
         return (
           <Pasta key={certificado.nome}>
