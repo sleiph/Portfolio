@@ -77,7 +77,7 @@ export default function Conhecimentos() {
 
   return (
     <MeuCorpo>
-      <Titulo>Experiências<hr class="dashed"></hr></Titulo>
+      <Titulo>Experiências Relevantes<hr class="dashed"></hr></Titulo>
 
       {experiencias.map((experiencia) => {
         return (
@@ -102,7 +102,7 @@ export default function Conhecimentos() {
       })}
 
 
-      <Titulo>Tecnologias<hr class="dashed"></hr></Titulo>
+      <Titulo>Principais Tecnologias<hr class="dashed"></hr></Titulo>
 
       {tecnologias.map((tecnologia) => {
         return (
