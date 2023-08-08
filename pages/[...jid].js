@@ -76,7 +76,7 @@ function BTarefas(propriedades) {
       </a>
         
       <div className="relogio">
-        16:20
+        23:59
       </div>
 
       {propriedades.start ?
