@@ -1,6 +1,5 @@
-import router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
-import Desenhos from '../Desenhos'
 import { MeuCorpo, Pasta } from '..'
 
 export default function Lixeira(  ) {

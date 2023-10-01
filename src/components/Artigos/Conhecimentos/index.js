@@ -1,19 +1,24 @@
 import { MeuCorpo, Pasta, Titulo } from '..'
-import router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 export default function Conhecimentos() {
   const router = useRouter()
 
   const experiencias = [
     {
-      nome: 'elinduxus',
+      nome: 'design',
+      empresa: 'Design',
+      cargo: '7 anos de experiência'
+    },
+    {
+      nome: 'elinduxus-estagiario',
       empresa: 'Élin Duxus',
       cargo: 'estagiário'
     },
     {
-      nome: 'elinduxus',
+      nome: 'elinduxus-junior',
       empresa: 'Élin Duxus',
-      cargo: 'júnior - atual'
+      cargo: 'programador júnior - atual'
     }
   ]
   const tecnologias = [
@@ -77,11 +82,11 @@ export default function Conhecimentos() {
 
   return (
     <MeuCorpo>
-      <Titulo>Experiências Relevantes<hr class="dashed"></hr></Titulo>
+      <Titulo>Experiências Relevantes<hr className="dashed"></hr></Titulo>
 
       {experiencias.map((experiencia) => {
         return (
-          <Pasta key={experiencia.empresa} onClick={
+          <Pasta key={experiencia.nome} onClick={
             () => {
               var caminho = router.asPath
               if (caminho === '/home') {
@@ -102,7 +107,7 @@ export default function Conhecimentos() {
       })}
 
 
-      <Titulo>Principais Tecnologias<hr class="dashed"></hr></Titulo>
+      <Titulo>Principais Tecnologias<hr className="dashed"></hr></Titulo>
 
       {tecnologias.map((tecnologia) => {
         return (

@@ -327,11 +327,32 @@ const Post = () => {
       isRaiz: true
     },
     {
-      nome:'elinduxus',
+      nome:'design',
+      icone: '/img/paint.png',
+      conteudo:<Descricao>
+        <h3>Design impresso e digital</h3>
+        <br></br>
+        <p>7 anos de experiência desenvolvendo websites, ícones, landingpages e outros produtos digitais. Também livros, jornais, todo tipo de mídia impressa.</p>
+      </Descricao>,
+      isRaiz: false
+    },
+    {
+      nome:'elinduxus-estagiario',
       icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
       conteudo:<Descricao>
-        <a href="https://www.duxus.com.br"><h3>Élin Duxus</h3></a>
-        <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é B.O.</p>
+        <a href="https://www.duxus.com.br"><h3>Élin Duxus - Estagiário</h3></a>
+        <br></br>
+        <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p>
+      </Descricao>,
+      isRaiz: false
+    },
+    {
+      nome:'elinduxus-junior',
+      icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
+      conteudo:<Descricao>
+        <a href="https://www.duxus.com.br"><h3>Élin Duxus - Programador Júnior</h3></a>
+        <br></br>
+        <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p>
       </Descricao>,
       isRaiz: false
     }

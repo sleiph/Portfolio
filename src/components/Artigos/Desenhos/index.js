@@ -1,4 +1,4 @@
-import router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 import { MeuCorpo, Pasta } from '..'
 

@@ -11,7 +11,7 @@ export const MeuCorpo = styled.div`
   }
 `
 
-export const Descricao = styled.p`
+export const Descricao = styled.div`
   padding: 24px 16px;
 `
 
