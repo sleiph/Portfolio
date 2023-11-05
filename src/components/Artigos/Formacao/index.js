@@ -20,6 +20,16 @@ export default function Formacao() {
   ]
   const certificados = [
     {
+      nome: 'Microsserviços, Spring e RabbitMQ',
+      data: 'outubro de 2023',
+      imagem: '/img/alura.png'
+    },
+    /*{
+      nome: 'Arquitetura e padrões de projeto',
+      data: 'agosto de 2023',
+      imagem: '/img/alura.png'
+    },*/
+    {
       nome: 'SOLID com Java',
       data: 'fevereiro de 2023',
       imagem: '/img/alura.png'
@@ -29,21 +39,21 @@ export default function Formacao() {
       data: 'agosto de 2022',
       imagem: '/img/dio.png'
     },
-    {
+    /*{
       nome: 'Carrefour Web Developer',
       data: 'maio de 2022',
       imagem: '/img/dio.png'
-    },
+    },*/
     {
       nome: 'Mobile Developer',
       data: 'fevereiro de 2022',
       imagem: '/img/dio.png'
     },
-    {
+    /*{
       nome: 'Amdocs JAVA Developer',
       data: 'janeiro de 2022',
       imagem: '/img/dio.png'
-    },
+    },*/
     /*{
       nome: 'Eduzz Fullstack Developer',
       data: 'novembro de 2021',
@@ -64,11 +74,11 @@ export default function Formacao() {
       data: 'Junho de 2021',
       imagem: '/img/dio.png'
     },*/
-    {
+    /*{
       nome: 'santander - Mobile Developer',
       data: 'Abril de 2021',
       imagem: '/img/dio.png'
-    },
+    },*/
     {
       nome: 'everis - Kotlin Developer',
       data: 'Março de 2021',
