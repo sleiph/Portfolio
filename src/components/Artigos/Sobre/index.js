@@ -40,8 +40,7 @@ export default function Sobre() {
         Olá, bem vindo ao meu portfólio!
         <br></br><br></br>
         Se gostou do meu trabalho pode me contatar em um dos links abaixo.
-        O melhor jeito de falar comigo é por whatsapp, mas se precisar muito mesmo, pode me ligar,
-        se mandar um email, as chances são grandes de eu pensar que é spam e ignorar,
+        O melhor jeito de falar comigo é por whatsapp, mas se precisar muito mesmo, pode me ligar ou mandar email,
         no LinkedIn eu realmente gostaria de nunca mais entrar na minha vida.
       </Descricao>
       <MeuCorpo>
