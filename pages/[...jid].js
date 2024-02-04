@@ -76,7 +76,7 @@ function BTarefas(propriedades) {
       </a>
         
       <div className="relogio">
-        23:59
+        {zeroPad(new Date().getHours(), 2) + ":" + zeroPad(new Date().getMinutes(),2)}
       </div>
 
       {propriedades.start ?
@@ -175,6 +175,8 @@ function Jnla(propriedades) {
     }
   />
 }
+
+const zeroPad = (num, casas) => String(num).padStart(casas, '0')
 
 const Post = () => {
   const router = useRouter()
