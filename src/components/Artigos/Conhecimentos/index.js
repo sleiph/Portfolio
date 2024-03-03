@@ -23,7 +23,7 @@ export default function Conhecimentos() {
   ]
   const tecnologias = [
     {
-      nome: 'spring-boot',
+      nome: 'Java/spring',
       imagem: '/img/spring.png'
     },
     /*{
@@ -31,11 +31,11 @@ export default function Conhecimentos() {
       imagem: '/img/mockito.png'
     },*/
     {
-      nome: 'Android Studio',
+      nome: 'Kotlin/Android Studio',
       imagem: '/img/android.png'
     },
     {
-      nome: '.NET',
+      nome: 'C#/.NET',
       imagem: '/img/dotnet.png'
     },
     /*{
