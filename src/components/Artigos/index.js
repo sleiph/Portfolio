@@ -40,8 +40,8 @@ export const Notas = styled.p`
 `
 
 export const Pasta = styled.div`
-  width: 92px;
-  min-height: 90px;
+  width: 96px;
+  min-height: 92px;
 
   img {
     display: block;
