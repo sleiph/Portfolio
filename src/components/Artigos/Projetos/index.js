@@ -18,6 +18,11 @@ export default function Projetos() {
       link: 'https://github.com/sleiph/CHIP-OITO'
     },
     {
+      nome: 'Coletor FipeZap',
+      tecnologia: 'Java/Spring',
+      link: 'https://github.com/sleiph/Fipezap'
+    },
+    {
       nome: 'Portas Lógicas',
       tecnologia: 'Unity',
       link: 'https://github.com/sleiph/portasLogicas'
