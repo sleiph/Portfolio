@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import router, { useRouter } from 'next/router'
-import styled from 'styled-components'
+import router, { useRouter } from 'next/router';
+import styled from 'styled-components';
 
-import {BarradeTarefas, StartMenu} from '../src/components/BarradeTarefas'
-import { Descricao } from '../src/components/Artigos'
+import {BarradeTarefas, StartMenu} from '../src/components/BarradeTarefas';
+import { Descricao } from '../src/components/Artigos';
+//import DB from '../src/dados/db.json';
 
-import Janela from '../src/components/Janela'
-import Projetos from '../src/components/Artigos/Projetos'
-import Conhecimentos from '../src/components/Artigos/Conhecimentos'
-import Desenhos from '../src/components/Artigos/Desenhos'
-import Formacao from '../src/components/Artigos/Formacao'
-import Sobre from '../src/components/Artigos/Sobre'
-import QuatrozeroQuatro from '../src/components/Artigos/404'
-import Config from '../src/components/Config'
+import Janela from '../src/components/Janela';
+import Projetos from '../src/components/Artigos/Projetos';
+import Conhecimentos from '../src/components/Artigos/Conhecimentos';
+import Desenhos from '../src/components/Artigos/Desenhos';
+import Formacao from '../src/components/Artigos/Formacao';
+import Sobre from '../src/components/Artigos/Sobre';
+import QuatrozeroQuatro from '../src/components/Artigos/404';
+import Config from '../src/components/Config';
 import Lixeira from '../src/components/Artigos/Lixeira';
+
 
 const AreadeTrabalho = styled.main`
   background: ${({ theme }) => theme.desktop.fundo};

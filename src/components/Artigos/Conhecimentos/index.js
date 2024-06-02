@@ -10,11 +10,11 @@ export default function Conhecimentos() {
       empresa: 'Design',
       cargo: '7 anos de experiência'
     },
-    {
+    /*{
       nome: 'elinduxus-estagiario',
       empresa: 'Élin Duxus',
       cargo: 'estagiário'
-    },
+    },*/
     {
       nome: 'elinduxus-junior',
       empresa: 'Élin Duxus',
