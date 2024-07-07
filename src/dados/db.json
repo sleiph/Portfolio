@@ -145,5 +145,67 @@
       "<Descricao><a href='https://www.duxus.com.br'><h3>Élin Duxus - Programador Júnior</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p></Descricao>",
       "isRaiz": false
     }
+  ],
+  "experiencias" : [
+    {
+      "nome": "design",
+      "empresa": "Design",
+      "cargo": "7 anos de experiência"
+    },
+    {
+      "nome": "elinduxus-junior",
+      "empresa": "Élin Duxus",
+      "cargo": "programador júnior - atual"
+    }
+  ],
+  "tecnologias" : [
+    {
+      "nome": "Java/spring",
+      "imagem": "/img/spring.png"
+    },
+    {
+      "nome": "Kotlin/Android Studio",
+      "imagem": "/img/android.png"
+    },
+    {
+      "nome": "C#/.NET",
+      "imagem": "/img/dotnet.png"
+    },
+    {
+      "nome": "React.js",
+      "imagem": "/img/react.png"
+    },
+    {
+      "nome": "Vue.js",
+      "imagem": "/img/vue.png"
+    },
+    {
+      "nome": "Node.js",
+      "imagem": "/img/node.png"
+    },
+    {
+      "nome": "unity",
+      "imagem": "/img/unity.png"
+    },
+    {
+      "nome": "MySQL",
+      "imagem": "/img/mysql.png"
+    },
+    {
+      "nome": "Postgres",
+      "imagem": "/img/postgres.png"
+    },
+    {
+      "nome": "MongoDB",
+      "imagem": "/img/mongodb.png"
+    },
+    {
+      "nome": "Adobe Photoshop",
+      "imagem": "/img/photoshop.png"
+    },
+    {
+      "nome": "Adobe Illustrator",
+      "imagem": "/img/illustrator.png"
+    }
   ]
 }

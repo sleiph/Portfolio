@@ -84,7 +84,7 @@ const Conteudo = styled.div`
 `
 
 export default function Artigo({ artigo }) {
-  const router = useRouter()
+  const router = useRouter();
   
   return (
     <Draggable
