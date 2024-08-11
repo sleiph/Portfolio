@@ -1,9 +1,9 @@
-import { useRouter } from 'next/router'
-import styled from 'styled-components'
-import Draggable from 'react-draggable'
+import { useRouter } from 'next/router';
+import styled from 'styled-components';
+import Draggable from 'react-draggable';
 
-import { theme } from '../../../pages/_app'
-import {Janela, Titulo} from '../Janela'
+import { theme } from '../../../pages/_app';
+import {Janela, Titulo} from '../Janela';
 
 const Conteudo = styled.div`
   min-height: 208px;

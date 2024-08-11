@@ -146,6 +146,50 @@
       "isRaiz": false
     }
   ],
+  "projetos" : [
+    {
+      "nome": "Milton.io",
+      "tecnologia": "Android Studio",
+      "link": "https://github.com/sleiph/Miltonio"
+    },
+    {
+      "nome": "TaroTI",
+      "tecnologia": "Spring web",
+      "link": "https://github.com/sleiph/taroTI"
+    },
+    {
+      "nome": "CHIP-OITO",
+      "tecnologia": "React",
+      "link": "https://github.com/sleiph/CHIP-OITO"
+    },
+    {
+      "nome": "Coletor FipeZap",
+      "tecnologia": "Java/Spring",
+      "link": "https://github.com/sleiph/Fipezap"
+    },
+    {
+      "nome": "Portas Lógicas",
+      "tecnologia": "Unity",
+      "link": "https://github.com/sleiph/portasLogicas"
+    },
+    {
+      "nome": "Avatares Gmail",
+      "tecnologia": ".NET Framework",
+      "link": "https://github.com/sleiph/GmailAvatar"
+    },
+    {
+      "nome": "Exploração de dados",
+      "tecnologia": "pandas",
+      "link": "https://github.com/sleiph/exploracao-de-dados"
+    }
+  ],
+  "projetos_old" : [
+    {
+      "nome": "Editor de pixels",
+      "tecnologia": "Django",
+      "link": "https://gitlab.com/ricadO/djangopixeleditor"
+    }
+  ],
   "experiencias" : [
     {
       "nome": "design",
@@ -172,12 +216,12 @@
       "imagem": "/img/dotnet.png"
     },
     {
-      "nome": "React.js",
-      "imagem": "/img/react.png"
+      "nome": "Vue.js 2/3",
+      "imagem": "/img/vue.png"
     },
     {
-      "nome": "Vue.js",
-      "imagem": "/img/vue.png"
+      "nome": "React.js",
+      "imagem": "/img/react.png"
     },
     {
       "nome": "Node.js",
@@ -206,6 +250,207 @@
     {
       "nome": "Adobe Illustrator",
       "imagem": "/img/illustrator.png"
+    }
+  ],
+  "formacoes" : [
+    {
+      "nome": "Análise de Sistemas",
+      "facul": "FATEC Guarulhos",
+      "estado": "concluído"
+    },
+    {
+      "nome": "Infografia",
+      "facul": "Anhembi Morumbi",
+      "estado": "concluído"
+    },
+    {
+      "nome": "Desenho Industrial",
+      "facul": "São Judas Tadeu",
+      "estado": "concluído"
+    }
+  ],
+  "certificados" : [
+    {
+      "nome": "Microsserviços, Spring e RabbitMQ",
+      "data": "outubro de 2023",
+      "imagem": "/img/alura.png"
+    },
+    {
+      "nome": "SOLID com Java",
+      "data": "fevereiro de 2023",
+      "imagem": "/img/alura.png"
+    },
+    {
+      "nome": "Java Developer",
+      "data": "agosto de 2022",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "Mobile Developer",
+      "data": "fevereiro de 2022",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "capgemini - Angular",
+      "data": "setembro de 2021",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "everis - .NET",
+      "data": "Agosto de 2021",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "everis - Kotlin Developer",
+      "data": "Março de 2021",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "Imersão Next.js da Alura",
+      "data": "Fevereiro de 2021",
+      "imagem": "/img/alura.png"
+    },
+    {
+      "nome": "React Web Developer",
+      "data": "Novembro de 2020",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "NextLevelWeek#3 da Rocketseat",
+      "data": "Setembro de 2020",
+      "imagem": "/img/rocketseat.png"
+    },
+    {
+      "nome": "Fullstack Developer",
+      "data": "Junho de 2020",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "Python - Análise de Dados",
+      "data": "Maio de 2020",
+      "imagem": "/img/dsa.png"
+    }
+  ],
+  "certificados_old" : [
+    {
+      "nome": "Arquitetura e padrões de projeto",
+      "data": "agosto de 2023",
+      "imagem": "/img/alura.png"
+    },
+    {
+      "nome": "Carrefour Web Developer",
+      "data": "maio de 2022",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "Amdocs JAVA Developer",
+      "data": "janeiro de 2022",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "Eduzz Fullstack Developer",
+      "data": "novembro de 2021",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "GFT - Java Developer",
+      "data": "Junho de 2021",
+      "imagem": "/img/dio.png"
+    },
+    {
+      "nome": "santander - Mobile Developer",
+      "data": "Abril de 2021",
+      "imagem": "/img/dio.png"
+    }
+  ],
+  "contatos" : [
+    {
+      "nome": "sleiph @gmail.com",
+      "imagem": "/img/gmail.png",
+      "link": "mailto:sleiph@gmail.com"
+    },
+    {
+      "nome": "(11) 94520-0418",
+      "imagem": "/img/whatsapp.png",
+      "link": "https://api.whatsapp.com/send?phone=+5511945200418"
+    },
+    {
+      "nome": "GitHub",
+      "imagem": "/img/github.png",
+      "link": "https://github.com/sleiph"
+    },
+    {
+      "nome": "LinkedIn",
+      "imagem": "/img/linkedin.png",
+      "link": "https://www.linkedin.com/in/ricardo-gomes-aa40a51b1/"
+    }
+  ],
+  "contatos_old" : [
+    {
+      "nome": "dribbble",
+      "imagem": "/img/dribbble.png",
+      "link": "https://dribbble.com/ricardoalvesgomes"
+    },
+    {
+      "nome": "Behance",
+      "imagem": "/img/behance.png",
+      "link": "https://www.behance.net/ricardoalvesgomes"
+    }
+  ],
+  "desenhos" : [
+    {
+      "nome": "nedankinde",
+      "imagem": "/img/nedankinde.png"
+    },
+    {
+      "nome": "mutarelli",
+      "imagem": "/img/mutarelli.jpg"
+    },
+    {
+      "nome": "h2",
+      "imagem": "/img/h2.jpg"
+    },
+    {
+      "nome": "vikings",
+      "imagem": "/img/vikings.jpg"
+    },
+    {
+      "nome": "daytona",
+      "imagem": "/img/daytona.png"
+    },
+    {
+      "nome": "iguacu",
+      "imagem": "/img/iguacu.jpg"
+    },
+    {
+      "nome": "lupus",
+      "imagem": "/img/lupus.jpg"
+    },
+    {
+      "nome": "caliban",
+      "imagem": "/img/caliban.jpg"
+    },
+    {
+      "nome": "thomassons",
+      "imagem": "/img/thomassons.jpg"
+    },
+    {
+      "nome": "expressionist",
+      "imagem": "/img/expressionist.jpg"
+    },
+    {
+      "nome": "64bitsMarseilles",
+      "imagem": "https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900"
+    }
+  ],
+  "lixos" : [
+    {
+      "nome":"desenhos",
+      "icone": "/img/paint.png"
+    },
+    {
+      "nome":"php",
+      "icone": "/img/php.png"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { MeuCorpo, Titulo, Notas } from '..'
+import { MeuCorpo, Titulo, Notas } from '..';
 
 export default function QuatrozeroQuatro() {
   return (

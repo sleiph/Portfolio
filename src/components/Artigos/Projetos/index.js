@@ -1,48 +1,9 @@
-import { MeuCorpo, Pasta } from '..'
+import { MeuCorpo, Pasta } from '..';
+import DB from '../../../dados/db.json';
 
 export default function Projetos() {
-  const projetos = [
-    {
-      nome: 'Milton.io',
-      tecnologia: 'Android Studio',
-      link: 'https://github.com/sleiph/Miltonio'
-    },
-    {
-      nome: 'TaroTI',
-      tecnologia: 'Spring web',
-      link: 'https://github.com/sleiph/taroTI'
-    },
-    {
-      nome: 'CHIP-OITO',
-      tecnologia: 'React',
-      link: 'https://github.com/sleiph/CHIP-OITO'
-    },
-    {
-      nome: 'Coletor FipeZap',
-      tecnologia: 'Java/Spring',
-      link: 'https://github.com/sleiph/Fipezap'
-    },
-    {
-      nome: 'Portas Lógicas',
-      tecnologia: 'Unity',
-      link: 'https://github.com/sleiph/portasLogicas'
-    },
-    /*{
-      nome: 'Editor de pixels',
-      tecnologia: 'Django',
-      link: 'https://gitlab.com/ricadO/djangopixeleditor'
-    },*/
-    {
-      nome: 'Avatares Gmail',
-      tecnologia: '.NET Framework',
-      link: 'https://github.com/sleiph/GmailAvatar'
-    },
-    {
-      nome: 'Exploração de dados',
-      tecnologia: 'pandas',
-      link: 'https://github.com/sleiph/exploracao-de-dados'
-    }
-  ]
+
+  const projetos = DB["projetos"];
 
   return (
     <MeuCorpo>

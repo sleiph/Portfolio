@@ -1,20 +1,11 @@
-import { useRouter } from 'next/router'
-
-import { MeuCorpo, Pasta } from '..'
+import { useRouter } from 'next/router';
+import { MeuCorpo, Pasta } from '..';
+import DB from '../../../dados/db.json';
 
 export default function Lixeira(  ) {
   const router = useRouter()
 
-  const lixos = [
-    {
-      nome:'desenhos',
-      icone: '/img/paint.png'
-    },
-    {
-      nome:'php',
-      icone: '/img/php.png'
-    }
-  ]
+  const lixos = DB["lixos"];
 
   return (
     <MeuCorpo>
