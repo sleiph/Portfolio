@@ -14,7 +14,7 @@ Next.js | [styled-components](https://styled-components.com/) | [React-Draggable
 
 Pra instalar os pacotes:
 ```bash
-npm install
+npm i -D cross-env
 ```
 
 Pra compilar e rodar:
