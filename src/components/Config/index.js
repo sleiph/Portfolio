@@ -186,7 +186,7 @@ export default function Config(  ) {
                 musiquinha.play()
               }
             }>
-              Tocar uma musiquina
+              Tocar uma musiquinha
             </Botao>
             <Botao onClick={
               () => {
