@@ -149,37 +149,44 @@
   "projetos" : [
     {
       "nome": "Milton.io",
-      "tecnologia": "Android Studio",
+      "tecnologia": "Kotlin",
+      "framework": "Android Studio",
       "link": "https://github.com/sleiph/Miltonio"
     },
     {
       "nome": "TaroTI",
-      "tecnologia": "Spring web",
+      "tecnologia": "Java",
+      "framework": "Spring web",
       "link": "https://github.com/sleiph/taroTI"
     },
     {
       "nome": "CHIP-OITO",
-      "tecnologia": "React",
+      "tecnologia": "javaScript",
+      "framework": "React",
       "link": "https://github.com/sleiph/CHIP-OITO"
     },
     {
       "nome": "Coletor FipeZap",
-      "tecnologia": "Java/Spring",
+      "tecnologia": "Java",
+      "framework": "Spring",
       "link": "https://github.com/sleiph/Fipezap"
     },
     {
       "nome": "Portas Lógicas",
-      "tecnologia": "Unity",
+      "tecnologia": "C#",
+      "framework": "Unity",
       "link": "https://github.com/sleiph/portasLogicas"
     },
     {
       "nome": "Avatares Gmail",
-      "tecnologia": ".NET Framework",
+      "tecnologia": "C#",
+      "framework": ".NET Framework",
       "link": "https://github.com/sleiph/GmailAvatar"
     },
     {
       "nome": "Exploração de dados",
-      "tecnologia": "pandas",
+      "tecnologia": "python",
+      "framework": "Anaconda/Pandas",
       "link": "https://github.com/sleiph/exploracao-de-dados"
     }
   ],
