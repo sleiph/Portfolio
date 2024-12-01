@@ -140,7 +140,7 @@ function Icns(propriedades) {
             onClick={
               () => {
                 var caminho = router.asPath
-                if (caminho === '/home') {
+                if (caminho.split('?')[0] === '/home') {
                   caminho = artigo.nome
                 }
                 else {
