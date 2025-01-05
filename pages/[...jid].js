@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import router, { useRouter } from 'next/router';
 import styled from 'styled-components';
 
@@ -68,6 +68,17 @@ function acharPost(arr, nome) {
 }
 
 function BTarefas(propriedades) {
+
+  const [hora, setHora] = useState(new Date());
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setHora(new Date());
+    }, 15000);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
   return (
     <BarradeTarefas>
       <a className="start-btn" onClick={
@@ -79,7 +90,7 @@ function BTarefas(propriedades) {
       </a>
         
       <div className="relogio">
-        {zeroPad(new Date().getHours(), 2) + ":" + zeroPad(new Date().getMinutes(),2)}
+        {hora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </div>
 
       {propriedades.start ?
@@ -178,8 +189,6 @@ function Jnla(propriedades) {
     }
   />
 }
-
-const zeroPad = (num, casas) => String(num).padStart(casas, '0')
 
 const Post = () => {
   const router = useRouter()
