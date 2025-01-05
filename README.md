@@ -22,11 +22,6 @@ Pra compilar e rodar:
 yarn dev
 ```
 
-Pra criar um projeto com o mesmo template:
-```bash
-npx create-next-app --example with-styled-components
-```
-
 ![Eu em 256x256px](/public/img/eu_16-16.gif)
 
 ## Coisas pra fazer
@@ -36,9 +31,10 @@ npx create-next-app --example with-styled-components
 - Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
 #### Pra fazer algum dia...
+* Mais temas pro portfólio
+* Escolher o tema automáticamente
+* Opção pra escolher um tema (natal, halloween, ...) nas 'config'
+
 - A janela abre em uma posição aleatória
-- Abrir o menu iniciar com CSS puro
-- Arrumar o horário
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
 - Função nas configurações pra mudar o tamanho das fontes
-- Opção pra escolher um tema (natal, halloween, ...) nas 'config'
