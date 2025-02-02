@@ -14,7 +14,7 @@
     },
     {
       "nome":"desenhos",
-      "icone": "/img/paint.png",
+      "icone": "/img/icn/paint.png",
       "conteudo": "<Desenhos  />",
       "isRaiz": false
     },
@@ -32,82 +32,82 @@
     },
     {
       "nome": "nedankinde",
-      "icone": "/img/nedankinde.png",
-      "conteudo": "<img src='/img/nedankinde.png' />",
+      "icone": "/img/dsn/nedankinde.png",
+      "conteudo": "<img src='/img/dsn/nedankinde.png' />",
       "isRaiz": false
     },
     {
       "nome": "mutarelli",
-      "icone": "/img/mutarelli.jpg",
+      "icone": "/img/dsn/mutarelli.jpg",
       "conteudo":
-      "<a href='https://www.behance.net/gallery/59384263/Quero-ser-Lourenco-Mutarelli'><img src='/img/mutarelli.jpg' /></a>",
+      "<a href='https://www.behance.net/gallery/59384263/Quero-ser-Lourenco-Mutarelli'><img src='/img/dsn/mutarelli.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "h2",
-      "icone": "/img/h2.jpg",
-      "conteudo": "<img src='/img/h2.jpg' />",
+      "icone": "/img/dsn/h2.jpg",
+      "conteudo": "<img src='/img/dsn/h2.jpg' />",
       "isRaiz": false
     },
     {
       "nome": "vikings",
-      "icone": "/img/vikings.jpg",
+      "icone": "/img/dsn/vikings.jpg",
       "conteudo": 
-      "<a href='https://www.deviantart.com/sleiph/art/Vikings-605260538'><img src='/img/vikings.jpg' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Vikings-605260538'><img src='/img/dsn/vikings.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "daytona",
-      "icone": "/img/daytona.png",
+      "icone": "/img/dsn/daytona.png",
       "conteudo":
-      "<a href='https://www.deviantart.com/sleiph/art/Daytona-845558314'><img src='/img/daytona.png' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Daytona-845558314'><img src='/img/dsn/daytona.png' /></a>",
       "isRaiz": false
     },
     {
       "nome": "iguacu",
-      "icone": "/img/iguacu.jpg",
+      "icone": "/img/dsn/iguacu.jpg",
       "conteudo": 
-      "<a href='https://www.artstation.com/artwork/YdaEK'><img src='/img/iguacu.jpg' /></a>",
+      "<a href='https://www.artstation.com/artwork/YdaEK'><img src='/img/dsn/iguacu.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "lupus",
-      "icone": "/img/lupus.jpg",
+      "icone": "/img/dsn/lupus.jpg",
       "conteudo":
-      "<a href='https://www.deviantart.com/sleiph/art/Lupus-dei-606614577'><img src='/img/lupus.jpg' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Lupus-dei-606614577'><img src='/img/dsn/lupus.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "caliban",
-      "icone": "/img/caliban.jpg",
+      "icone": "/img/dsn/caliban.jpg",
       "conteudo":
-      "<a href='https://www.deviantart.com/sleiph/art/Dreadful-Caliban-482397424'><img src='/img/caliban.jpg' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Dreadful-Caliban-482397424'><img src='/img/dsn/caliban.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "thomassons",
-      "icone": "/img/thomassons.jpg",
+      "icone": "/img/dsn/thomassons.jpg",
       "conteudo":
-      "<a href='https://www.deviantart.com/sleiph/art/Thomassons-483662972'><img src='/img/thomassons.jpg' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Thomassons-483662972'><img src='/img/dsn/thomassons.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "expressionist",
-      "icone": "/img/expressionist.jpg",
+      "icone": "/img/dsn/expressionist.jpg",
       "conteudo":
-      "<a href='https://www.deviantart.com/sleiph/art/Expressionist-482396606'><img src='/img/expressionist.jpg' /></a>",
+      "<a href='https://www.deviantart.com/sleiph/art/Expressionist-482396606'><img src='/img/dsn/expressionist.jpg' /></a>",
       "isRaiz": false
     },
     {
       "nome": "64bitsMarseilles",
-      "icone": "/img/paint.png",
+      "icone": "/img/icn/paint.png",
       "conteudo":
       "<a href='https://dribbble.com/shots/16692392-Paus-de-Marseilles'><img src='https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900' alt='tarot de Marseilles' /></a>",
       "isRaiz": false
     },
     {
       "nome":"php",
-      "icone": "/img/php.png",
+      "icone": "/img/icn/php.png",
       "conteudo": 
       "<a href='https://www.reddit.com/r/PHP/comments/1fy71s/why_do_so_many_developers_hate_php/'><img src='https://i.imgur.com/eXi1Ld0.jpeg' alt='meme de php' /></a>",
       "isRaiz": false
@@ -120,13 +120,13 @@
     },
     {
       "nome": "lixeira",
-      "icone": "/img/lixeira-cheia.png",
+      "icone": "/img/icn/lixeira-cheia.png",
       "conteudo": "<Lixeira />",
       "isRaiz": true
     },
     {
       "nome":"design",
-      "icone": "/img/paint.png",
+      "icone": "/img/icn/paint.png",
       "conteudo":
       "<Descricao><h3>Design impresso e digital</h3><br></br><p>7 anos de experiência desenvolvendo websites, ícones, landingpages e outros produtos digitais. Também livros, jornais, todo tipo de mídia impressa.</p></Descricao>",
       "isRaiz": false
@@ -212,51 +212,51 @@
   "tecnologias" : [
     {
       "nome": "Java/spring",
-      "imagem": "/img/spring.png"
+      "imagem": "/img/icn/spring.png"
     },
     {
       "nome": "Kotlin/Android Studio",
-      "imagem": "/img/android.png"
+      "imagem": "/img/icn/android.png"
     },
     {
       "nome": "C#/.NET",
-      "imagem": "/img/dotnet.png"
+      "imagem": "/img/icn/dotnet.png"
     },
     {
       "nome": "Vue.js 2/3",
-      "imagem": "/img/vue.png"
+      "imagem": "/img/icn/vue.png"
     },
     {
       "nome": "React.js",
-      "imagem": "/img/react.png"
+      "imagem": "/img/icn/react.png"
     },
     {
       "nome": "Node.js",
-      "imagem": "/img/node.png"
+      "imagem": "/img/icn/node.png"
     },
     {
       "nome": "unity",
-      "imagem": "/img/unity.png"
+      "imagem": "/img/icn/unity.png"
     },
     {
       "nome": "MySQL",
-      "imagem": "/img/mysql.png"
+      "imagem": "/img/icn/mysql.png"
     },
     {
       "nome": "Postgres",
-      "imagem": "/img/postgres.png"
+      "imagem": "/img/icn/postgres.png"
     },
     {
       "nome": "MongoDB",
-      "imagem": "/img/mongodb.png"
+      "imagem": "/img/icn/mongodb.png"
     },
     {
       "nome": "Adobe Photoshop",
-      "imagem": "/img/photoshop.png"
+      "imagem": "/img/icn/photoshop.png"
     },
     {
       "nome": "Adobe Illustrator",
-      "imagem": "/img/illustrator.png"
+      "imagem": "/img/icn/illustrator.png"
     }
   ],
   "formacoes" : [
@@ -280,170 +280,175 @@
     {
       "nome": "Microsserviços, Spring e RabbitMQ",
       "data": "outubro de 2023",
-      "imagem": "/img/alura.png"
+      "imagem": "/img/icn/alura.png"
     },
     {
       "nome": "SOLID com Java",
       "data": "fevereiro de 2023",
-      "imagem": "/img/alura.png"
+      "imagem": "/img/icn/alura.png"
     },
     {
       "nome": "Java Developer",
       "data": "agosto de 2022",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "Mobile Developer",
       "data": "fevereiro de 2022",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "capgemini - Angular",
       "data": "setembro de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "everis - .NET",
       "data": "Agosto de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "everis - Kotlin Developer",
       "data": "Março de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "Imersão Next.js da Alura",
       "data": "Fevereiro de 2021",
-      "imagem": "/img/alura.png"
+      "imagem": "/img/icn/alura.png"
     },
     {
       "nome": "React Web Developer",
       "data": "Novembro de 2020",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "NextLevelWeek#3 da Rocketseat",
       "data": "Setembro de 2020",
-      "imagem": "/img/rocketseat.png"
+      "imagem": "/img/icn/rocketseat.png"
     },
     {
       "nome": "Fullstack Developer",
       "data": "Junho de 2020",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "Python - Análise de Dados",
       "data": "Maio de 2020",
-      "imagem": "/img/dsa.png"
+      "imagem": "/img/icn/dsa.png"
     }
   ],
   "certificados_old" : [
     {
       "nome": "Arquitetura e padrões de projeto",
       "data": "agosto de 2023",
-      "imagem": "/img/alura.png"
+      "imagem": "/img/icn/alura.png"
     },
     {
       "nome": "Carrefour Web Developer",
       "data": "maio de 2022",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "Amdocs JAVA Developer",
       "data": "janeiro de 2022",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "Eduzz Fullstack Developer",
       "data": "novembro de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "GFT - Java Developer",
       "data": "Junho de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     },
     {
       "nome": "santander - Mobile Developer",
       "data": "Abril de 2021",
-      "imagem": "/img/dio.png"
+      "imagem": "/img/icn/dio.png"
     }
   ],
   "contatos" : [
     {
       "nome": "sleiph @gmail.com",
-      "imagem": "/img/gmail.png",
+      "imagem": "/img/icn/gmail.png",
       "link": "mailto:sleiph@gmail.com"
     },
     {
       "nome": "(11) 94520-0418",
-      "imagem": "/img/whatsapp.png",
+      "imagem": "/img/icn/whatsapp.png",
       "link": "https://api.whatsapp.com/send?phone=+5511945200418"
     },
     {
       "nome": "GitHub",
-      "imagem": "/img/github.png",
+      "imagem": "/img/icn/github.png",
       "link": "https://github.com/sleiph"
     },
     {
+      "nome": "itch.io",
+      "imagem": "/img/icn/itch.png",
+      "link": "https://harpo.itch.io"
+    },
+    {
       "nome": "LinkedIn",
-      "imagem": "/img/linkedin.png",
+      "imagem": "/img/icn/linkedin.png",
       "link": "https://www.linkedin.com/in/ricardo-gomes-aa40a51b1/"
     }
   ],
   "contatos_old" : [
     {
       "nome": "dribbble",
-      "imagem": "/img/dribbble.png",
+      "imagem": "/img/icn/dribbble.png",
       "link": "https://dribbble.com/ricardoalvesgomes"
     },
     {
       "nome": "Behance",
-      "imagem": "/img/behance.png",
+      "imagem": "/img/icn/behance.png",
       "link": "https://www.behance.net/ricardoalvesgomes"
     }
   ],
   "desenhos" : [
     {
       "nome": "nedankinde",
-      "imagem": "/img/nedankinde.png"
+      "imagem": "/img/dsn/nedankinde.png"
     },
     {
       "nome": "mutarelli",
-      "imagem": "/img/mutarelli.jpg"
+      "imagem": "/img/dsn/mutarelli.jpg"
     },
     {
       "nome": "h2",
-      "imagem": "/img/h2.jpg"
+      "imagem": "/img/dsn/h2.jpg"
     },
     {
       "nome": "vikings",
-      "imagem": "/img/vikings.jpg"
+      "imagem": "/img/dsn/vikings.jpg"
     },
     {
       "nome": "daytona",
-      "imagem": "/img/daytona.png"
+      "imagem": "/img/dsn/daytona.png"
     },
     {
       "nome": "iguacu",
-      "imagem": "/img/iguacu.jpg"
+      "imagem": "/img/dsn/iguacu.jpg"
     },
     {
       "nome": "lupus",
-      "imagem": "/img/lupus.jpg"
+      "imagem": "/img/dsn/lupus.jpg"
     },
     {
       "nome": "caliban",
-      "imagem": "/img/caliban.jpg"
+      "imagem": "/img/dsn/caliban.jpg"
     },
     {
       "nome": "thomassons",
-      "imagem": "/img/thomassons.jpg"
+      "imagem": "/img/dsn/thomassons.jpg"
     },
     {
       "nome": "expressionist",
-      "imagem": "/img/expressionist.jpg"
+      "imagem": "/img/dsn/expressionist.jpg"
     },
     {
       "nome": "64bitsMarseilles",
@@ -453,11 +458,11 @@
   "lixos" : [
     {
       "nome":"desenhos",
-      "icone": "/img/paint.png"
+      "icone": "/img/icn/paint.png"
     },
     {
       "nome":"php",
-      "icone": "/img/php.png"
+      "icone": "/img/icn/php.png"
     }
   ]
 }
