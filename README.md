@@ -28,7 +28,6 @@ npm run dev
 ## Coisas pra fazer
 
 #### Importantes
-- Readicionar um jeito de arrastar as janelas
 - Arrumar o 'fechar janela' pra funcionar em celular...
 - Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
@@ -40,3 +39,4 @@ npm run dev
 - A janela abre em uma posição aleatória
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
 - Função nas configurações pra mudar o tamanho das fontes
+- resolver warnings no console sobre `Do not add stylesheets using next/head`

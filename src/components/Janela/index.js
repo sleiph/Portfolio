@@ -1,5 +1,7 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import Draggable from 'react-draggable';
+import { useRef } from 'react';
 
 export const Janela = styled.div`
   position: absolute;
@@ -83,11 +85,15 @@ const Conteudo = styled.div`
 `
 
 export default function Artigo({ artigo }) {
+
   const router = useRouter();
+  const nodeRef = useRef(null);
   
   return (
-
-      <Janela id={ artigo.nome }>
+    <Draggable
+    handle=".head"
+    positionOffset={{x: '-50%', y: '-50%'}} nodeRef={nodeRef}>
+      <Janela id={ artigo.nome } ref={nodeRef}>
         
         <Titulo className="head">
           <div className="icone" onClick={
@@ -128,5 +134,6 @@ export default function Artigo({ artigo }) {
         </Conteudo>
 
       </Janela>
+    </Draggable>
   )
 }
