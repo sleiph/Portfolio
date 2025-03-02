@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import Draggable from 'react-draggable';
 
 import { theme } from '../../../pages/_app';
 import {Janela, Titulo} from '../Janela';
@@ -69,9 +68,6 @@ export default function Config(  ) {
   const router = useRouter()
   
   return (
-    <Draggable
-    handle=".head"
-    positionOffset={{x: '-50%', y: '-50%'}}>
       <Janela id='config'>
           
         <Titulo className="head">
@@ -199,6 +195,5 @@ export default function Config(  ) {
         </Conteudo>
 
       </Janela>
-    </Draggable>
   )
 }
