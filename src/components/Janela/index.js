@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components';
-import Draggable from 'react-draggable'
 
 export const Janela = styled.div`
   position: absolute;
@@ -87,9 +86,7 @@ export default function Artigo({ artigo }) {
   const router = useRouter();
   
   return (
-    <Draggable
-    handle=".head"
-    positionOffset={{x: '-50%', y: '-50%'}}>
+
       <Janela id={ artigo.nome }>
         
         <Titulo className="head">
@@ -131,6 +128,5 @@ export default function Artigo({ artigo }) {
         </Conteudo>
 
       </Janela>
-    </Draggable>
   )
 }

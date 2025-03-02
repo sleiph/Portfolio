@@ -6,20 +6,21 @@ Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app/home).
 
 Layout ~copiado~ baseado em um projeto do [Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
 
-## Tecnologias usadas
-
-Next.js | [styled-components](https://styled-components.com/) | [React-Draggable](https://github.com/react-grid-layout/react-draggable)
-
 ## Comandos
 
 Pra instalar os pacotes:
 ```bash
-npm i -D cross-env
+npm install
+```
+
+Pra buildar o projeto:
+```bash
+npm build
 ```
 
 Pra compilar e rodar:
 ```bash
-yarn dev
+npm run dev
 ```
 
 ![Eu em 256x256px](/public/img/eu_16-16.gif)
@@ -27,6 +28,7 @@ yarn dev
 ## Coisas pra fazer
 
 #### Importantes
+- Readicionar um jeito de arrastar as janelas
 - Arrumar o 'fechar janela' pra funcionar em celular...
 - Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
 
