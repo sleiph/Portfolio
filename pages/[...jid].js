@@ -183,7 +183,7 @@ function Jnla(propriedades) {
     artigo={
       {
         nome: propriedades.id,
-        icone: 'https://64.media.tumblr.com/7b1a9eb3789efa0e5570c62db6484d0e/tumblr_prx9qfzCdv1ubqz06_540.gifv',
+        icone: '/img/icn/lixeira-cheia.png',
         conteudo: <QuatrozeroQuatro />
       }
     }
@@ -197,17 +197,17 @@ const Post = () => {
   const [start, setStart] = useState(false);
 
   const iconeContato = {
-    0: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    1: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    2: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    3: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    4: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    5: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    6: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    7: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
-    8: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
+    0: '/img/ajuda.png',
+    1: '/img/ajuda.png',
+    2: '/img/ajuda.png',
+    3: '/img/ajuda.png',
+    4: '/img/ajuda.png',
+    5: '/img/ajuda.png',
+    6: '/img/ajuda.png',
+    7: '/img/ajuda.png',
+    8: '/img/ajuda.png',
     9: '/img/icn/spook.gif',
-    10: 'https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png',
+    10: '/img/ajuda.png',
     11: '/img/icn/spohoho.gif',
   }
   const mes = new Date().getMonth();
@@ -215,13 +215,13 @@ const Post = () => {
   const posts = [
     {
       nome:'projetos',
-      icone: 'https://66.media.tumblr.com/2d4a1593f0a13df6d507304708e11a7f/tumblr_odqaag4zd41vgs7gco1_75sq.png',
+      icone: '/img/pasta.png',
       conteudo: <Projetos />,
       isRaiz: true
     },
     {
       nome:'conhecimentos',
-      icone: 'https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png',
+      icone: '/img/janela.png',
       conteudo: <Conhecimentos />,
       isRaiz: true
     },
@@ -233,7 +233,7 @@ const Post = () => {
     },
     {
       nome:'formacao',
-      icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
+      icone: '/img/doc.png',
       conteudo: <Formacao />,
       isRaiz: true
     },
@@ -340,13 +340,13 @@ const Post = () => {
       nome:'php',
       icone: '/img/icn/php.png',
       conteudo: <a href="https://www.reddit.com/r/PHP/comments/1fy71s/why_do_so_many_developers_hate_php/">
-        <img src="https://i.imgur.com/eXi1Ld0.jpeg" alt="meme de php" />
+        <img src="/img/php.jpeg" alt="meme de php" />
       </a>,
       isRaiz: false
     },
     {
       nome: 'config',
-      icone: 'https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png',
+      icone: '/img/config.png',
       conteudo: <></>,
       isRaiz: true
     },
@@ -368,7 +368,7 @@ const Post = () => {
     },
     {
       nome:'elinduxus-estagiario',
-      icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
+      icone: '/img/doc.png',
       conteudo:<Descricao>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Estagiário</h3></a>
         <br></br>
@@ -378,7 +378,7 @@ const Post = () => {
     },
     {
       nome:'elinduxus-junior',
-      icone: 'https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png',
+      icone: '/img/doc.png',
       conteudo:<Descricao>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Programador Júnior</h3></a>
         <br></br>

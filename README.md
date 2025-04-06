@@ -40,3 +40,7 @@ npm run dev
 - Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
 - Função nas configurações pra mudar o tamanho das fontes
 - resolver warnings no console sobre `Do not add stylesheets using next/head`
+- aparece um bichinho (gif) na tela se ficar muito tempo parado
+- trocar as imagens externas por internas
+
+- tirar o styled components?

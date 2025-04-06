@@ -28,7 +28,7 @@ export default function Conhecimentos() {
               router.push(`${caminho}`)
             }
           }>
-            <img src='https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png' alt="pasta de arquivos" />
+            <img src='/img/doc.png' alt="pasta de arquivos" />
             <p><b>{experiencia.empresa}</b></p>
             <p>{experiencia.cargo}</p>
           </Pasta>

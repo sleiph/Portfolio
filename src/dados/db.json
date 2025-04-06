@@ -2,13 +2,13 @@
   "posts" : [ 
     {
       "nome":"projetos",
-      "icone": "https://66.media.tumblr.com/2d4a1593f0a13df6d507304708e11a7f/tumblr_odqaag4zd41vgs7gco1_75sq.png",
+      "icone": "/img/pasta.png",
       "conteudo": "<Projetos />",
       "isRaiz": true
     },
     {
       "nome":"conhecimentos",
-      "icone": "https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png",
+      "icone": "/img/janela.png",
       "conteudo": "<Conhecimentos />",
       "isRaiz": true
     },
@@ -20,13 +20,13 @@
     },
     {
       "nome":"formacao",
-      "icone": "https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png",
+      "icone": "/img.doc.png",
       "conteudo": "<Formacao />",
       "isRaiz": true
     },
     {
       "nome":"contatos",
-      "icone": "https://67.media.tumblr.com/f269281536842a64ec1a35479ca8fdd3/tumblr_odqaag4zd41vgs7gco5_75sq.png",
+      "icone": "/img/ajuda.png",
       "conteudo": "<Sobre />",
       "isRaiz": true
     },
@@ -114,7 +114,7 @@
     },
     {
       "nome": "config",
-      "icone": "https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png",
+      "icone": "/img/config.png",
       "conteudo": "<></>",
       "isRaiz": true
     },
@@ -133,14 +133,14 @@
     },
     {
       "nome":"elinduxus-estagiario",
-      "icone": "https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png",
+      "icone": "/img/doc.png",
       "conteudo":
       "<Descricao><a href='https://www.duxus.com.br'><h3>Élin Duxus - Estagiário</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p></Descricao>",
       "isRaiz": false
     },
     {
       "nome":"elinduxus-junior",
-      "icone": "https://66.media.tumblr.com/6ee194172c15584561b951ff258d9d1d/tumblr_odqaag4zd41vgs7gco3_75sq.png",
+      "icone": "/img/doc.png",
       "conteudo":
       "<Descricao><a href='https://www.duxus.com.br'><h3>Élin Duxus - Programador Júnior</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p></Descricao>",
       "isRaiz": false
@@ -379,7 +379,7 @@
     {
       "nome": "(11) 94520-0418",
       "imagem": "/img/icn/whatsapp.png",
-      "link": "https://api.whatsapp.com/send?phone=+5511945200418"
+      "link": "https://wa.me/+5511945200418"
     },
     {
       "nome": "GitHub",

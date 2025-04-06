@@ -50,10 +50,13 @@ export const Titulo = styled.div`
   }
 
   .fechar {
+    position: relative;
   	height: 100%;
   	display: block;
   	float: right;
   	padding-right: 4px;
+    z-index: 10;
+    pointer-events: all;
 
     button {
       background: ${({ theme }) => theme.desktop.janela};
@@ -88,43 +91,40 @@ export default function Artigo({ artigo }) {
 
   const router = useRouter();
   const nodeRef = useRef(null);
+
+  const fecharJanela = () =>  {
+    let caminho = router.asPath.replace('/' + artigo.nome, '');
+    if (caminho === '')
+      caminho = '/home';
+    router.replace(`${caminho}`);
+  }
+
+  const ordenaJanela = () => {
+    var caminho = router.asPath;
+    caminho = caminho.replace('/' + artigo.nome, '');
+    caminho += '/' + artigo.nome;
+    router.push(`${caminho}`);
+  }
   
   return (
     <Draggable
-    handle=".head"
-    positionOffset={{x: '-50%', y: '-50%'}} nodeRef={nodeRef}>
+      handle=".head"
+      positionOffset={{x: '-50%', y: '-50%'}}
+      nodeRef={nodeRef}
+      cancel=".fechar"
+    >
       <Janela id={ artigo.nome } ref={nodeRef}>
         
         <Titulo className="head">
-          <div className="icone" onClick={
-            () => {
-              var caminho = router.asPath
-              caminho = caminho.replace('/' + artigo.nome, '')
-              caminho += '/' + artigo.nome
-              router.push(`${caminho}`)
-            }
-          }>
+          <div className="icone">
             <img src={ artigo.icone } alt="icone do programa" />
           </div>
           <div className="fechar">
-            <button onClick={
-              () =>  {
-                var caminho = router.asPath.replace('/' + artigo.nome, '')
-                if (caminho === '') caminho = '/home'
-                router.replace(`${caminho}`)
-              }
-            }>
+            <button onClick={fecharJanela}>
               &#10006;
             </button>
           </div>
-          <div className="titulo" onClick={
-            () => {
-              var caminho = router.asPath
-              caminho = caminho.replace('/' + artigo.nome, '')
-              caminho += '/' + artigo.nome
-              router.push(`${caminho}`)
-            }
-          }>
+          <div className="titulo" onClick={ordenaJanela}>
             { artigo.nome }
           </div>
         </Titulo>

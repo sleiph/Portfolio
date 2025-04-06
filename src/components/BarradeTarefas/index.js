@@ -14,7 +14,7 @@ export const BarradeTarefas = styled.div`
     float: right;
     padding: 4px 15px 3px 35px;
     font-size: 14px;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Gnome-audio-volume-high.svg/120px-Gnome-audio-volume-high.svg.png');
+    background: url('/img/som.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 5px center;
@@ -112,13 +112,13 @@ export const StartMenu = styled.div`
       background-position: 48px center;
       background-size: 33px;
       &.windows-update {
-        background-image: url('https://68.media.tumblr.com/f33cc852028056f5c3f41daa4ba007c3/tumblr_odq9qssnET1vgs7gco1_75sq.png');
+        background-image: url('/img/winmundo.png');
       }
       &.config {
-        background-image: url('https://66.media.tumblr.com/83833fe1b6ac3b482a89ff02aad3ed15/tumblr_odqaag4zd41vgs7gco9_75sq.png');
+        background-image: url('/img/config.png');
       }
       &.shut-down {
-        background-image: url('https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png');
+        background-image: url('/img/monitor.png');
       }
       
       &:hover {
