@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import router, { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { theme } from './_app';
 
-import {BarradeTarefas, StartMenu} from '../src/components/BarradeTarefas';
+import stylesBarra from '../src/components/BarradeTarefas.module.css';
 import { Descricao } from '../src/components/Artigos';
 //import DB from '../src/dados/db.json';
 
@@ -67,9 +68,17 @@ function acharPost(arr, nome) {
   })
 }
 
+/**
+ * TODO: mover pra um componente separado
+ * @param {*} propriedades 
+ * @returns 
+ */
 function BTarefas(propriedades) {
 
   const [hora, setHora] = useState(new Date());
+
+  const corJanela = {background: theme.desktop.janela};
+  const corTituloJanela = {background: theme.desktop.titulo_janela};
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -80,8 +89,8 @@ function BTarefas(propriedades) {
   }, []);
 
   return (
-    <BarradeTarefas>
-      <a className="start-btn" onClick={
+    <div className={stylesBarra.barradetarefasdiv} style={corJanela}>
+      <a className={stylesBarra.startbtn} style={corJanela} onClick={
         () => {
           propriedades.setStart(!propriedades.start)
         }
@@ -89,16 +98,14 @@ function BTarefas(propriedades) {
         Iniciar
       </a>
         
-      <div className="relogio">
+      <div className={stylesBarra.relogio}>
         {hora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </div>
 
       {propriedades.start ?
-      <StartMenu id="start-menu">
-        <div id='start-menu-titulo' className="title-container">
-          <div className="title" style={{
-            top: (42*7) + 'px'
-          }}>
+      <div className={stylesBarra.startmenudiv} id="start-menu" style={corJanela}>
+        <div id='start-menu-titulo' className={stylesBarra.titlecontainer} style={corTituloJanela}>
+          <div className={stylesBarra.titlecontainertitle} style={{top: (42*7) + 'px'}}>
             Ricardo<span>98</span>
           </div>
         </div>
@@ -134,10 +141,10 @@ function BTarefas(propriedades) {
             </li>
           </a>
         </ul>
-      </StartMenu>
+      </div>
       : <></>
       }
-    </BarradeTarefas>
+    </div>
   )
 }
 

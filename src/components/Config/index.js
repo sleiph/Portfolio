@@ -1,70 +1,10 @@
 import { useRouter } from 'next/router';
-import styled from 'styled-components';
+import styles from './Config.module.css';
 import Draggable from 'react-draggable';
 import { useRef } from 'react';
 
 import { theme } from '../../../pages/_app';
-import {Janela, Titulo} from '../Janela';
-
-const Conteudo = styled.div`
-  min-height: 208px;
-  max-height: 80vh;
-  width: 100%;
-  clear: both;
-  border-radius: 1px;
-  overflow: auto;
-
-  img {
-    max-width:1080px;
-  }
-`
-
-const ImgSys = styled.img`
-  width: 180px;
-  margin-top: 12px;
-`
-
-const Campo = styled.div`
-  display: block;
-  margin: 15px 10px;
-  padding: 0 10px;
-  border: thin solid #222;
-
-  h5 {
-    background-color: ${({ theme }) => theme.desktop.janela};
-    position: relative;
-    display: inline;
-    top: -12px;
-    left: -3px;
-    padding: 0 3px;
-    font-weight: 200;
-    color: #222;
-  }
-`
-
-const Botao = styled.a`
-  padding: 5px 25px;
-  display: block;
-  margin: 0 auto 10px auto;
-  line-height: 1;
-  font-size: small;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 2px;
-  border-top-color: white;
-  border-left-color: white;
-  border-right-color: #222;
-  border-bottom-color: #222;
-  &:active {
-    outline: none;
-    border-top-color: #222;
-    border-left-color: #222;
-    border-right-color: white;
-    border-bottom-color: white;
-  }
-`
+import stylesJanela from '../Janela/Janela.module.css';
 
 export default function Config(  ) {
 
@@ -142,11 +82,14 @@ export default function Config(  ) {
 
   //todo: tem uma funcao igual na janela/index.js
   const ordenaJanela = () => {
-    var caminho = router.asPath
-    caminho = caminho.replace('/config', '')
-    caminho += '/config'
-    router.push(`${caminho}`)
+    var caminho = router.asPath;
+    caminho = caminho.replace('/config', '');
+    caminho += '/config';
+    router.push(`${caminho}`);
   }
+
+  const corJanela = {backgroundColor: theme.desktop.janela};
+  const corTituloJanela = {background: theme.desktop.titulo_janela};
   
   return (
     <Draggable
@@ -155,58 +98,57 @@ export default function Config(  ) {
       nodeRef={nodeRef}
       cancel=".fechar"
     >
-      <Janela id='config' ref={nodeRef}>
+      <div className={stylesJanela.janeladiv} id='config' ref={nodeRef} style={corJanela}>
           
-        <Titulo className="head">
-          <div className="icone">
+        <div className={stylesJanela.titulodiv + ' head'} style={corTituloJanela}>
+          <div className={stylesJanela.icone}>
             <img src='/img/config.png' alt="icone das configuracoes" />
           </div>
-          <div className="fechar">
+          <div className={stylesJanela.fechar}>
             <button onClick={fecharJanela}>
               &#10006;
             </button>
           </div>
-          <div className="titulo" onClick={ordenaJanela}>
+          <div className={stylesJanela.titulo} onClick={ordenaJanela}>
             Configurações
           </div>
+        </div>
 
-        </Titulo>
-
-        <Conteudo>
-          <ImgSys src='/img/win98.png' />
-          <Campo>
-            <h5>Estilos</h5>
-            <Botao onClick={corBackgroundAleatoria}>
+        <div className={styles.conteudodiv}>
+          <img id={styles.imgsys} src='/img/win98.png' />
+          <div className={styles.campodiv} >
+            <h5 style = {corJanela}>Estilos</h5>
+            <a className={styles.botaoa} onClick={corBackgroundAleatoria}>
               Mudar a cor do plano de fundo
-            </Botao>
-            <Botao onClick={resetarCores}>
+            </a>
+            <a className={styles.botaoa} onClick={resetarCores}>
               Resetar todas as cores
-            </Botao>
-          </Campo>
-          <Campo>
-            <h5>Janelas</h5>
-            <Botao onClick={corJanelaAleatoria}>
+            </a>
+          </div>
+          <div className={styles.campodiv} >
+            <h5 style = {corJanela}>Janelas</h5>
+            <a className={styles.botaoa} onClick={corJanelaAleatoria}>
               Mudar a cor da barra de título
-            </Botao>
-            <Botao onClick={corJanelaFundoAleatoria}>
+            </a>
+            <a className={styles.botaoa} onClick={corJanelaFundoAleatoria}>
               Mudar a cor de fundo
-            </Botao>
-            <Botao onClick={fecharTodasJanelas}>
+            </a>
+            <a className={styles.botaoa} onClick={fecharTodasJanelas}>
               Fechar todas as janelas
-            </Botao>
-          </Campo>
-          <Campo>
-            <h5>Sistema</h5>
-            <Botao onClick={tocarMusiquinha}>
+            </a>
+          </div>
+          <div className={styles.campodiv} >
+            <h5 style = {corJanela}>Sistema</h5>
+            <a className={styles.botaoa} onClick={tocarMusiquinha}>
               Tocar uma musiquinha
-            </Botao>
-            <Botao onClick={boraPraWikipedia}>
+            </a>
+            <a className={styles.botaoa} onClick={boraPraWikipedia}>
               Sair
-            </Botao>
-          </Campo>
-        </Conteudo>
+            </a>
+          </div>
+        </div>
 
-      </Janela>
+      </div>
     </Draggable>
   )
 }

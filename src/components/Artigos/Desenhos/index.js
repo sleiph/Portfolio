@@ -3,7 +3,7 @@ import { MeuCorpo, Pasta } from '..';
 import DB from '../../../dados/db.json';
 
 export default function Desenhos(  ) {
-  const router = useRouter()
+  const router = useRouter();
 
   const desenhos = DB["desenhos"];
 
