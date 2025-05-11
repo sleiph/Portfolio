@@ -1,4 +1,4 @@
-import { MeuCorpo, Pasta } from '..';
+import stylesArtigo from '../Artigo.module.css';
 import DB from '../../../dados/db.json';
 
 export default function Projetos() {
@@ -6,19 +6,19 @@ export default function Projetos() {
   const projetos = DB["projetos"];
 
   return (
-    <MeuCorpo>
+    <div className={stylesArtigo.artigocorpodiv}>
       {projetos.map((projeto) => {
         return (
           <a href={projeto.link} key={projeto.nome}>
-            <Pasta>
+            <div className={stylesArtigo.pastadiv}>
               <img src='/img/doc.png' alt={projeto.nome} />
               <p><b>{projeto.nome}</b></p>
               <p>{projeto.tecnologia}/</p>
               <p>{projeto.framework}</p>
-            </Pasta>
+            </div>
           </a>
         )
       })}
-    </MeuCorpo>
+    </div>
   )
 }

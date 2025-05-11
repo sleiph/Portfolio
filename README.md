@@ -42,5 +42,3 @@ npm run dev
 - resolver warnings no console sobre `Do not add stylesheets using next/head`
 - aparece um bichinho (gif) na tela se ficar muito tempo parado
 - trocar as imagens externas por internas
-
-- tirar o styled components?

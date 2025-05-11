@@ -1,0 +1,58 @@
+.artigocorpodiv {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 12px;
+    padding: 24px 16px;
+}
+.artigocorpodiv a {
+    text-decoration: none;
+}
+
+.descricaodiv {
+    padding: 24px 16px;
+}
+
+.tituloh3 {
+    width: 100%;
+    line-height: 1.75;
+    font-size: large;
+    font-weight: bold;
+}
+
+.notasp {
+  width: 100%;
+  line-height: 1.75;
+}
+.notasp a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* TODO: achar um jeito de adicionar background nos links denovo
+.notasp a:link {
+    color: ${({ theme }) => theme.desktop.fundo};
+}
+.notasp a:visited {
+    color: ${({ theme }) => theme.desktop.titulo_janela};
+}
+*/
+
+.pastadiv {
+  width: 96px;
+  min-height: 92px;
+}
+.pastadiv img {
+    display: block;
+    margin: 5px auto;
+    width: 48px;
+    height: 46px;
+    object-fit: cover;
+}
+.pastadiv p {
+    font-size: 12px;
+    text-align: center;
+}
+.pastadiv:active p {
+    /* TODO: achar um jeito de adicionar background no active denovo
+    background-color: ${({ theme }) => theme.desktop.titulo_janela};*/
+    color: white;
+}

@@ -128,21 +128,21 @@
       "nome":"design",
       "icone": "/img/icn/paint.png",
       "conteudo":
-      "<Descricao><h3>Design impresso e digital</h3><br></br><p>7 anos de experiência desenvolvendo websites, ícones, landingpages e outros produtos digitais. Também livros, jornais, todo tipo de mídia impressa.</p></Descricao>",
+      "<div className={stylesArtigo.descricaodiv}><h3>Design impresso e digital</h3><br></br><p>7 anos de experiência desenvolvendo websites, ícones, landingpages e outros produtos digitais. Também livros, jornais, todo tipo de mídia impressa.</p></div>",
       "isRaiz": false
     },
     {
       "nome":"elinduxus-estagiario",
       "icone": "/img/doc.png",
       "conteudo":
-      "<Descricao><a href='https://www.duxus.com.br'><h3>Élin Duxus - Estagiário</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p></Descricao>",
+      "<div className={stylesArtigo.descricaodiv}><a href='https://www.duxus.com.br'><h3>Élin Duxus - Estagiário</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p></div>",
       "isRaiz": false
     },
     {
       "nome":"elinduxus-junior",
       "icone": "/img/doc.png",
       "conteudo":
-      "<Descricao><a href='https://www.duxus.com.br'><h3>Élin Duxus - Programador Júnior</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p></Descricao>",
+      "<div className={stylesArtigo.descricaodiv}><a href='https://www.duxus.com.br'><h3>Élin Duxus - Programador Júnior</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p></div>",
       "isRaiz": false
     }
   ],

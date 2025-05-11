@@ -1,17 +1,5 @@
-import Head from 'next/head'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Fira Code', monospace;
-  }
-`
+import Head from 'next/head';
+import './styles/global.css';
 
 export const theme = {
   desktop: {
@@ -36,10 +24,7 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content={theme.desktop.titulo_janela}></meta>
       </Head>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </>
   )
 }

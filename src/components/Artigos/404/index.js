@@ -1,10 +1,10 @@
-import { MeuCorpo, Titulo, Notas } from '..';
+import stylesArtigo from '../Artigo.module.css';
 
 export default function QuatrozeroQuatro() {
   return (
-    <MeuCorpo>
-      <Titulo>404 - Página não encontrada<hr className="dashed"></hr></Titulo>
-      <Notas>Não sei o que você esperava, mas não conseguiu.</Notas>
-    </MeuCorpo>
+    <div className={stylesArtigo.artigocorpodiv}>
+      <h3 className={stylesArtigo.tituloh3}>404 - Página não encontrada<hr className="dashed"></hr></h3>
+      <p className={stylesArtigo.notasp}>Não sei o que você esperava, mas não conseguiu.</p>
+    </div>
   )
 }

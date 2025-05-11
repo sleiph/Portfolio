@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import router, { useRouter } from 'next/router';
-import styled from 'styled-components';
 import { theme } from './_app';
 
+import stylesArea from '../src/components/AreadeTrabalho.module.css';
 import stylesBarra from '../src/components/BarradeTarefas.module.css';
-import { Descricao } from '../src/components/Artigos';
-//import DB from '../src/dados/db.json';
+import stylesArtigo from '../src/components/Artigos/Artigo.module.css';
+/* TODO: achar um jeito de passar isso pro arquivo de dados */
+/*import DB from '../src/dados/db.json';*/
 
 import Janela from '../src/components/Janela';
 import Projetos from '../src/components/Artigos/Projetos';
@@ -16,48 +17,6 @@ import Sobre from '../src/components/Artigos/Sobre';
 import QuatrozeroQuatro from '../src/components/Artigos/404';
 import Config from '../src/components/Config';
 import Lixeira from '../src/components/Artigos/Lixeira';
-
-
-const AreadeTrabalho = styled.main`
-  background: ${({ theme }) => theme.desktop.fundo};
-  height: 100vh;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-`
-
-const Icones = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  grid-gap: 15px;
-  margin: 20px;
-`
-
-const Icone = styled.div`
-  width: 96px;
-  min-height: 80px;
-  cursor: pointer;
-
-  img {
-    display: block;
-    margin: 5px auto;
-    width: 48px;
-  }
-
-  p {
-    color: white;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  &:active {
-    p {
-      background-color: ${({ theme }) => theme.desktop.titulo_janela};
-    }
-  }
-`
 
 //TODO: usar um mapa
 function acharPost(arr, nome) {
@@ -150,30 +109,30 @@ function BTarefas(propriedades) {
 
 function Icns(propriedades) {
   return (
-    <Icones>
+    <div className={stylesArea.iconesdiv}>
       {propriedades.janelas.map((artigo) => {
         if (artigo.isRaiz)
           return (
-            <Icone key={artigo.nome+'-icone'}
+            <div key={artigo.nome+'-icone'} className={stylesArea.iconediv}
             onClick={
               () => {
-                var caminho = router.asPath
+                let caminho = router.asPath;
                 if (caminho.split('?')[0] === '/home') {
-                  caminho = artigo.nome
+                  caminho = artigo.nome;
                 }
                 else {
-                  caminho = caminho.replace('/' + artigo.nome, '')
-                  caminho += '/' + artigo.nome
+                  caminho = caminho.replace('/' + artigo.nome, '');
+                  caminho += '/' + artigo.nome;
                 }
-                router.push(`${caminho}`)
+                router.push(`${caminho}`);
               }
             }>
               <img src={artigo.icone} alt="" />
               <p>{artigo.nome}</p>
-            </Icone>
+            </div>
           )
       })}
-    </Icones>
+    </div>
   )
 }
 
@@ -366,37 +325,39 @@ const Post = () => {
     {
       nome:'design',
       icone: '/img/icn/paint.png',
-      conteudo:<Descricao>
+      conteudo:<div className={stylesArtigo.descricaodiv}>
         <h3>Design impresso e digital</h3>
         <br></br>
         <p>7 anos de experiência desenvolvendo websites, ícones, landingpages e outros produtos digitais. Também livros, jornais, todo tipo de mídia impressa.</p>
-      </Descricao>,
+      </div>,
       isRaiz: false
     },
     {
       nome:'elinduxus-estagiario',
       icone: '/img/doc.png',
-      conteudo:<Descricao>
+      conteudo:<div className={stylesArtigo.descricaodiv}>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Estagiário</h3></a>
         <br></br>
         <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p>
-      </Descricao>,
+      </div>,
       isRaiz: false
     },
     {
       nome:'elinduxus-junior',
       icone: '/img/doc.png',
-      conteudo:<Descricao>
+      conteudo:<div className={stylesArtigo.descricaodiv}>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Programador Júnior</h3></a>
         <br></br>
         <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p>
-      </Descricao>,
+      </div>,
       isRaiz: false
     }
-  ]
+  ];
+
+  const corFundo = {background: theme.desktop.fundo};
 
   return (
-    <AreadeTrabalho id='area-de-trabalho'>
+    <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain} style={corFundo}>
       <BTarefas artigos={posts} start={start} setStart={setStart} />
 
       <Icns janelas={posts} />
@@ -414,7 +375,7 @@ const Post = () => {
         : <></>
       }
       
-    </AreadeTrabalho>
+    </main>
   )
 }
 

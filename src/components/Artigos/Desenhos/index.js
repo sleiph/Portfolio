@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { MeuCorpo, Pasta } from '..';
+import stylesArtigo from '../Artigo.module.css';
 import DB from '../../../dados/db.json';
 
 export default function Desenhos(  ) {
@@ -8,10 +8,10 @@ export default function Desenhos(  ) {
   const desenhos = DB["desenhos"];
 
   return (
-    <MeuCorpo>
+    <div className={stylesArtigo.artigocorpodiv}>
       {desenhos.map((desenho) => {
         return (
-          <Pasta key={desenho.nome} onClick={
+          <div key={desenho.nome} className={stylesArtigo.pastadiv} onClick={
             () => {
               var caminho = router.asPath
               if (caminho === '/home') {
@@ -26,9 +26,9 @@ export default function Desenhos(  ) {
           }>
             <img src={desenho.imagem} alt={desenho.nome} />
             <p>{desenho.nome}</p>
-          </Pasta>
+          </div>
         )
       })}
-    </MeuCorpo>
+    </div>
   )
 }

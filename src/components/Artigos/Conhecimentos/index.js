@@ -1,4 +1,4 @@
-import { MeuCorpo, Pasta, Titulo } from '..';
+import stylesArtigo from '../Artigo.module.css';
 import { useRouter } from 'next/router';
 import DB from '../../../dados/db.json';
 
@@ -9,13 +9,13 @@ export default function Conhecimentos() {
   const tecnologias = DB["tecnologias"];
 
   return (
-    <MeuCorpo>
+    <div className={stylesArtigo.artigocorpodiv}>
 
-      <Titulo>Experiências Relevantes<hr className="dashed"></hr></Titulo>
+      <h3 className={stylesArtigo.tituloh3}>Experiências Relevantes<hr className="dashed"></hr></h3>
 
       {experiencias.map((experiencia) => {
         return (
-          <Pasta key={experiencia.nome} onClick={
+          <div key={experiencia.nome} className={stylesArtigo.pastadiv} onClick={
             () => {
               var caminho = router.asPath
               if (caminho === '/home') {
@@ -31,21 +31,21 @@ export default function Conhecimentos() {
             <img src='/img/doc.png' alt="pasta de arquivos" />
             <p><b>{experiencia.empresa}</b></p>
             <p>{experiencia.cargo}</p>
-          </Pasta>
+          </div>
         )
       })}
 
-      <Titulo>Principais Tecnologias<hr className="dashed"></hr></Titulo>
+      <h3 className={stylesArtigo.tituloh3}>Principais Tecnologias<hr className="dashed"></hr></h3>
 
       {tecnologias.map((tecnologia) => {
         return (
-          <Pasta key={tecnologia.nome}>
+          <div key={tecnologia.nome} className={stylesArtigo.pastadiv}>
             <img src={tecnologia.imagem} alt={tecnologia.nome} />
             <p>{tecnologia.nome}</p>
-          </Pasta>
+          </div>
         )
       })}
 
-    </MeuCorpo>
+    </div>
   )
 }

@@ -79,8 +79,8 @@
     background-size: 33px;
 }
 .startmenudiv ul li:hover {
-    /**TODO: achar um jeito de adicionar background no hover denovo/
-    /*background-color: ${({ theme }) => theme.desktop.titulo_janela};*/
+    /* TODO: achar um jeito de adicionar background no hover denovo */
+    /* background-color: ${({ theme }) => theme.desktop.titulo_janela};*/
     color: white;
     cursor: pointer;
 }

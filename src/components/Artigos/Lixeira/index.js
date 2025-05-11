@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { MeuCorpo, Pasta } from '..';
+import stylesArtigo from '../Artigo.module.css';
 import DB from '../../../dados/db.json';
 
 export default function Lixeira(  ) {
@@ -8,10 +8,10 @@ export default function Lixeira(  ) {
   const lixos = DB["lixos"];
 
   return (
-    <MeuCorpo>
+    <div className={stylesArtigo.artigocorpodiv}>
       {lixos.map((lixo) => {
         return (
-          <Pasta key={lixo.nome} onClick={
+          <div key={lixo.nome} className={stylesArtigo.pastadiv} onClick={
             () => {
               var caminho = router.asPath
               if (caminho === '/home') {
@@ -26,9 +26,9 @@ export default function Lixeira(  ) {
           }>
             <img src={lixo.icone} alt={lixo.nome} />
             <p>{lixo.nome}</p>
-          </Pasta>
+          </div>
         )
       })}
-    </MeuCorpo>
+    </div>
   )
 }

@@ -1,0 +1,38 @@
+.areadetrabalhomain {
+    /*background: ${({ theme }) => theme.desktop.fundo};*/
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.iconesdiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-gap: 15px;
+    margin: 20px;
+}
+
+.iconediv {
+    width: 96px;
+    min-height: 80px;
+    cursor: pointer;
+}
+.iconediv img {
+    display: block;
+    margin: 5px auto;
+    width: 48px;
+}
+
+.iconediv p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* TODO: achar um jeito de adicionar background no active denovo */
+/*.iconediv:active p {
+    background-color: ${({ theme }) => theme.desktop.titulo_janela};
+}*/
