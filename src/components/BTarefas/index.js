@@ -8,9 +8,6 @@ export default function BTarefas(propriedades) {
 
   const [hora, setHora] = useState(new Date());
 
-  const corJanela = {background: theme.desktop.janela};
-  const corTituloJanela = {background: theme.desktop.titulo_janela};
-
   useEffect(() => {
     const intervalo = setInterval(() => {
       setHora(new Date());
@@ -20,7 +17,7 @@ export default function BTarefas(propriedades) {
   }, []);
 
   return (
-    <div className={stylesBarra.barradetarefasdiv} style={corJanela}>
+    <div className={stylesBarra.barradetarefasdiv} >
       <a className={stylesBarra.startbtn} onClick={
         () => {
           propriedades.setStart(!propriedades.start)
@@ -34,8 +31,8 @@ export default function BTarefas(propriedades) {
       </div>
 
       {propriedades.start ?
-      <div className={stylesBarra.startmenudiv} id="start-menu" style={corJanela}>
-        <div id='start-menu-titulo' className={stylesBarra.titlecontainer} style={corTituloJanela}>
+      <div className={stylesBarra.startmenudiv} id="start-menu" >
+        <div id='start-menu-titulo' className={stylesBarra.titlecontainer} >
           <div className={stylesBarra.titlecontainertitle} style={{top: (42*7) + 'px'}}>
             Ricardo<span>98</span>
           </div>

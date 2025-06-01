@@ -54,10 +54,6 @@ function Artigo({ artigo }) {
     caminho += '/' + artigo.nome;
     router.push(`${caminho}`);
   }
-
-  const corJanela = {background: theme.desktop.janela};
-  const corTituloJanela = {background: theme.desktop.titulo_janela};
-  const corFundoJanela = {background: theme.desktop.fundo_janela};
   
   return (
     <Draggable
@@ -66,14 +62,14 @@ function Artigo({ artigo }) {
       nodeRef={nodeRef}
       cancel=".fechar"
     >
-      <div className={styles.janeladiv} id={ artigo.nome } ref={nodeRef} style={corJanela}>
+      <div className={styles.janeladiv} id={ artigo.nome } ref={nodeRef}>
         
-        <div className={styles.titulodiv + " head"} style={corTituloJanela}>
+        <div className={styles.titulodiv + " head"}>
           <div className={styles.icone}>
             <img src={ artigo.icone } alt="icone do programa" />
           </div>
           <div className={styles.fechar}>
-            <button onClick={fecharJanela} style={corJanela}>
+            <button onClick={fecharJanela}>
               &#10006;
             </button>
           </div>
@@ -82,7 +78,7 @@ function Artigo({ artigo }) {
           </div>
         </div>
 
-        <div className={styles.conteudodiv + ' conteudo'} style={corFundoJanela}>
+        <div className={styles.conteudodiv + ' conteudo'}>
           { artigo.conteudo }
         </div>
 

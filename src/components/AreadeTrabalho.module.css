@@ -1,5 +1,5 @@
 .areadetrabalhomain {
-    /*background: ${({ theme }) => theme.desktop.fundo};*/
+    background: var(--fundo);
     height: 100vh;
     position: relative;
     display: flex;
@@ -32,7 +32,6 @@
     text-align: center;
 }
 
-/* TODO: achar um jeito de adicionar background no active denovo */
-/*.iconediv:active p {
-    background-color: ${({ theme }) => theme.desktop.titulo_janela};
-}*/
+.iconediv:active p {
+    background-color: var(--titulo_janela);
+}

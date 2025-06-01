@@ -22,7 +22,7 @@
   border: thin solid #222;
 }
 .campodiv h5 {
-  /*background-color: ${({ theme }) => theme.desktop.janela};*/
+  background-color: var(--janela);
   position: relative;
   display: inline;
   top: -12px;

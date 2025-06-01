@@ -87,9 +87,6 @@ export default function Config(  ) {
     caminho += '/config';
     router.push(`${caminho}`);
   }
-
-  const corJanela = {backgroundColor: theme.desktop.janela};
-  const corTituloJanela = {background: theme.desktop.titulo_janela};
   
   return (
     <Draggable
@@ -98,9 +95,9 @@ export default function Config(  ) {
       nodeRef={nodeRef}
       cancel=".fechar"
     >
-      <div className={stylesJanela.janeladiv} id='config' ref={nodeRef} style={corJanela}>
+      <div className={stylesJanela.janeladiv} id='config' ref={nodeRef} >
           
-        <div className={stylesJanela.titulodiv + ' head'} style={corTituloJanela}>
+        <div className={stylesJanela.titulodiv + ' head'}>
           <div className={stylesJanela.icone}>
             <img src='/img/config.png' alt="icone das configuracoes" />
           </div>
@@ -117,7 +114,7 @@ export default function Config(  ) {
         <div className={styles.conteudodiv}>
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
-            <h5 style = {corJanela}>Estilos</h5>
+            <h5>Estilos</h5>
             <a className={styles.botaoa} onClick={corBackgroundAleatoria}>
               Mudar a cor do plano de fundo
             </a>
@@ -126,7 +123,7 @@ export default function Config(  ) {
             </a>
           </div>
           <div className={styles.campodiv} >
-            <h5 style = {corJanela}>Janelas</h5>
+            <h5>Janelas</h5>
             <a className={styles.botaoa} onClick={corJanelaAleatoria}>
               Mudar a cor da barra de título
             </a>
@@ -138,7 +135,7 @@ export default function Config(  ) {
             </a>
           </div>
           <div className={styles.campodiv} >
-            <h5 style = {corJanela}>Sistema</h5>
+            <h5>Sistema</h5>
             <a className={styles.botaoa} onClick={tocarMusiquinha}>
               Tocar uma musiquinha
             </a>

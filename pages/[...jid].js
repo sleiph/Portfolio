@@ -215,10 +215,8 @@ const AreaTrabalho = () => {
     }
   ];
 
-  const corFundo = {background: theme.desktop.fundo};
-
   return (
-    <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain} style={corFundo}>
+    <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain} >
       <BTarefas artigos={posts} start={start} setStart={setStart} />
 
       <Icones janelas={posts} />

@@ -10,6 +10,12 @@ export const theme = {
   }
 }
 
+if (typeof window !== 'undefined') {
+  Object.keys(theme.desktop).forEach(key => {
+    document.documentElement.style.setProperty(`--${key}`, theme.desktop[key]);
+  });
+}
+
 export default function App({ Component, pageProps }) {
   return (
     <>

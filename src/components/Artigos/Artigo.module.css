@@ -27,14 +27,12 @@
     font-weight: bold;
     text-decoration: underline;
 }
-/* TODO: achar um jeito de adicionar background nos links denovo
 .notasp a:link {
-    color: ${({ theme }) => theme.desktop.fundo};
+    color: var(--fundo);
 }
 .notasp a:visited {
-    color: ${({ theme }) => theme.desktop.titulo_janela};
+    color: var(--titulo_janela);
 }
-*/
 
 .pastadiv {
   width: 96px;
@@ -52,7 +50,6 @@
     text-align: center;
 }
 .pastadiv:active p {
-    /* TODO: achar um jeito de adicionar background no active denovo
-    background-color: ${({ theme }) => theme.desktop.titulo_janela};*/
+    background-color: var(--titulo_janela);
     color: white;
 }
