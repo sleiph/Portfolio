@@ -1,162 +1,23 @@
-import { useState, useEffect } from 'react';
-import router, { useRouter } from 'next/router';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { theme } from './_app';
 
 import stylesArea from '../src/components/AreadeTrabalho.module.css';
-import stylesBarra from '../src/components/BarradeTarefas.module.css';
 import stylesArtigo from '../src/components/Artigos/Artigo.module.css';
 /* TODO: achar um jeito de passar isso pro arquivo de dados */
 /*import DB from '../src/dados/db.json';*/
 
+import BTarefas from '../src/components/BTarefas';
+import Icones from '../src/components/Icones';
 import Janela from '../src/components/Janela';
 import Projetos from '../src/components/Artigos/Projetos';
 import Conhecimentos from '../src/components/Artigos/Conhecimentos';
 import Desenhos from '../src/components/Artigos/Desenhos';
 import Formacao from '../src/components/Artigos/Formacao';
 import Sobre from '../src/components/Artigos/Sobre';
-import QuatrozeroQuatro from '../src/components/Artigos/404';
-import Config from '../src/components/Config';
 import Lixeira from '../src/components/Artigos/Lixeira';
 
-//TODO: usar um mapa
-function acharPost(arr, nome) {
-  return arr.find(function(post) {
-    if (post.nome == nome) {
-      return true
-    }
-  })
-}
-
-/**
- * TODO: mover pra um componente separado
- * @param {*} propriedades 
- * @returns 
- */
-function BTarefas(propriedades) {
-
-  const [hora, setHora] = useState(new Date());
-
-  const corJanela = {background: theme.desktop.janela};
-  const corTituloJanela = {background: theme.desktop.titulo_janela};
-
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      setHora(new Date());
-    }, 15000);
-
-    return () => clearInterval(intervalo);
-  }, []);
-
-  return (
-    <div className={stylesBarra.barradetarefasdiv} style={corJanela}>
-      <a className={stylesBarra.startbtn} style={corJanela} onClick={
-        () => {
-          propriedades.setStart(!propriedades.start)
-        }
-      }>
-        Iniciar
-      </a>
-        
-      <div className={stylesBarra.relogio}>
-        {hora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
-      </div>
-
-      {propriedades.start ?
-      <div className={stylesBarra.startmenudiv} id="start-menu" style={corJanela}>
-        <div id='start-menu-titulo' className={stylesBarra.titlecontainer} style={corTituloJanela}>
-          <div className={stylesBarra.titlecontainertitle} style={{top: (42*7) + 'px'}}>
-            Ricardo<span>98</span>
-          </div>
-        </div>
-        <ul>
-          {propriedades.artigos.map((artigo) => {
-            if (artigo.isRaiz) {
-              return (
-                <li key={artigo.nome}
-                style={{backgroundImage: `url(${artigo.icone})`}}
-                onClick={
-                  () => {
-                    propriedades.setStart(!propriedades.start)
-                    var caminho = router.asPath
-                    if (caminho === '/home') {
-                      caminho = artigo.nome
-                    }
-                    else {
-                      caminho = caminho.replace('/' + artigo.nome, '')
-                      caminho += '/' + artigo.nome
-                    }
-                    router.push(`${caminho}`)
-                  }
-                }>
-                  {artigo.nome}
-                </li>
-              )
-            }
-          })}
-          <hr />
-          <a href='https://pt.wikipedia.org/wiki/Special:Random'>
-            <li key='shutdown' className="shut-down ok">
-              Sair
-            </li>
-          </a>
-        </ul>
-      </div>
-      : <></>
-      }
-    </div>
-  )
-}
-
-function Icns(propriedades) {
-  return (
-    <div className={stylesArea.iconesdiv}>
-      {propriedades.janelas.map((artigo) => {
-        if (artigo.isRaiz)
-          return (
-            <div key={artigo.nome+'-icone'} className={stylesArea.iconediv}
-            onClick={
-              () => {
-                let caminho = router.asPath;
-                if (caminho.split('?')[0] === '/home') {
-                  caminho = artigo.nome;
-                }
-                else {
-                  caminho = caminho.replace('/' + artigo.nome, '');
-                  caminho += '/' + artigo.nome;
-                }
-                router.push(`${caminho}`);
-              }
-            }>
-              <img src={artigo.icone} alt="" />
-              <p>{artigo.nome}</p>
-            </div>
-          )
-      })}
-    </div>
-  )
-}
-
-function Jnla(propriedades) {
-  if (propriedades.id === 'home')
-    return <></>
-  else if (propriedades.id === 'config')
-    return <Config />
-  var poste = acharPost(propriedades.janelas, propriedades.id)
-  return (poste !== undefined) ?
-  <Janela artigo={poste} />
-  :
-  <Janela
-    artigo={
-      {
-        nome: propriedades.id,
-        icone: '/img/icn/lixeira-cheia.png',
-        conteudo: <QuatrozeroQuatro />
-      }
-    }
-  />
-}
-
-const Post = () => {
+const AreaTrabalho = () => {
   const router = useRouter();
   const { jid } = router.query;
 
@@ -360,13 +221,13 @@ const Post = () => {
     <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain} style={corFundo}>
       <BTarefas artigos={posts} start={start} setStart={setStart} />
 
-      <Icns janelas={posts} />
+      <Icones janelas={posts} />
 
       {
         (jid !== undefined) ?
         jid.map((artigo) => {
           return (
-            <Jnla key={artigo}
+            <Janela key={artigo}
               janelas={posts}
               id={ artigo }
             />
@@ -379,4 +240,4 @@ const Post = () => {
   )
 }
 
-export default Post
+export default AreaTrabalho;

@@ -1,10 +1,42 @@
 import { useRouter } from 'next/router';
-import { theme } from '../../../pages/_app';
-import styles from './Janela.module.css';
 import Draggable from 'react-draggable';
 import { useRef } from 'react';
 
-export default function Artigo({ artigo }) {
+import { theme } from '../../../pages/_app';
+import styles from './Janela.module.css';
+import QuatrozeroQuatro from '../Artigos/404';
+import Config from '../Config';
+
+//TODO: usar um mapa
+function acharPost(arr, nome) {
+  return arr.find(function(post) {
+    if (post.nome == nome) {
+      return true
+    }
+  })
+}
+
+export default function Janela(propriedades) {
+  if (propriedades.id === 'home')
+    return <></>
+  else if (propriedades.id === 'config')
+    return <Config />
+  var poste = acharPost(propriedades.janelas, propriedades.id)
+  return (poste !== undefined) ?
+  <Artigo artigo={poste} />
+  :
+  <Artigo
+    artigo={
+      {
+        nome: propriedades.id,
+        icone: '/img/icn/lixeira-cheia.png',
+        conteudo: <QuatrozeroQuatro />
+      }
+    }
+  />
+}
+
+function Artigo({ artigo }) {
 
   const router = useRouter();
   const nodeRef = useRef(null);
