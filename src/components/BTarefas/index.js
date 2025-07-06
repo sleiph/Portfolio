@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import router from 'next/router';
 
-import { theme } from '../../../pages/_app';
 import stylesBarra from './BarradeTarefas.module.css';
 
 export default function BTarefas(propriedades) {

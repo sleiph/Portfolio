@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { theme } from './_app';
 
 import stylesArea from '../src/components/AreadeTrabalho.module.css';
 import stylesArtigo from '../src/components/Artigos/Artigo.module.css';

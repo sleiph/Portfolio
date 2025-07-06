@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import Draggable from 'react-draggable';
 import { useRef } from 'react';
 
-import { theme } from '../../../pages/_app';
 import styles from './Janela.module.css';
 import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
@@ -17,23 +16,26 @@ function acharPost(arr, nome) {
 }
 
 export default function Janela(propriedades) {
+
   if (propriedades.id === 'home')
     return <></>
   else if (propriedades.id === 'config')
     return <Config />
-  var poste = acharPost(propriedades.janelas, propriedades.id)
+  
+  var poste = acharPost(propriedades.janelas, propriedades.id);
+  
   return (poste !== undefined) ?
-  <Artigo artigo={poste} />
+    <Artigo artigo={poste} />
   :
-  <Artigo
-    artigo={
-      {
-        nome: propriedades.id,
-        icone: '/img/icn/lixeira-cheia.png',
-        conteudo: <QuatrozeroQuatro />
+    <Artigo
+      artigo={
+        {
+          nome: propriedades.id,
+          icone: '/img/icn/lixeira-cheia.png',
+          conteudo: <QuatrozeroQuatro />
+        }
       }
-    }
-  />
+    />
 }
 
 function Artigo({ artigo }) {

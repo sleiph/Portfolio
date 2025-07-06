@@ -27,11 +27,12 @@ npm run dev
 
 ## Coisas pra fazer
 
-#### Importantes
-- Arrumar o 'fechar janela' pra funcionar em celular...
-- Achar um jeito de não poluir o histórico da coitada da pessoa que acessar meu site
+### Importantes
 
-#### Pra fazer algum dia...
+- dar um picker pro usuário escolher as cores
+
+### Pra fazer algum dia...
+
 * Mais temas pro portfólio
 * Escolher o tema automáticamente
 * Opção pra escolher um tema (natal, halloween, ...) nas 'config'

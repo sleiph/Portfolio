@@ -20,43 +20,29 @@ export default function Config(  ) {
 
   const corBackgroundAleatoria = () => {
     const hex = getHexAleatorio();
-    document.getElementById("area-de-trabalho").style.background = hex;
+    theme.desktop.fundo = hex;
+    document.documentElement.style.setProperty('--fundo', hex);
   }
 
   const corJanelaAleatoria = () => {
     let hex = getHexAleatorio();
     theme.desktop.titulo_janela = hex;
-
-    let titulos = document.getElementsByClassName('head');
-    for(let i = 0; i < titulos.length; i++){
-      titulos[i].style.background = hex;
-    }
+    document.documentElement.style.setProperty('--titulo_janela', hex);
   }
 
   const corJanelaFundoAleatoria = () => {
     let hex = '#' + getHexClaroAleatorio()(Math, '3456789ABCDEF', 4);
     theme.desktop.fundo_janela = hex;
-
-    let corpos = document.getElementsByClassName('conteudo');
-    for(var i = 0; i < corpos.length; i++) {
-      corpos[i].style.background = hex;
-    }
+    document.documentElement.style.setProperty('--fundo_janela', hex);
   }
 
   const resetarCores = () => {
     theme.desktop.titulo_janela = '#01007A';
     theme.desktop.fundo_janela = 'white';
-    document.getElementById("area-de-trabalho").style.background = theme.desktop.fundo;
-
-    let titulos = document.getElementsByClassName('head');
-    for(var i = 0; i < titulos.length; i++) {
-      titulos[i].style.backgroundColor = theme.desktop.titulo_janela;
-    }
-
-    let corpos = document.getElementsByClassName('conteudo');
-    for(var i = 0; i < corpos.length; i++) {
-      corpos[i].style.background = theme.desktop.fundo_janela;
-    }
+    theme.desktop.fundo = '#008080';
+    document.documentElement.style.setProperty('--titulo_janela', '#01007A');
+    document.documentElement.style.setProperty('--fundo_janela', 'white');
+    document.documentElement.style.setProperty('--fundo', '#008080');
   }
 
   const fecharTodasJanelas = () => {
