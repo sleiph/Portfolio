@@ -7,12 +7,8 @@ import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
 
 //TODO: usar um mapa
-function acharPost(arr, nome) {
-  return arr.find(function(post) {
-    if (post.nome == nome) {
-      return true
-    }
-  })
+function acharPost(obj, nome) {
+  return obj[nome];
 }
 
 export default function Janela(propriedades) {

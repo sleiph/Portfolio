@@ -38,44 +38,44 @@ const AreaTrabalho = () => {
   }
   const mes = new Date().getMonth();
 
-  const posts = [
-    {
+  const posts = {
+    projetos: {
       nome:'projetos',
       icone: '/img/pasta.png',
       conteudo: <Projetos />,
       isRaiz: true
     },
-    {
+    conhecimentos: {
       nome:'conhecimentos',
       icone: '/img/janela.png',
       conteudo: <Conhecimentos />,
       isRaiz: true
     },
-    {
+    desenhos: {
       nome:'desenhos',
       icone: '/img/icn/paint.png',
       conteudo: <Desenhos  />,
       isRaiz: false
     },
-    {
+    formacao: {
       nome:'formacao',
       icone: '/img/doc.png',
       conteudo: <Formacao />,
       isRaiz: true
     },
-    {
+    contatos: {
       nome:'contatos',
       icone: iconeContato[mes],
       conteudo: <Sobre />,
       isRaiz: true
     },
-    {
+    nedankinde: {
       nome: 'nedankinde',
       icone: '/img/dsn/nedankinde.png',
       conteudo: <img src='/img/dsn/nedankinde.png' />,
       isRaiz: false
     },
-    {
+    mutarelli: {
       nome: 'mutarelli',
       icone: '/img/dsn/mutarelli.jpg',
       conteudo:
@@ -84,13 +84,13 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    h2: {
       nome: 'h2',
       icone: '/img/dsn/h2.jpg',
       conteudo: <img src='/img/dsn/h2.jpg' />,
       isRaiz: false
     },
-    {
+    vikings: {
       nome: 'vikings',
       icone: '/img/dsn/vikings.jpg',
       conteudo: 
@@ -99,7 +99,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    daytona: {
       nome: 'daytona',
       icone: '/img/dsn/daytona.png',
       conteudo:
@@ -108,7 +108,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    iguacu: {
       nome: 'iguacu',
       icone: '/img/dsn/iguacu.jpg',
       conteudo: 
@@ -117,7 +117,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    lupus: {
       nome: 'lupus',
       icone: '/img/dsn/lupus.jpg',
       conteudo:
@@ -126,7 +126,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    caliban: {
       nome: 'caliban',
       icone: '/img/dsn/caliban.jpg',
       conteudo:
@@ -135,7 +135,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    thomassons: {
       nome: 'thomassons',
       icone: '/img/dsn/thomassons.jpg',
       conteudo:
@@ -144,7 +144,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    expressionist: {
       nome: 'expressionist',
       icone: '/img/dsn/expressionist.jpg',
       conteudo:
@@ -153,8 +153,8 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
-      nome: '64bitsMarseilles',
+    bitsMarseilles: {
+      nome: 'bitsMarseilles',
       icone: '/img//icn/paint.png',
       conteudo:
       <a href='https://dribbble.com/shots/16692392-Paus-de-Marseilles'>
@@ -162,7 +162,7 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    php: {
       nome:'php',
       icone: '/img/icn/php.png',
       conteudo: <a href="https://www.reddit.com/r/PHP/comments/1fy71s/why_do_so_many_developers_hate_php/">
@@ -170,19 +170,19 @@ const AreaTrabalho = () => {
       </a>,
       isRaiz: false
     },
-    {
+    config: {
       nome: 'config',
       icone: '/img/config.png',
       conteudo: <></>,
       isRaiz: true
     },
-    {
+    lixeira: {
       nome: 'lixeira',
       icone: '/img/icn/lixeira-cheia.png',
       conteudo: <Lixeira />,
       isRaiz: true
     },
-    {
+    design: {
       nome:'design',
       icone: '/img/icn/paint.png',
       conteudo:<div className={stylesArtigo.descricaodiv}>
@@ -192,8 +192,8 @@ const AreaTrabalho = () => {
       </div>,
       isRaiz: false
     },
-    {
-      nome:'elinduxus-estagiario',
+    elinduxusEstagiario: {
+      nome:'elinduxusEstagiario',
       icone: '/img/doc.png',
       conteudo:<div className={stylesArtigo.descricaodiv}>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Estagiário</h3></a>
@@ -202,8 +202,8 @@ const AreaTrabalho = () => {
       </div>,
       isRaiz: false
     },
-    {
-      nome:'elinduxus-junior',
+    elinduxusJunior:{
+      nome:'elinduxusJunior',
       icone: '/img/doc.png',
       conteudo:<div className={stylesArtigo.descricaodiv}>
         <a href="https://www.duxus.com.br"><h3>Élin Duxus - Programador Júnior</h3></a>
@@ -212,7 +212,7 @@ const AreaTrabalho = () => {
       </div>,
       isRaiz: false
     }
-  ];
+  };
 
   return (
     <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain} >

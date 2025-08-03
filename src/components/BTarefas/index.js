@@ -37,7 +37,7 @@ export default function BTarefas(propriedades) {
           </div>
         </div>
         <ul>
-          {propriedades.artigos.map((artigo) => {
+          {Object.values(propriedades.artigos).map((artigo) => {
             if (artigo.isRaiz) {
               return (
                 <li key={artigo.nome}

@@ -99,7 +99,7 @@
       "isRaiz": false
     },
     {
-      "nome": "64bitsMarseilles",
+      "nome": "bitsMarseilles",
       "icone": "/img/icn/paint.png",
       "conteudo":
       "<a href='https://dribbble.com/shots/16692392-Paus-de-Marseilles'><img src='https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900' alt='tarot de Marseilles' /></a>",
@@ -132,14 +132,14 @@
       "isRaiz": false
     },
     {
-      "nome":"elinduxus-estagiario",
+      "nome":"elinduxusEstagiario",
       "icone": "/img/doc.png",
       "conteudo":
       "<div className={stylesArtigo.descricaodiv}><a href='https://www.duxus.com.br'><h3>Élin Duxus - Estagiário</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, tudo que é problema.</p></div>",
       "isRaiz": false
     },
     {
-      "nome":"elinduxus-junior",
+      "nome":"elinduxusJunior",
       "icone": "/img/doc.png",
       "conteudo":
       "<div className={stylesArtigo.descricaodiv}><a href='https://www.duxus.com.br'><h3>Élin Duxus - Programador Júnior</h3></a><br></br><p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p></div>",
@@ -451,7 +451,7 @@
       "imagem": "/img/dsn/expressionist.jpg"
     },
     {
-      "nome": "64bitsMarseilles",
+      "nome": "bitsMarseilles",
       "imagem": "https://cdn.dribbble.com/users/1016047/screenshots/16692392/media/75bfc073d531286106202a5159774830.png?compress=1&resize=1200x900"
     }
   ],

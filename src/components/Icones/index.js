@@ -5,7 +5,7 @@ import stylesArea from '../AreadeTrabalho.module.css';
 export default function Icones(propriedades) {
   return (
     <div className={stylesArea.iconesdiv}>
-      {propriedades.janelas.map((artigo) => {
+      {Object.values(propriedades.janelas).map((artigo) => {
         if (artigo.isRaiz)
           return (
             <div key={artigo.nome+'-icone'} className={stylesArea.iconediv}
