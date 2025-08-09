@@ -31,7 +31,7 @@ const AreaTrabalho = () => {
     5: '/img/ajuda.png',
     6: '/img/ajuda.png',
     7: '/img/ajuda.png',
-    8: '/img/ajuda.png',
+    8: '/img/huehuebr.png',
     9: '/img/icn/spook.gif',
     10: '/img/ajuda.png',
     11: '/img/icn/spohoho.gif',

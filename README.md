@@ -32,7 +32,6 @@ npm run dev
 - trocar as imagens externas por internas
 - dar um picker pro usuário escolher as cores
 - Mais temas pro portfólio
-- A janela abre em uma posição aleatória
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
 
 ### Pra fazer algum dia...
@@ -41,3 +40,4 @@ npm run dev
 * Opção pra escolher um tema (natal, halloween, ...) nas 'config'
 * Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
 * Função nas configurações pra mudar o tamanho das fontes
+* A janela abre em uma posição aleatória
