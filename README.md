@@ -27,19 +27,17 @@ npm run dev
 
 ## Coisas pra fazer
 
-### Importantes
+### Melhorias
 
+- trocar as imagens externas por internas
 - dar um picker pro usuário escolher as cores
+- Mais temas pro portfólio
+- A janela abre em uma posição aleatória
+- aparecer um bichinho (gif) na tela se ficar muito tempo parado
 
 ### Pra fazer algum dia...
 
-* Mais temas pro portfólio
 * Escolher o tema automáticamente
 * Opção pra escolher um tema (natal, halloween, ...) nas 'config'
-
-- A janela abre em uma posição aleatória
-- Desenhar uns fundo de tela [bem psicodélico](https://everydaylouie.itch.io/kidpix)
-- Função nas configurações pra mudar o tamanho das fontes
-- resolver warnings no console sobre `Do not add stylesheets using next/head`
-- aparece um bichinho (gif) na tela se ficar muito tempo parado
-- trocar as imagens externas por internas
+* Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
+* Função nas configurações pra mudar o tamanho das fontes
