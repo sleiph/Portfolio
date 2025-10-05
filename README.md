@@ -6,6 +6,8 @@ Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app/home).
 
 Layout ~copiado~ baseado em um projeto do [Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
 
+Alguns ícones de [gifCities](https://gifcities.org/).
+
 ## Comandos
 
 Pra instalar os pacotes:
@@ -29,7 +31,6 @@ npm run dev
 
 ### Melhorias
 
-- trocar as imagens externas por internas
 - dar um picker pro usuário escolher as cores
 - Mais temas pro portfólio
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
