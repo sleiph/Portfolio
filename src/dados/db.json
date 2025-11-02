@@ -204,7 +204,7 @@
       "cargo": "7 anos de experiência"
     },
     {
-      "nome": "elinduxus-junior",
+      "nome": "elinduxusJunior",
       "empresa": "Élin Duxus",
       "cargo": "programador júnior - atual"
     }
@@ -257,6 +257,10 @@
     {
       "nome": "Adobe Illustrator",
       "imagem": "/img/icn/illustrator.png"
+    },
+    {
+      "nome": "Apache Ignite",
+      "imagem": "/img/icn/ignite.png"
     }
   ],
   "formacoes" : [
