@@ -2,7 +2,7 @@
 
 Taí o meu portfólio, feito com Next.js, React.js e Node.js. O que eu tenho a ver com o Windows 98? Nada... eu só pensei nesse tema enquanto estudava o Next e acabei deixando.
 
-Pode ser acessado no [site da Vercel](ricardo-gomes.vercel.app/home).
+Pode ser acessado no [site da Vercel](https://ricardo-gomes.vercel.app/home).
 
 Layout ~copiado~ baseado em um projeto do [Dylan Macnab](https://codepen.io/DylanMacnab/pen/xEEOyZ).
 

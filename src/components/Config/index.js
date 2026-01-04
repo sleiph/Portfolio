@@ -87,7 +87,7 @@ export default function Config(  ) {
           <div className={stylesJanela.icone}>
             <img src='/img/config.png' alt="icone das configuracoes" />
           </div>
-          <div className={stylesJanela.fechar}>
+          <div className={stylesJanela.fechar + " fechar"}>
             <button onClick={fecharJanela}>
               &#10006;
             </button>

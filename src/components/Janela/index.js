@@ -66,7 +66,7 @@ function Artigo({ artigo }) {
           <div className={styles.icone}>
             <img src={ artigo.icone } alt="icone do programa" />
           </div>
-          <div className={styles.fechar}>
+          <div className={styles.fechar + " fechar"}>
             <button onClick={fecharJanela}>
               &#10006;
             </button>
