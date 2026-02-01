@@ -34,6 +34,7 @@ npm run dev
 - dar um picker pro usuário escolher as cores
 - Mais temas pro portfólio
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
+- centralizar `fecharJanela` e `ordenaJanela`
 
 ### Pra fazer algum dia...
 

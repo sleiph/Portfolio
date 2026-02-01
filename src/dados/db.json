@@ -119,6 +119,12 @@
       "isRaiz": true
     },
     {
+      "nome": "picker",
+      "icone": "/img/config.png",
+      "conteudo": "<></>",
+      "isRaiz": false
+    },
+    {
       "nome": "lixeira",
       "icone": "/img/icn/lixeira-cheia.png",
       "conteudo": "<Lixeira />",

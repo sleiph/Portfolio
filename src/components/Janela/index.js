@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import styles from './Janela.module.css';
 import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
+import Picker from '../Picker';
 
 //TODO: usar um mapa
 function acharPost(obj, nome) {
@@ -17,6 +18,8 @@ export default function Janela(propriedades) {
     return <></>
   else if (propriedades.id === 'config')
     return <Config />
+  else if (propriedades.id === 'picker')
+    return <Picker />
   
   var poste = acharPost(propriedades.janelas, propriedades.id);
   

@@ -176,6 +176,12 @@ const AreaTrabalho = () => {
       conteudo: <></>,
       isRaiz: true
     },
+    picker: {
+      nome: 'picker',
+      icone: '/img/config.png',
+      conteudo: <></>,
+      isRaiz: false
+    },
     lixeira: {
       nome: 'lixeira',
       icone: '/img/icn/lixeira-cheia.png',

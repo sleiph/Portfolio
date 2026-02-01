@@ -1,0 +1,25 @@
+#gridpicker {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom: 10px;
+}
+.cor {
+    width: 24px;
+    height: 20px;
+    background-color: var(--janela);
+    margin:4px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-left-color: #222;
+    border-top-color: #222;
+}
+.cor:active {
+  outline: none;
+  border-bottom-color: #222;
+  border-right-color: #222;
+  border-left-color: white;
+  border-top-color: white;
+}

@@ -1,27 +1,21 @@
 import { useRouter } from 'next/router';
-import styles from './Config.module.css';
 import Draggable from 'react-draggable';
 import { useRef } from 'react';
-
 import { theme } from '../../../pages/_app';
+
+import styles from './Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
 
 export default function Config(  ) {
 
   const router = useRouter();
-  const nodeRef = useRef(null);
+  const nodeRef = useRef('config');
 
   const getHexAleatorio = () => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
   }
   const getHexClaroAleatorio = () => function lol(m, s, c) {
     return s[m.floor(m.random() * s.length)] + (c && lol(m, s, c - 1));
-  }
-
-  const corBackgroundAleatoria = () => {
-    const hex = getHexAleatorio();
-    theme.desktop.fundo = hex;
-    document.documentElement.style.setProperty('--fundo', hex);
   }
 
   const corJanelaAleatoria = () => {
@@ -56,6 +50,13 @@ export default function Config(  ) {
 
   const boraPraWikipedia = () => {
     window.location.href='https://pt.wikipedia.org/wiki/Special:Random'
+  }
+
+  const abrirPicker = () => {
+    var caminho = router.asPath;
+    caminho = caminho.replace('/picker', '');
+    caminho += '/picker';
+    router.push(`${caminho}`);
   }
 
   //todo: tem uma funcao igual na janela/index.js
@@ -101,7 +102,7 @@ export default function Config(  ) {
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
             <h5>Estilos</h5>
-            <a className={styles.botaoa} onClick={corBackgroundAleatoria}>
+            <a className={styles.botaoa} onClick={abrirPicker}>
               Mudar a cor do plano de fundo
             </a>
             <a className={styles.botaoa} onClick={resetarCores}>
