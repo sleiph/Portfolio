@@ -5,11 +5,11 @@ import stylesBarra from './BarradeTarefas.module.css';
 
 export default function BTarefas(propriedades) {
 
-  const [hora, setHora] = useState(new Date());
+  const [hora, setHora] = useState("00:00");
 
   useEffect(() => {
     const intervalo = setInterval(() => {
-      setHora(new Date());
+      setHora(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
     }, 15000);
 
     return () => clearInterval(intervalo);
@@ -26,7 +26,7 @@ export default function BTarefas(propriedades) {
       </a>
         
       <div className={stylesBarra.relogio}>
-        {hora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+        {hora || "00:00"}
       </div>
 
       {propriedades.start ?

@@ -29,6 +29,10 @@ npm run dev
 
 ## Coisas pra fazer
 
+### Correções
+
+- `Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:`
+
 ### Melhorias
 
 - dar um picker pro usuário escolher as cores
