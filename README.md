@@ -35,10 +35,10 @@ npm run dev
 
 ### Melhorias
 
-- dar um picker pro usuário escolher as cores
 - Mais temas pro portfólio
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
-- centralizar `fecharJanela` e `ordenaJanela`
+- centralizar em um service: `fecharJanela` e `ordenaJanela`
+- adicionar grandient pro picker de cores
 
 ### Pra fazer algum dia...
 

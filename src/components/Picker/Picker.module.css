@@ -1,4 +1,4 @@
-#gridpicker {
+.gridpicker {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     margin-bottom: 10px;

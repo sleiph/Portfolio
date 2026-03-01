@@ -18,8 +18,12 @@ export default function Janela(propriedades) {
     return <></>
   else if (propriedades.id === 'config')
     return <Config />
-  else if (propriedades.id === 'picker')
-    return <Picker />
+  else if (propriedades.id === 'pickerbg')
+    return <Picker caminho='bg' contexto='background' />
+  else if (propriedades.id === 'pickerbt')
+    return <Picker caminho='bt' contexto = 'titulos'/>
+  else if (propriedades.id === 'pickerft')
+    return <Picker caminho='ft' contexto='janelas' />
   
   var poste = acharPost(propriedades.janelas, propriedades.id);
   

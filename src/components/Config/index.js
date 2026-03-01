@@ -52,10 +52,11 @@ export default function Config(  ) {
     window.location.href='https://pt.wikipedia.org/wiki/Special:Random'
   }
 
-  const abrirPicker = () => {
+  const abrirPicker = (contexto) => {
     var caminho = router.asPath;
-    caminho = caminho.replace('/picker', '');
-    caminho += '/picker';
+    const ctxFinal = '/picker' + contexto;
+    caminho = caminho.replace(ctxFinal, '');
+    caminho += ctxFinal;
     router.push(`${caminho}`);
   }
 
@@ -102,7 +103,7 @@ export default function Config(  ) {
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
             <h5>Estilos</h5>
-            <a className={styles.botaoa} onClick={abrirPicker}>
+            <a className={styles.botaoa} onClick={() => abrirPicker('bg')}>
               Mudar a cor do plano de fundo
             </a>
             <a className={styles.botaoa} onClick={resetarCores}>
@@ -111,10 +112,10 @@ export default function Config(  ) {
           </div>
           <div className={styles.campodiv} >
             <h5>Janelas</h5>
-            <a className={styles.botaoa} onClick={corJanelaAleatoria}>
+            <a className={styles.botaoa} onClick={() => abrirPicker('bt')}>
               Mudar a cor da barra de título
             </a>
-            <a className={styles.botaoa} onClick={corJanelaFundoAleatoria}>
+            <a className={styles.botaoa} onClick={() => abrirPicker('ft')}>
               Mudar a cor de fundo
             </a>
             <a className={styles.botaoa} onClick={fecharTodasJanelas}>

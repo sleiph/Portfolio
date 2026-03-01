@@ -9,9 +9,9 @@ import stylesJanela from '../Janela/Janela.module.css';
 export default function Picker(propriedades) {
 
     const router = useRouter();
-    const nodeRef = useRef('picker');
+    const nodeRef = useRef('picker' + propriedades.caminho);
 
-    const nomeRota = 'picker';
+    const nomeRota = 'picker' + propriedades.caminho;
 
     const cores = [
         'ff8080',
@@ -69,9 +69,29 @@ export default function Picker(propriedades) {
         'ffffff'
     ]
 
+    const executaContextualmente = (cor, contexto) => {
+      if (contexto === 'background')
+        return mudaCorBackground(cor);
+      else if (contexto === 'titulos')
+        return mudaCorTitulo(cor);
+      else if (contexto === 'janelas')
+        return mudaCorFundo(cor);
+      else
+        console.error("contexto do picker não identificado");
+    }
+
     const mudaCorBackground = (hex) => {
         theme.desktop.fundo = hex;
         document.documentElement.style.setProperty('--fundo', hex);
+    }
+    const mudaCorTitulo = (hex) => {
+        theme.desktop.titulo_janela = hex;
+        document.documentElement.style.setProperty('--titulo_janela', hex);
+    }
+
+    const mudaCorFundo = (hex) => {
+        theme.desktop.fundo_janela = hex;
+        document.documentElement.style.setProperty('--fundo_janela', hex);
     }
 
     //todo: tem uma funcao igual na janela/index.js
@@ -115,12 +135,12 @@ export default function Picker(propriedades) {
 
         <div className={configStyles.conteudodiv}>
           <div className={configStyles.campodiv} >
-            <h5>Cores Padrão:</h5>
+            <h5>Cores de {propriedades.contexto}:</h5>
 
-            <div id={styles.gridpicker}>
+            <div id={styles.gridpicker + propriedades.caminho} className={styles.gridpicker}>
                 {Object.values(cores).map((cor) => {
                     return (
-                        <div key={'picker_' + cor} className={styles.cor} style={{backgroundColor: '#'+cor}} onClick={() => mudaCorBackground('#'+cor)}></div>
+                        <div key={'picker_' + propriedades.caminho + cor} className={styles.cor} style={{backgroundColor: '#'+cor}} onClick={() => executaContextualmente('#'+cor, propriedades.contexto)}></div>
                     )
                 })}
             </div>

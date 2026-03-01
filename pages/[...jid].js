@@ -176,8 +176,20 @@ const AreaTrabalho = () => {
       conteudo: <></>,
       isRaiz: true
     },
-    picker: {
-      nome: 'picker',
+    pickerbg: {
+      nome: 'pickerbg',
+      icone: '/img/config.png',
+      conteudo: <></>,
+      isRaiz: false
+    },
+    pickerbt: {
+      nome: 'pickerbt',
+      icone: '/img/config.png',
+      conteudo: <></>,
+      isRaiz: false
+    },
+    pickerft: {
+      nome: 'pickerft',
       icone: '/img/config.png',
       conteudo: <></>,
       isRaiz: false
