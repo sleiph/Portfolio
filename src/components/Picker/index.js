@@ -129,7 +129,7 @@ export default function Picker(propriedades) {
             </button>
           </div>
           <div className={stylesJanela.titulo} onClick={ordenaJanela}>
-            Cores
+            Cores de {propriedades.contexto}
           </div>
         </div>
 

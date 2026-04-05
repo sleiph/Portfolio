@@ -42,6 +42,7 @@ npm run dev
 
 ### Pra fazer algum dia...
 
+* Quando abrir uma janela, adicionar uma aba na barra de tarefas
 * Escolher o tema automáticamente
 * Opção pra escolher um tema (natal, halloween, ...) nas 'config'
 * Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)

@@ -19,6 +19,8 @@
     width: 96px;
     min-height: 80px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 .iconediv img {
     display: block;
