@@ -50,9 +50,9 @@ export default function Conhecimentos() {
       </header>
 
       <section className={stylesArtigo.gridContainer}>
-        {tecnologias.map(({ nome, imagem }) => (
+        {tecnologias.map(({ nome, icone }) => (
           <div key={nome} className={stylesArtigo.pastadiv}>
-            <img src={imagem} alt={nome} />
+            <img src={icone} alt={nome} />
             <p>{nome}</p>
           </div>
         ))}

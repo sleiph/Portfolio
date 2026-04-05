@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import stylesArtigo from '../Artigo.module.css';
 
-export default function Artigo({ items, imageKey = 'icone' }) {
+export default function Artigo({ items }) {
     const router = useRouter();
 
     //TODO: metodo repetido
@@ -23,7 +23,7 @@ export default function Artigo({ items, imageKey = 'icone' }) {
                     className={stylesArtigo.pastadiv}
                     onClick={() => handleNavegacao(item.nome)}
                 >
-                    <img src={item[imageKey]} alt={item.nome} />
+                    <img src={item.icone} alt={item.nome} />
                     <p>{item.nome}</p>
                 </button>
             ))}

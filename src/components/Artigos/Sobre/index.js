@@ -19,7 +19,7 @@ export default function Sobre() {
           return (
             <a href={contato.link} key={contato.nome}>
               <div className={stylesArtigo.pastadiv}>
-                <img src={contato.imagem} alt={contato.nome} />
+                <img src={contato.icone} alt={contato.nome} />
                 <p>{contato.nome}</p>
               </div>
             </a>

@@ -42,7 +42,7 @@ export default function Formacao() {
         {certificados.map((certificado) => {
           return (
             <div key={certificado.nome} className={stylesArtigo.pastadiv}>
-              <img src={certificado.imagem} alt={certificado.nome} />
+              <img src={certificado.icone} alt={certificado.nome} />
               <p><b>{certificado.data}</b></p>
               <p>{certificado.nome}</p>
             </div>
