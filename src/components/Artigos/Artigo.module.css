@@ -12,11 +12,17 @@
     padding: 24px 16px;
 }
 
-.tituloh3 {
+.titulo {
     width: 100%;
+}
+.tituloh3 {
     line-height: 1.75;
     font-size: large;
     font-weight: bold;
+}
+
+.gridContainer {
+    display: contents;
 }
 
 .notasp {
@@ -37,6 +43,8 @@
 .pastadiv {
   width: 96px;
   min-height: 92px;
+  background: none;
+  border: none;
 }
 .pastadiv img {
     display: block;

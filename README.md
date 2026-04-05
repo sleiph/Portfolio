@@ -35,6 +35,7 @@ npm run dev
 
 ### Melhorias
 
+- eu melhorei o conhecimentos, falta o resto
 - Mais temas pro portfólio
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
 - centralizar em um service: `fecharJanela` e `ordenaJanela`
