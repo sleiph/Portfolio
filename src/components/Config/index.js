@@ -5,30 +5,12 @@ import { theme } from '../../../pages/_app';
 
 import styles from './Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
+import { janelaService } from '../../services/janelaService';
 
 export default function Config(  ) {
 
   const router = useRouter();
   const nodeRef = useRef('config');
-
-  const getHexAleatorio = () => {
-    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-  }
-  const getHexClaroAleatorio = () => function lol(m, s, c) {
-    return s[m.floor(m.random() * s.length)] + (c && lol(m, s, c - 1));
-  }
-
-  const corJanelaAleatoria = () => {
-    let hex = getHexAleatorio();
-    theme.desktop.titulo_janela = hex;
-    document.documentElement.style.setProperty('--titulo_janela', hex);
-  }
-
-  const corJanelaFundoAleatoria = () => {
-    let hex = '#' + getHexClaroAleatorio()(Math, '3456789ABCDEF', 4);
-    theme.desktop.fundo_janela = hex;
-    document.documentElement.style.setProperty('--fundo_janela', hex);
-  }
 
   const resetarCores = () => {
     theme.desktop.titulo_janela = '#01007A';
@@ -52,28 +34,12 @@ export default function Config(  ) {
     window.location.href='https://pt.wikipedia.org/wiki/Special:Random'
   }
 
-  const abrirPicker = (contexto) => {
-    var caminho = router.asPath;
-    const ctxFinal = '/picker' + contexto;
-    caminho = caminho.replace(ctxFinal, '');
-    caminho += ctxFinal;
-    router.push(`${caminho}`);
-  }
-
-  //TODO: tem uma funcao igual na janela/index.js
   const fecharJanela = () => {
-    let caminho = router.asPath.replace('/config', '');
-    if (caminho === '')
-      caminho = '/home';
-    router.replace(`${caminho}`);
+    janelaService.fecharJanela(router, 'config');
   }
 
-  //TODO: tem uma funcao igual na janela/index.js
   const ordenaJanela = () => {
-    var caminho = router.asPath;
-    caminho = caminho.replace('/config', '');
-    caminho += '/config';
-    router.push(`${caminho}`);
+    janelaService.ordenaJanela(router, 'config');
   }
   
   return (
@@ -103,7 +69,7 @@ export default function Config(  ) {
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
             <h5>Estilos</h5>
-            <a className={styles.botaoa} onClick={() => abrirPicker('bg')}>
+            <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'bg')}>
               Mudar a cor do plano de fundo
             </a>
             <a className={styles.botaoa} onClick={resetarCores}>
@@ -112,10 +78,10 @@ export default function Config(  ) {
           </div>
           <div className={styles.campodiv} >
             <h5>Janelas</h5>
-            <a className={styles.botaoa} onClick={() => abrirPicker('bt')}>
+            <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'bt')}>
               Mudar a cor da barra de título
             </a>
-            <a className={styles.botaoa} onClick={() => abrirPicker('ft')}>
+            <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'ft')}>
               Mudar a cor de fundo
             </a>
             <a className={styles.botaoa} onClick={fecharTodasJanelas}>

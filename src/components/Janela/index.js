@@ -6,6 +6,7 @@ import styles from './Janela.module.css';
 import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
 import Picker from '../Picker';
+import { janelaService } from '../../services/janelaService';
 
 function acharPost(obj, nome) {
   return obj[nome];
@@ -46,17 +47,11 @@ function Artigo({ artigo }) {
   const nodeRef = useRef(null);
 
   const fecharJanela = () =>  {
-    let caminho = router.asPath.replace('/' + artigo.nome, '');
-    if (caminho === '')
-      caminho = '/home';
-    router.replace(`${caminho}`);
+    janelaService.fecharJanela(router, artigo.nome);
   }
 
   const ordenaJanela = () => {
-    var caminho = router.asPath;
-    caminho = caminho.replace('/' + artigo.nome, '');
-    caminho += '/' + artigo.nome;
-    router.push(`${caminho}`);
+    janelaService.ordenaJanela(router, artigo.nome);
   }
   
   return (
