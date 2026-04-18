@@ -60,7 +60,7 @@ export default function Config(  ) {
     router.push(`${caminho}`);
   }
 
-  //todo: tem uma funcao igual na janela/index.js
+  //TODO: tem uma funcao igual na janela/index.js
   const fecharJanela = () => {
     let caminho = router.asPath.replace('/config', '');
     if (caminho === '')
@@ -68,7 +68,7 @@ export default function Config(  ) {
     router.replace(`${caminho}`);
   }
 
-  //todo: tem uma funcao igual na janela/index.js
+  //TODO: tem uma funcao igual na janela/index.js
   const ordenaJanela = () => {
     var caminho = router.asPath;
     caminho = caminho.replace('/config', '');

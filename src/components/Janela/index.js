@@ -7,7 +7,6 @@ import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
 import Picker from '../Picker';
 
-//TODO: usar um mapa
 function acharPost(obj, nome) {
   return obj[nome];
 }
