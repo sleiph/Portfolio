@@ -35,6 +35,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# windsurf
+# agentes
 .windsurf
-
+.openclaude-profile.json

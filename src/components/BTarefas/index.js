@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import router from 'next/router';
+import { janelaService } from '../../services/janelaService';
 
 import stylesBarra from './BarradeTarefas.module.css';
 
@@ -24,7 +24,24 @@ export default function BTarefas(propriedades) {
       }>
         Iniciar
       </a>
-        
+
+      <div className={stylesBarra.janelasContainer}>
+        {Array.isArray(propriedades.jid) && propriedades.jid.map((id) => {
+          const artigo = propriedades.artigos[id];
+          if (!artigo) return null;
+          return (
+            <button
+              key={id}
+              className={stylesBarra.janelaBtn}
+              onClick={() => janelaService.ordenaJanela(propriedades.router, id)}
+            >
+              <img src={artigo.icone} alt="" />
+              <span>{artigo.nome}</span>
+            </button>
+          );
+        }).reverse()}
+      </div>
+
       <div className={stylesBarra.relogio}>
         {hora || "00:00"}
       </div>
@@ -45,7 +62,7 @@ export default function BTarefas(propriedades) {
                 onClick={
                   () => {
                     propriedades.setStart(!propriedades.start)
-                    var caminho = router.asPath
+                    var caminho = propriedades.router.asPath
                     if (caminho === '/home') {
                       caminho = artigo.nome
                     }
@@ -53,7 +70,7 @@ export default function BTarefas(propriedades) {
                       caminho = caminho.replace('/' + artigo.nome, '')
                       caminho += '/' + artigo.nome
                     }
-                    router.push(`${caminho}`)
+                    propriedades.router.push(`${caminho}`)
                   }
                 }>
                   {artigo.nome}

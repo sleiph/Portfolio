@@ -7,6 +7,8 @@
     border-top: 2px solid #efefef;
     padding: 3px;
     z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 .relogio {
     float: right;
@@ -51,6 +53,55 @@
     border-left-color: #222;
     border-right-color: white;
     border-bottom-color: white;
+}
+
+.janelasContainer {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow-x: hidden;
+    gap: 2px;
+}
+
+.janelaBtn {
+    display: flex;
+    align-items: center;
+    height: 29px;
+    min-width: 150px;
+    max-width: 200px;
+    padding: 0 5px;
+    background-color: var(--janela);
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: #222;
+    border-bottom-color: #222;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.janelaBtn img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.janelaBtn span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.janelaBtn:active {
+    border-top-color: #222;
+    border-left-color: #222;
+    border-right-color: white;
+    border-bottom-color: white;
+    padding: 1px 4px 0 6px;
 }
 
 .startmenudiv {

@@ -32,7 +32,7 @@ const AreaTrabalho = () => {
 
   return (
     <main id='area-de-trabalho' className={stylesArea.areadetrabalhomain}>
-      <BTarefas artigos={posts} start={start} setStart={setStart} />
+      <BTarefas artigos={posts} start={start} setStart={setStart} jid={jid} router={router} />
 
       <Icones janelas={posts} />
 
