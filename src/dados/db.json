@@ -92,10 +92,6 @@
       "icone": "/img/icn/unity.png"
     },
     {
-      "nome": "MySQL",
-      "icone": "/img/icn/mysql.png"
-    },
-    {
       "nome": "Postgres",
       "icone": "/img/icn/postgres.png"
     },
