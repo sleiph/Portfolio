@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Draggable from 'react-draggable';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 import styles from './Janela.module.css';
 import QuatrozeroQuatro from '../Artigos/404';
@@ -25,10 +25,10 @@ export default function Janela(propriedades) {
   else if (propriedades.id === 'pickerft')
     return <Picker caminho='ft' contexto='janelas' />
   
-  var poste = acharPost(propriedades.janelas, propriedades.id);
+  var post = acharPost(propriedades.janelas, propriedades.id);
   
-  return (poste !== undefined) ?
-    <Artigo artigo={poste} />
+  return (post !== undefined) ?
+    <Artigo artigo={post} />
   :
     <Artigo
       artigo={
@@ -46,6 +46,25 @@ function Artigo({ artigo }) {
   const router = useRouter();
   const nodeRef = useRef(null);
 
+  const [offset, setOffset] = useState({ x: '-50%', y: '-50%' });
+
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+      const maxW = window.innerWidth * 0.25;
+      const maxH = window.innerHeight * 0.25;
+
+      const randomX = (Math.random() - 0.5) * maxW;
+      const randomY = (Math.random() - 0.5) * maxH;
+
+      setOffset({
+        x: `calc(-50% + ${randomX}px)`,
+        y: `calc(-50% + ${randomY}px)`
+      });
+    }
+  }, []);
+
   const fecharJanela = () =>  {
     janelaService.fecharJanela(router, artigo.nome);
   }
@@ -57,7 +76,7 @@ function Artigo({ artigo }) {
   return (
     <Draggable
       handle=".head"
-      positionOffset={{x: '-50%', y: '-50%'}}
+      positionOffset={offset}
       nodeRef={nodeRef}
       cancel=".fechar"
     >

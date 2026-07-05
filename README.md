@@ -48,5 +48,5 @@ npm run dev
 * Escolher o tema automáticamente
 * Opção pra escolher um tema (natal, halloween, ...) nas 'config'
 * Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
-* Função nas configurações pra mudar o tamanho das fontes
-* A janela abre em uma posição aleatória
+* Função nas configurações pra mudar o tamanho e cor dos textos e títulos das fontes
+* A janela abre sempre um pouquinho pra baixo da anterior, igual no windows
