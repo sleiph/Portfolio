@@ -8,6 +8,8 @@ import Config from '../Config';
 import Picker from '../Picker';
 import { janelaService } from '../../services/janelaService';
 
+let historicoJanelasCriadas = 0;
+
 function acharPost(obj, nome) {
   return obj[nome];
 }
@@ -57,16 +59,17 @@ function Artigo({ artigo }) {
         y: `-50%`
       });
     } else {
-      const openWindows = document.querySelectorAll(`.${styles.janeladiv}`);
-      
-      const windowIndex = Math.max(0, openWindows.length - 1);
+      const indice = historicoJanelasCriadas;
+      historicoJanelasCriadas++;
 
       const startX = 120;
       const startY = 60;
       const step = 24;
 
-      const targetX = startX + (windowIndex * step);
-      const targetY = startY + (windowIndex * step);
+      const ciclo = indice % 15;
+
+      const targetX = startX + (ciclo * step);
+      const targetY = startY + (ciclo * step);
 
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
