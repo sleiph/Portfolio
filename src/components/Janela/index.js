@@ -51,16 +51,32 @@ function Artigo({ artigo }) {
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
 
-    if (!isMobile) {
-      const maxW = window.innerWidth * 0.25;
-      const maxH = window.innerHeight * 0.25;
+    if (isMobile) {
+      setOffset({
+        x: `-50%`,
+        y: `-50%`
+      });
+    } else {
+      const openWindows = document.querySelectorAll(`.${styles.janeladiv}`);
+      
+      const windowIndex = Math.max(0, openWindows.length - 1);
 
-      const randomX = (Math.random() - 0.5) * maxW;
-      const randomY = (Math.random() - 0.5) * maxH;
+      const startX = 120;
+      const startY = 60;
+      const step = 24;
+
+      const targetX = startX + (windowIndex * step);
+      const targetY = startY + (windowIndex * step);
+
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const finalX = targetX - centerX;
+      const finalY = targetY - centerY;
 
       setOffset({
-        x: `calc(-50% + ${randomX}px)`,
-        y: `calc(-50% + ${randomY}px)`
+        x: `calc(0px + ${finalX}px)`,
+        y: `calc(0px + ${finalY}px)`
       });
     }
   }, []);
