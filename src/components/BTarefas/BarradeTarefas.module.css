@@ -13,7 +13,7 @@
 .relogio {
     float: right;
     padding: 4px 15px 3px 35px;
-    font-size: 14px;
+    font-size: var(--text_size, small);
     background: url('/img/som.png');
     background-size: 20px;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@
     border-right-color: #222;
     border-bottom-color: #222;
     cursor: pointer;
-    font-size: 12px;
+    font-size: var(--text_size, small);
     font-weight: normal;
     text-align: left;
 }
@@ -111,7 +111,7 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-    font-size: 14px;
+    font-size: var(--text_size, small);
     border-style: solid;
     border-width: 2px;
     border-top-color: white;
@@ -162,7 +162,7 @@
     transform: rotate(-90deg);
     color: white;
     left: -49px;
-    font-size: 25px;
+    font-size: var(--titulo_size, medium);
     font-weight: bold;
 }
 .titlecontainertitle span {

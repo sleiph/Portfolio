@@ -30,7 +30,7 @@
 
 .iconediv p {
     color: white;
-    font-size: 12px;
+    font-size: var(--text_size, small);
     text-align: center;
 }
 

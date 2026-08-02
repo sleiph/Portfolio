@@ -41,6 +41,25 @@ export default function Config(  ) {
   const ordenaJanela = () => {
     janelaService.ordenaJanela(router, 'config');
   }
+
+  const mudarTamanhoTexto = () => {
+    const tamanhosTexto = ['small', 'medium', 'x-large', 'xx-large'];
+    const tamanhoAtual = theme.desktop.titulo_size;
+    const atual = tamanhosTexto.indexOf(tamanhoAtual);
+    const proximo = (atual + 1) % tamanhosTexto.length;
+    const novoTamanho = tamanhosTexto[proximo];
+    
+    theme.desktop.titulo_size = novoTamanho;
+    document.documentElement.style.setProperty('--titulo_size', novoTamanho);
+
+    if (tamanhoAtual == 'xx-large') {
+      theme.desktop.text_size = 'x-small';
+      document.documentElement.style.setProperty('--text_size', 'x-small');
+    } else {
+      theme.desktop.text_size = tamanhoAtual;
+      document.documentElement.style.setProperty('--text_size', tamanhoAtual);
+    }
+  }
   
   return (
     <Draggable
@@ -71,6 +90,9 @@ export default function Config(  ) {
             <h5>Estilos</h5>
             <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'bg')}>
               Mudar a cor do plano de fundo
+            </a>
+            <a className={styles.botaoa} onClick={mudarTamanhoTexto}>
+              Mudar tamanho do texto
             </a>
             <a className={styles.botaoa} onClick={resetarCores}>
               Resetar todas as cores

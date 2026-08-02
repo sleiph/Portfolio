@@ -6,4 +6,5 @@
 
 body {
     font-family: 'Fira Code', monospace;
+    font-size: var(--titulo_size, medium);
 }

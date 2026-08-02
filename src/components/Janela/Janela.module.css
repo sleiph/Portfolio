@@ -15,7 +15,7 @@
 .titulodiv {
     background: var(--titulo_janela);
     width: 100%;
-    height: 25px;
+    min-height: 25px;
     margin-bottom: 2px;
     cursor: move;
 }

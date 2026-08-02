@@ -6,7 +6,9 @@ export const theme = {
     janela: '#BFBFBF',
     titulo_janela: '#01007A',
     fundo: '#008080',
-    fundo_janela: 'white'
+    fundo_janela: 'white',
+    text_size: 'small',
+    titulo_size: 'medium'
   }
 }
 

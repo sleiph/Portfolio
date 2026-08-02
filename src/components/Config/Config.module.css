@@ -37,7 +37,6 @@
   display: block;
   margin: 0 auto 10px auto;
   line-height: 1;
-  font-size: small;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -47,6 +46,7 @@
   border-left-color: white;
   border-right-color: #222;
   border-bottom-color: #222;
+  font-size: var(--text_size, small);
 }
 .botaoa:active {
   outline: none;

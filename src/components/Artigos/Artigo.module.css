@@ -17,7 +17,7 @@
 }
 .tituloh3 {
     line-height: 1.75;
-    font-size: large;
+    font-size: var(--titulo_size, medium);
     font-weight: bold;
 }
 
@@ -54,7 +54,7 @@
     object-fit: cover;
 }
 .pastadiv p {
-    font-size: 12px;
+    font-size: var(--text_size, small);
     text-align: center;
 }
 .pastadiv:active p {

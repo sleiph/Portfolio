@@ -41,12 +41,8 @@ npm run dev
 - Mais temas pro portfólio
 - aparecer um bichinho (gif) na tela se ficar muito tempo parado
 - adicionar grandiente pro picker de cores
-
-
-### Pra fazer algum dia...
-
-* Escolher o tema automáticamente
-* Opção pra escolher um tema (natal, halloween, ...) nas 'config'
-* Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
-* Função nas configurações pra mudar o tamanho e cor dos textos e títulos das fontes
-* A janela abre sempre um pouquinho pra baixo da anterior, igual no windows
+- Opção pra escolher um tema (natal, halloween, ...) nas 'config'
+- Escolher o tema automáticamente
+- Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
+- Botão nas configurações pra mudar a cor dos textos e títulos
+- Adaptar os tamanhos das divs pros textos grandes
