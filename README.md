@@ -39,10 +39,12 @@ npm run dev
 ### Melhorias
 
 - Mais temas pro portfólio
-- aparecer um bichinho (gif) na tela se ficar muito tempo parado
+- melhorar o protetor de tela pra ser um [texto 3d](https://www.youtube.com/watch?v=qrqcVjf1nRs)
+- adicionar mais protetores de tela
 - adicionar grandiente pro picker de cores
 - Opção pra escolher um tema (natal, halloween, ...) nas 'config'
-- Escolher o tema automáticamente
+- Opção pra escolher um protetor de tela
+- Escolher o tema automaticamente
 - Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
 - Botão nas configurações pra mudar a cor dos textos e títulos
 - Adaptar os tamanhos das divs pros textos grandes

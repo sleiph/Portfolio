@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import './styles/global.css';
+import ProtetorDeTela from '../src/components/ProtetorDeTela';
 
 export const theme = {
   desktop: {
@@ -32,6 +33,7 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content={theme.desktop.titulo_janela}></meta>
       </Head>
+      <ProtetorDeTela />
       <Component {...pageProps} />
     </>
   )
