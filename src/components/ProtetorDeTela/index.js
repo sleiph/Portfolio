@@ -5,8 +5,10 @@ export default function ProtetorDeTela() {
   const [isVisivel, setIsVisivel] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [direction, setDirection] = useState({ dx: 2, dy: 2 });
+  const [opacity, setOpacity] = useState(0);
   const idleTimerRef = useRef(null);
   const animationFrameRef = useRef(null);
+  const fadeIntervalRef = useRef(null);
   const IDLE_TIMEOUT = 2 * 60 * 1000; // 2 minutos
 
   const resetIdleTimer = () => {
@@ -14,13 +16,28 @@ export default function ProtetorDeTela() {
       clearTimeout(idleTimerRef.current);
     }
     setIsVisivel(false);
+    setOpacity(0);
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
+    }
+    if (fadeIntervalRef.current) {
+      clearInterval(fadeIntervalRef.current);
     }
     idleTimerRef.current = setTimeout(() => {
       setIsVisivel(true);
       setPosition({ x: 0, y: 0 });
       setDirection({ dx: 2, dy: 2 });
+      setOpacity(0);
+      
+      let currentOpacity = 0;
+      fadeIntervalRef.current = setInterval(() => {
+        currentOpacity += 0.02;
+        if (currentOpacity >= 1) {
+          currentOpacity = 1;
+          clearInterval(fadeIntervalRef.current);
+        }
+        setOpacity(currentOpacity);
+      }, 50);
     }, IDLE_TIMEOUT);
   };
 
@@ -42,6 +59,9 @@ export default function ProtetorDeTela() {
       }
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+      }
+      if (fadeIntervalRef.current) {
+        clearInterval(fadeIntervalRef.current);
       }
     };
   }, []);
@@ -92,6 +112,10 @@ export default function ProtetorDeTela() {
 
   return (
     <div className={styles.screensaver}>
+      <div 
+        className={styles.overlay}
+        style={{ opacity }}
+      />
       <img 
         src='/img/win98-logo.png' 
         alt='screensaver sprite'

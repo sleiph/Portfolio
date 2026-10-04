@@ -44,7 +44,6 @@ npm run dev
 - adicionar grandiente pro picker de cores
 - Opção pra escolher um tema (natal, halloween, ...) nas 'config'
 - Opção pra escolher um protetor de tela
-- Escolher o tema automaticamente
 - Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
 - Botão nas configurações pra mudar a cor dos textos e títulos
 - Adaptar os tamanhos das divs pros textos grandes

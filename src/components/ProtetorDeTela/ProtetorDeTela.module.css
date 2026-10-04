@@ -8,6 +8,17 @@
   z-index: 9999;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+  transition: opacity 0.05s linear;
+}
+
 .sprite {
   position: absolute;
   width: 100px;
