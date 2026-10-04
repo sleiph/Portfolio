@@ -122,7 +122,8 @@ export default function ProtetorDeTela() {
         className={styles.sprite}
         style={{
           left: `${position.x}px`,
-          top: `${position.y}px`
+          top: `${position.y}px`,
+          opacity
         }}
       />
     </div>
