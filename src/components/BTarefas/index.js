@@ -8,6 +8,8 @@ export default function BTarefas(propriedades) {
   const [hora, setHora] = useState("00:00");
 
   useEffect(() => {
+    setHora(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+    
     const intervalo = setInterval(() => {
       setHora(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
     }, 15000);
