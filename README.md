@@ -39,6 +39,7 @@ npm run dev
 ### Melhorias
 
 - Mudar o ícone dos contatos quando muda o tema
+- se a cor de fundo for clara, texto fica preto
 - melhorar o protetor de tela pra ser um [texto 3d](https://www.youtube.com/watch?v=qrqcVjf1nRs)
 - adicionar mais protetores de tela
 - adicionar grandiente pro picker de cores
@@ -47,3 +48,4 @@ npm run dev
 - Desenhar uns fundos de tela [bem psicodélicos](https://everydaylouie.itch.io/kidpix)
 - Botão nas configurações pra mudar a cor dos textos e títulos
 - Adaptar os tamanhos das divs pros textos grandes
+- redimensionar janelas

@@ -75,8 +75,8 @@ export const TEMAS = {
     nome: 'Setembro',
     icone: '/img/icn/huehuebr.gif',
     cores: {
-      titulo_janela: '#009900',
-      fundo_janela: '#F0FFF0',
+      titulo_janela: '#0000ff',
+      fundo_janela: '#ffff00',
       fundo: '#32CD32'
     }
   },
