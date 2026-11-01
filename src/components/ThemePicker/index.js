@@ -18,10 +18,13 @@ export default function ThemePicker() {
     theme.desktop.titulo_janela = tema.cores.titulo_janela;
     theme.desktop.fundo_janela = tema.cores.fundo_janela;
     theme.desktop.fundo = tema.cores.fundo;
+    theme.desktop.tema_atual = parseInt(temaId);
 
     document.documentElement.style.setProperty('--titulo_janela', tema.cores.titulo_janela);
     document.documentElement.style.setProperty('--fundo_janela', tema.cores.fundo_janela);
     document.documentElement.style.setProperty('--fundo', tema.cores.fundo);
+
+    fecharJanela();
   };
 
   const fecharJanela = () => {

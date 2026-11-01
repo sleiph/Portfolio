@@ -75,18 +75,18 @@ export const TEMAS = {
     nome: 'Setembro',
     icone: '/img/icn/huehuebr.gif',
     cores: {
-      titulo_janela: '#0000ff',
+      titulo_janela: '#0000a0',
       fundo_janela: '#ffff00',
-      fundo: '#32CD32'
+      fundo: '#008040'
     }
   },
   9: {
     nome: 'Outubro',
     icone: '/img/icn/spook.gif',
     cores: {
-      titulo_janela: '#FF4500',
-      fundo_janela: '#FFE4C4',
-      fundo: '#FF8C00'
+      titulo_janela: '#ff8000',
+      fundo_janela: '#ff8040',
+      fundo: '#804040'
     }
   },
   10: {
@@ -103,7 +103,7 @@ export const TEMAS = {
     icone: '/img/icn/spohoho.gif',
     cores: {
       titulo_janela: '#ff0000',
-      fundo_janela: '#ffffff',
+      fundo_janela: '#008040',
       fundo: '#800000'
     }
   }

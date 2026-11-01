@@ -9,7 +9,8 @@ export const theme = {
     fundo: '#008080',
     fundo_janela: 'white',
     text_size: 'small',
-    titulo_size: 'medium'
+    titulo_size: 'medium',
+    tema_atual: null
   }
 }
 
