@@ -3,29 +3,16 @@ import { useRouter } from 'next/router';
 
 import stylesArea from '../src/components/AreadeTrabalho.module.css';
 import { POSTS_DATA } from '../src/dados/posts';
+import { TEMAS } from '../src/dados/temas';
 
 import BTarefas from '../src/components/BTarefas';
 import Icones from '../src/components/Icones';
 import Janela from '../src/components/Janela';
 
-const MES_ICONES = {
-  0: '/img/icn/janeiro.png',
-  1: '/img/icn/fevereiro.webp',
-  2: '/img/icn/marco.webp',
-  3: '/img/icn/abril.png',
-  4: '/img/icn/maio.png',
-  5: '/img/icn/junho.webp',
-  6: '/img/icn/julho.png',
-  7: '/img/icn/agosto.png',
-  8: '/img/icn/huehuebr.gif',
-  9: '/img/icn/spook.gif',
-  10: '/img/icn/novembro.webp',
-  11: '/img/icn/spohoho.gif'
-};
-
 const getIconeDoMes = () => {
   const mes = new Date().getMonth();
-  return MES_ICONES[mes] || '/img/ajuda.png';
+  const tema = TEMAS[mes];
+  return tema ? tema.icone : '/img/ajuda.png';
 };
 
 const AreaTrabalho = () => {
