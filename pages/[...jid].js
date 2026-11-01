@@ -9,8 +9,17 @@ import Icones from '../src/components/Icones';
 import Janela from '../src/components/Janela';
 
 const MES_ICONES = {
+  0: '/img/icn/janeiro.png',
+  1: '/img/icn/fevereiro.webp',
+  2: '/img/icn/marco.webp',
+  3: '/img/icn/abril.png',
+  4: '/img/icn/maio.png',
+  5: '/img/icn/junho.webp',
+  6: '/img/icn/julho.png',
+  7: '/img/icn/agosto.png',
   8: '/img/icn/huehuebr.gif',
   9: '/img/icn/spook.gif',
+  10: '/img/icn/novembro.webp',
   11: '/img/icn/spohoho.gif'
 };
 

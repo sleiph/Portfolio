@@ -161,7 +161,7 @@
     position: absolute;
     transform: rotate(-90deg);
     color: white;
-    left: -49px;
+    left: -24px;
     font-size: var(--titulo_size, medium);
     font-weight: bold;
 }
