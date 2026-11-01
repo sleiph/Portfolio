@@ -1,0 +1,42 @@
+.temasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.temaButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 2px;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: #222;
+  border-bottom-color: #222;
+  background: inherit;
+  font-size: var(--text_size, small);
+  font-family: 'Fira Code', monospace;
+}
+
+.temaButton:active {
+  border-top-color: #222;
+  border-left-color: #222;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.temaButton img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.temaButton span {
+  font-size: 10px;
+  text-align: center;
+}

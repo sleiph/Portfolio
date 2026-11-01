@@ -48,7 +48,7 @@ export default function Config(  ) {
     const atual = tamanhosTexto.indexOf(tamanhoAtual);
     const proximo = (atual + 1) % tamanhosTexto.length;
     const novoTamanho = tamanhosTexto[proximo];
-    
+
     theme.desktop.titulo_size = novoTamanho;
     document.documentElement.style.setProperty('--titulo_size', novoTamanho);
 
@@ -88,6 +88,9 @@ export default function Config(  ) {
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
             <h5>Estilos</h5>
+            <a className={styles.botaoa} onClick={() => janelaService.abrirThemePicker(router)}>
+              Mudar tema
+            </a>
             <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'bg')}>
               Mudar a cor do plano de fundo
             </a>

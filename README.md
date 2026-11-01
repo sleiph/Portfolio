@@ -38,7 +38,7 @@ npm run dev
 
 ### Melhorias
 
-- Mais temas pro portfólio
+- Mudar o ícone dos contatos quando muda o tema
 - melhorar o protetor de tela pra ser um [texto 3d](https://www.youtube.com/watch?v=qrqcVjf1nRs)
 - adicionar mais protetores de tela
 - adicionar grandiente pro picker de cores

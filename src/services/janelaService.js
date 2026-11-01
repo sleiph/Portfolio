@@ -35,5 +35,17 @@ export const janelaService = {
     caminho = caminho.replace(ctxFinal, '');
     caminho += ctxFinal;
     router.push(`${caminho}`);
+  },
+
+  /**
+   * Abre a janela de seleção de temas
+   * @param {object} router - Next.js router
+   */
+  abrirThemePicker(router) {
+    var caminho = router.asPath;
+    const ctxFinal = '/pickertheme';
+    caminho = caminho.replace(ctxFinal, '');
+    caminho += ctxFinal;
+    router.push(`${caminho}`);
   }
 };
