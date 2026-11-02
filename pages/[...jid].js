@@ -4,20 +4,20 @@ import { useRouter } from 'next/router';
 import stylesArea from '../src/components/AreadeTrabalho.module.css';
 import { POSTS_DATA } from '../src/dados/posts';
 import { TEMAS } from '../src/dados/temas';
-import { theme } from './_app';
+import { tema } from './_app';
 
 import BTarefas from '../src/components/BTarefas';
 import Icones from '../src/components/Icones';
 import Janela from '../src/components/Janela';
 
 const getIconeDoTema = () => {
-  const temaId = theme.desktop.tema_atual;
+  const temaId = tema.desktop.tema_atual;
   if (temaId !== null && TEMAS[temaId]) {
     return TEMAS[temaId].icone;
   }
   const mes = new Date().getMonth();
-  const tema = TEMAS[mes];
-  return tema ? tema.icone : '/img/ajuda.png';
+  const temaMes = TEMAS[mes];
+  return temaMes ? temaMes.icone : '/img/ajuda.png';
 };
 
 const AreaTrabalho = () => {

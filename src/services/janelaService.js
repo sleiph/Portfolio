@@ -41,9 +41,9 @@ export const janelaService = {
    * Abre a janela de seleção de temas
    * @param {object} router - Next.js router
    */
-  abrirThemePicker(router) {
+  abrirTemaPicker(router) {
     var caminho = router.asPath;
-    const ctxFinal = '/pickertheme';
+    const ctxFinal = '/pickertema';
     caminho = caminho.replace(ctxFinal, '');
     caminho += ctxFinal;
     router.push(`${caminho}`);

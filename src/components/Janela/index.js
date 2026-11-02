@@ -6,7 +6,7 @@ import styles from './Janela.module.css';
 import QuatrozeroQuatro from '../Artigos/404';
 import Config from '../Config';
 import Picker from '../Picker';
-import ThemePicker from '../ThemePicker';
+import TemaPicker from '../TemaPicker';
 import { janelaService } from '../../services/janelaService';
 
 let historicoJanelasCriadas = 0;
@@ -27,8 +27,8 @@ export default function Janela(propriedades) {
     return <Picker caminho='bt' contexto = 'titulos'/>
   else if (propriedades.id === 'pickerft')
     return <Picker caminho='ft' contexto='janelas' />
-  else if (propriedades.id === 'pickertheme')
-    return <ThemePicker />
+  else if (propriedades.id === 'pickertema')
+    return <TemaPicker />
   
   var post = acharPost(propriedades.janelas, propriedades.id);
   

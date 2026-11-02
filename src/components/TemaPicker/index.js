@@ -1,34 +1,35 @@
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
 import Draggable from 'react-draggable';
-import { theme } from '../../../pages/_app';
-import styles from './ThemePicker.module.css';
+import { tema } from '../../../pages/_app';
+import styles from './TemaPicker.module.css';
 import configStyles from '../Config/Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
 import { TEMAS } from '../../dados/temas';
 
-export default function ThemePicker() {
+export default function TemaPicker() {
   const router = useRouter();
-  const nodeRef = useRef('themePicker');
+  const nodeRef = useRef('temaPicker');
 
   const aplicarTema = (temaId) => {
-    const tema = TEMAS[temaId];
-    if (!tema) return;
+    const temaMes = TEMAS[temaId];
+    if (!temaMes)
+      return;
 
-    theme.desktop.titulo_janela = tema.cores.titulo_janela;
-    theme.desktop.fundo_janela = tema.cores.fundo_janela;
-    theme.desktop.fundo = tema.cores.fundo;
-    theme.desktop.tema_atual = parseInt(temaId);
+    tema.desktop.titulo_janela = temaMes.cores.titulo_janela;
+    tema.desktop.fundo_janela = temaMes.cores.fundo_janela;
+    tema.desktop.fundo = temaMes.cores.fundo;
+    tema.desktop.tema_atual = parseInt(temaId);
 
-    document.documentElement.style.setProperty('--titulo_janela', tema.cores.titulo_janela);
-    document.documentElement.style.setProperty('--fundo_janela', tema.cores.fundo_janela);
-    document.documentElement.style.setProperty('--fundo', tema.cores.fundo);
+    document.documentElement.style.setProperty('--titulo_janela', temaMes.cores.titulo_janela);
+    document.documentElement.style.setProperty('--fundo_janela', temaMes.cores.fundo_janela);
+    document.documentElement.style.setProperty('--fundo', temaMes.cores.fundo);
 
     fecharJanela();
   };
 
   const fecharJanela = () => {
-    let caminho = router.asPath.replace('/pickertheme', '');
+    let caminho = router.asPath.replace('/pickertema', '');
     if (caminho === '')
       caminho = '/home';
     router.replace(`${caminho}`);
@@ -36,8 +37,8 @@ export default function ThemePicker() {
 
   const ordenaJanela = () => {
     var caminho = router.asPath;
-    caminho = caminho.replace('/pickertheme', '');
-    caminho += '/pickertheme';
+    caminho = caminho.replace('/pickertema', '');
+    caminho += '/pickertema';
     router.push(`${caminho}`);
   };
 
@@ -48,7 +49,7 @@ export default function ThemePicker() {
       nodeRef={nodeRef}
       cancel=".fechar"
     >
-      <div className={stylesJanela.janeladiv} id='pickertheme' ref={nodeRef}>
+      <div className={stylesJanela.janeladiv} id='pickertema' ref={nodeRef}>
         
         <div className={stylesJanela.titulodiv + ' head'}>
           <div className={stylesJanela.icone}>

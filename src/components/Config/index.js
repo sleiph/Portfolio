@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Draggable from 'react-draggable';
 import { useRef } from 'react';
-import { theme } from '../../../pages/_app';
+import { tema } from '../../../pages/_app';
 
 import styles from './Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
@@ -13,9 +13,9 @@ export default function Config(  ) {
   const nodeRef = useRef('config');
 
   const resetarCores = () => {
-    theme.desktop.titulo_janela = '#01007A';
-    theme.desktop.fundo_janela = 'white';
-    theme.desktop.fundo = '#008080';
+    tema.desktop.titulo_janela = '#01007A';
+    tema.desktop.fundo_janela = 'white';
+    tema.desktop.fundo = '#008080';
     document.documentElement.style.setProperty('--titulo_janela', '#01007A');
     document.documentElement.style.setProperty('--fundo_janela', 'white');
     document.documentElement.style.setProperty('--fundo', '#008080');
@@ -44,19 +44,19 @@ export default function Config(  ) {
 
   const mudarTamanhoTexto = () => {
     const tamanhosTexto = ['small', 'medium', 'x-large', 'xx-large'];
-    const tamanhoAtual = theme.desktop.titulo_size;
+    const tamanhoAtual = tema.desktop.titulo_size;
     const atual = tamanhosTexto.indexOf(tamanhoAtual);
     const proximo = (atual + 1) % tamanhosTexto.length;
     const novoTamanho = tamanhosTexto[proximo];
 
-    theme.desktop.titulo_size = novoTamanho;
+    tema.desktop.titulo_size = novoTamanho;
     document.documentElement.style.setProperty('--titulo_size', novoTamanho);
 
     if (tamanhoAtual == 'xx-large') {
-      theme.desktop.text_size = 'x-small';
+      tema.desktop.text_size = 'x-small';
       document.documentElement.style.setProperty('--text_size', 'x-small');
     } else {
-      theme.desktop.text_size = tamanhoAtual;
+      tema.desktop.text_size = tamanhoAtual;
       document.documentElement.style.setProperty('--text_size', tamanhoAtual);
     }
   }
@@ -88,7 +88,7 @@ export default function Config(  ) {
           <img id={styles.imgsys} src='/img/win98.png' />
           <div className={styles.campodiv} >
             <h5>Estilos</h5>
-            <a className={styles.botaoa} onClick={() => janelaService.abrirThemePicker(router)}>
+            <a className={styles.botaoa} onClick={() => janelaService.abrirTemaPicker(router)}>
               Mudar tema
             </a>
             <a className={styles.botaoa} onClick={() => janelaService.abrirPicker(router, 'bg')}>

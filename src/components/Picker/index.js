@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
 import Draggable from 'react-draggable';
-import { theme } from '../../../pages/_app';
+import { tema } from '../../../pages/_app';
 import styles from './Picker.module.css';
 import configStyles from '../Config/Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
@@ -26,16 +26,16 @@ export default function Picker(propriedades) {
     }
 
     const mudaCorBackground = (hex) => {
-        theme.desktop.fundo = hex;
+        tema.desktop.fundo = hex;
         document.documentElement.style.setProperty('--fundo', hex);
     }
     const mudaCorTitulo = (hex) => {
-        theme.desktop.titulo_janela = hex;
+        tema.desktop.titulo_janela = hex;
         document.documentElement.style.setProperty('--titulo_janela', hex);
     }
 
     const mudaCorFundo = (hex) => {
-        theme.desktop.fundo_janela = hex;
+        tema.desktop.fundo_janela = hex;
         document.documentElement.style.setProperty('--fundo_janela', hex);
     }
 

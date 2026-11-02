@@ -2,7 +2,7 @@ import Head from 'next/head';
 import './styles/global.css';
 import ProtetorDeTela from '../src/components/ProtetorDeTela';
 
-export const theme = {
+export const tema = {
   desktop: {
     janela: '#BFBFBF',
     titulo_janela: '#01007A',
@@ -15,8 +15,8 @@ export const theme = {
 }
 
 if (typeof window !== 'undefined') {
-  Object.keys(theme.desktop).forEach(key => {
-    document.documentElement.style.setProperty(`--${key}`, theme.desktop[key]);
+  Object.keys(tema.desktop).forEach(key => {
+    document.documentElement.style.setProperty(`--${key}`, tema.desktop[key]);
   });
 }
 
@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content={theme.desktop.titulo_janela}></meta>
+        <meta name="tema-color" content={tema.desktop.titulo_janela}></meta>
       </Head>
       <ProtetorDeTela />
       <Component {...pageProps} />
