@@ -6,6 +6,7 @@ import styles from './Picker.module.css';
 import configStyles from '../Config/Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
 import { CORES } from '../../dados/cores';
+import { janelaService } from '../../services/janelaService';
 
 export default function Picker(propriedades) {
 
@@ -39,20 +40,12 @@ export default function Picker(propriedades) {
         document.documentElement.style.setProperty('--fundo_janela', hex);
     }
 
-    //todo: tem uma funcao igual na janela/index.js
     const fecharJanela = () => {
-        let caminho = router.asPath.replace('/' + nomeRota, '');
-        if (caminho === '')
-            caminho = '/home';
-        router.replace(`${caminho}`);
+        janelaService.fecharJanela(router, nomeRota);
     }
 
-    //todo: tem uma funcao igual na janela/index.js
     const ordenaJanela = () => {
-        var caminho = router.asPath;
-        caminho = caminho.replace('/' + nomeRota, '');
-        caminho += '/' + nomeRota;
-        router.push(`${caminho}`);
+        janelaService.ordenaJanela(router, nomeRota);
     }
 
     return (

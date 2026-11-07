@@ -1,19 +1,13 @@
 import { useRouter } from 'next/router';
 import stylesArea from '../AreadeTrabalho.module.css';
+import { janelaService } from '../../services/janelaService';
 
 export default function Icones({ janelas }) {
 
   const router = useRouter();
 
   const handleNavegacao = (nome) => {
-    const { asPath } = router;
-    const basePath = asPath.split('?')[0];
-
-    const nextPath = basePath === '/home' 
-      ? `/${nome}` 
-      : `${basePath.replace(`/${nome}`, '')}/${nome}`;
-
-    router.push(nextPath);
+    janelaService.ordenaJanela(router, nome);
   };
 
   const janelasRaiz = Object.values(janelas).filter(artigo => artigo.isRaiz);

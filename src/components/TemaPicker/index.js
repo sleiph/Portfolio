@@ -6,6 +6,7 @@ import styles from './TemaPicker.module.css';
 import configStyles from '../Config/Config.module.css';
 import stylesJanela from '../Janela/Janela.module.css';
 import { TEMAS } from '../../dados/temas';
+import { janelaService } from '../../services/janelaService';
 
 export default function TemaPicker() {
   const router = useRouter();
@@ -29,17 +30,11 @@ export default function TemaPicker() {
   };
 
   const fecharJanela = () => {
-    let caminho = router.asPath.replace('/pickertema', '');
-    if (caminho === '')
-      caminho = '/home';
-    router.replace(`${caminho}`);
+    janelaService.fecharJanela(router, 'pickertema');
   };
 
   const ordenaJanela = () => {
-    var caminho = router.asPath;
-    caminho = caminho.replace('/pickertema', '');
-    caminho += '/pickertema';
-    router.push(`${caminho}`);
+    janelaService.ordenaJanela(router, 'pickertema');
   };
 
   return (

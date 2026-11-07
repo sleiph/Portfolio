@@ -63,16 +63,8 @@ export default function BTarefas(propriedades) {
                 style={{backgroundImage: `url(${artigo.icone})`}}
                 onClick={
                   () => {
-                    propriedades.setStart(!propriedades.start)
-                    var caminho = propriedades.router.asPath
-                    if (caminho === '/home') {
-                      caminho = artigo.nome
-                    }
-                    else {
-                      caminho = caminho.replace('/' + artigo.nome, '')
-                      caminho += '/' + artigo.nome
-                    }
-                    propriedades.router.push(`${caminho}`)
+                    propriedades.setStart(!propriedades.start);
+                    janelaService.ordenaJanela(propriedades.router, artigo.nome);
                   }
                 }>
                   {artigo.nome}

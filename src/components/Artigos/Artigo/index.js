@@ -1,17 +1,12 @@
 import { useRouter } from 'next/router';
 import stylesArtigo from '../Artigo.module.css';
+import { janelaService } from '../../../services/janelaService';
 
 export default function Artigo({ items }) {
     const router = useRouter();
 
-    //TODO: metodo repetido
     const handleNavegacao = (nome) => {
-        const basePath = router.asPath.split('?')[0];
-        const nextPath = basePath === '/home'
-            ? `/${nome}`
-            : `${basePath.replace(`/${nome}`, '')}/${nome}`;
-
-        router.push(nextPath);
+        janelaService.ordenaJanela(router, nome);
     };
 
     return (

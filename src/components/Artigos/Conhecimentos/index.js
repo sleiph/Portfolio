@@ -1,20 +1,14 @@
 import stylesArtigo from '../Artigo.module.css';
 import { useRouter } from 'next/router';
 import DB from '../../../dados/db.json';
+import { janelaService } from '../../../services/janelaService';
 
 export default function Conhecimentos() {
-  const router = useRouter()
+  const router = useRouter();
   const { experiencias, tecnologias } = DB;
 
-  //TODO: separar num service
   const handleNavegacao = (nome) => {
-    const basePath = router.asPath.split('?')[0];
-    
-    const nextPath = basePath === '/home' 
-      ? `/${nome}` 
-      : `${basePath.replace(`/${nome}`, '')}/${nome}`;
-
-    router.push(nextPath);
+    janelaService.ordenaJanela(router, nome);
   };
 
   return (

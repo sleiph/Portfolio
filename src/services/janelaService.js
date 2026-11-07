@@ -1,15 +1,44 @@
 export const janelaService = {
 
+  _obterNovoCaminho(asPath, nomeJanela, acao) {
+    const [path, search] = asPath.split('?');
+    const queryStr = search ? `?${search}` : '';
+
+    const targetDecoded = decodeURIComponent(nomeJanela);
+    const segments = path
+      .split('/')
+      .filter(Boolean)
+      .filter(seg => seg !== 'home');
+
+    const filteredSegments = segments.filter(
+      seg => decodeURIComponent(seg) !== targetDecoded
+    );
+
+    if (acao === 'ordena') {
+      filteredSegments.push(targetDecoded);
+    }
+
+    if (filteredSegments.length === 0) {
+      return '/home' + queryStr;
+    }
+
+    const encodedPath =
+      '/' +
+      filteredSegments
+        .map(seg => encodeURIComponent(decodeURIComponent(seg)))
+        .join('/');
+
+    return encodedPath + queryStr;
+  },
+
   /**
    * Fecha a janela, tirando ela da URL
    * @param {object} router - Next.js router
    * @param {string} nomeJanela - Nome da janela
    */
   fecharJanela(router, nomeJanela) {
-    let caminho = router.asPath.replace(`/${nomeJanela}`, '');
-    if (caminho === '')
-      caminho = '/home';
-    router.replace(`${caminho}`);
+    const novoCaminho = this._obterNovoCaminho(router.asPath, nomeJanela, 'fechar');
+    router.replace(novoCaminho);
   },
 
   /**
@@ -18,10 +47,10 @@ export const janelaService = {
    * @param {string} nomeJanela - Nome da janela
    */
   ordenaJanela(router, nomeJanela) {
-    var caminho = router.asPath;
-    caminho = caminho.replace(`/${nomeJanela}`, '');
-    caminho += `/${nomeJanela}`;
-    router.push(`${caminho}`);
+    const novoCaminho = this._obterNovoCaminho(router.asPath, nomeJanela, 'ordena');
+    if (novoCaminho !== router.asPath) {
+      router.push(novoCaminho);
+    }
   },
 
   /**
@@ -30,11 +59,7 @@ export const janelaService = {
    * @param {string} contexto - Contexto para o picker (bg, bt, ft)
    */
   abrirPicker(router, contexto) {
-    var caminho = router.asPath;
-    const ctxFinal = '/picker' + contexto;
-    caminho = caminho.replace(ctxFinal, '');
-    caminho += ctxFinal;
-    router.push(`${caminho}`);
+    this.ordenaJanela(router, 'picker' + contexto);
   },
 
   /**
@@ -42,10 +67,6 @@ export const janelaService = {
    * @param {object} router - Next.js router
    */
   abrirTemaPicker(router) {
-    var caminho = router.asPath;
-    const ctxFinal = '/pickertema';
-    caminho = caminho.replace(ctxFinal, '');
-    caminho += ctxFinal;
-    router.push(`${caminho}`);
+    this.ordenaJanela(router, 'pickertema');
   }
 };
