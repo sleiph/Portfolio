@@ -197,5 +197,16 @@ export const POSTS_DATA = {
             <p>Desenvolvimento e Manutenção de aplicações Java de risco bancário. Criação de testes, refatoração de código, backend, frontend, banco de dados, o mesmo que eu fazia como estagiário, mas agora 8 horas por dia.</p>
         </div>,
         isRaiz: false
+    },
+    avataresGmail: {
+        nome: 'avataresGmail',
+        icone: '/img/doc.png',
+        conteudo: <div className={stylesArtigo.descricaodiv}>
+            <h3>Avatares do Gmail</h3>
+            <br></br>
+            <p>tecnologia: C#, .NET Framework</p>
+            <a href="https://github.com/sleiph/GmailAvatar"><h3>link pro Github</h3></a>
+        </div>,
+        isRaiz: false
     }
 };

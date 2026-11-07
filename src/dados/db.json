@@ -1,28 +1,15 @@
 {
   "projetos" : [
     {
-      "nome": "Milton.io",
-      "tecnologia": "Kotlin",
-      "framework": "Android Studio",
-      "link": "https://github.com/sleiph/Miltonio"
-    },
-    {
-      "nome": "TaroTI",
-      "tecnologia": "Java",
-      "framework": "Spring web",
-      "link": "https://github.com/sleiph/taroTI"
-    },
-    {
+      "nome": "Planning Poker",
+      "tecnologia": "javaScript",
+      "framework": "React",
+      "link": "https://planning.ricardoal.com/"
+    },{
       "nome": "CHIP-OITO",
       "tecnologia": "javaScript",
       "framework": "React",
       "link": "https://github.com/sleiph/CHIP-OITO"
-    },
-    {
-      "nome": "Coletor FipeZap",
-      "tecnologia": "Java",
-      "framework": "Spring",
-      "link": "https://github.com/sleiph/Fipezap"
     },
     {
       "nome": "Portas Lógicas",
@@ -31,16 +18,22 @@
       "link": "https://github.com/sleiph/portasLogicas"
     },
     {
-      "nome": "Avatares Gmail",
-      "tecnologia": "C#",
-      "framework": ".NET Framework",
-      "link": "https://github.com/sleiph/GmailAvatar"
+      "nome": "TaroTI",
+      "tecnologia": "Java",
+      "framework": "Spring web",
+      "link": "https://github.com/sleiph/taroTI"
     },
     {
-      "nome": "Exploração de dados",
-      "tecnologia": "python",
-      "framework": "Anaconda/Pandas",
-      "link": "https://github.com/sleiph/exploracao-de-dados"
+      "nome": "Coletor FipeZap",
+      "tecnologia": "Java",
+      "framework": "Spring",
+      "link": "https://github.com/sleiph/Fipezap"
+    },
+    {
+      "nome": "Milton.io",
+      "tecnologia": "Kotlin",
+      "framework": "Android Studio",
+      "link": "https://github.com/sleiph/Miltonio"
     }
   ],
   "projetos_old" : [
@@ -272,6 +265,10 @@
     {
       "nome":"php",
       "icone": "/img/icn/php.png"
+    },
+    {
+      "nome": "avataresGmail",
+      "icone": "/img/doc.png"
     }
   ]
 }
